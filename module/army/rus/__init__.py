@@ -1,0 +1,1 @@
+import module.army.rus.infantry_brigade
