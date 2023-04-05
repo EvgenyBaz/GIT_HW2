@@ -21,12 +21,15 @@ class Ui_RusCorpsWindow(object):
         self.firstBatallion = QtWidgets.QComboBox(parent=self.centralwidget)
         self.firstBatallion.setGeometry(QtCore.QRect(70, 110, 191, 22))
         self.firstBatallion.setObjectName("firstBatallion")
+
         self.secondfirstBatallion = QtWidgets.QComboBox(parent=self.centralwidget)
         self.secondfirstBatallion.setGeometry(QtCore.QRect(70, 130, 191, 22))
         self.secondfirstBatallion.setObjectName("secondfirstBatallion")
+
         self.thirdBatallion = QtWidgets.QComboBox(parent=self.centralwidget)
         self.thirdBatallion.setGeometry(QtCore.QRect(70, 150, 191, 22))
         self.thirdBatallion.setObjectName("thirdBatallion")
+
         self.fourthBatallion = QtWidgets.QComboBox(parent=self.centralwidget)
         self.fourthBatallion.setGeometry(QtCore.QRect(70, 170, 191, 22))
         self.fourthBatallion.setObjectName("fourthBatallion")

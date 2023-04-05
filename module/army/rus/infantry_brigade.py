@@ -7,12 +7,14 @@ from module.army.rus.infantry import volunteer_jager_musket
 from module.army.rus.infantry import volunteer_jager_rifle
 from module.army.rus.infantry import jager
 from module.army.rus.infantry import jager_two_battalions
+from module.army import unit
+
 
 class InfantryBrigade:
 
     def __init__(self):
-
         self.infantry_brigade_list = [
+            unit.Unit(),
             line_Infantry.LineInfantry()
         ]
 

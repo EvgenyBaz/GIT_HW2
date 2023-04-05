@@ -1,6 +1,7 @@
 class Unit:
 
     def __init__(self):
+        self.name = "empty"
         self.type = "unit"
         self.armament = "weapon"
         self.hand_to_hand = 4
