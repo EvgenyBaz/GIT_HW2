@@ -2,7 +2,8 @@ from module.army.infantry import *
 class LifeGuardInfantry(Infantry):
 
     def __init__(self):
-        self.type = "Regular Indantry"
+        self.name = "Life guard Infantry"
+        self.type = "Regular Infantry"
         self.armament = "Smoothbore Musket"
         self.hand_to_hand = 7
         self.shooting = 3

@@ -2,6 +2,7 @@ from module.army.cavalry import *
 class LifeGuardHorse(Cavalry):
 
     def __init__(self):
+        self.name = "Life Guard Horse"
         self.type = "Regular Cavalry"
         self.armament = "Sabre"
         self.hand_to_hand = 10

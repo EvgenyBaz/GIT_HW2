@@ -2,6 +2,7 @@ from module.army.cavalry import *
 class Cuirassier(Cavalry):
 
     def __init__(self):
+        self.name = "Cuirassier"
         self.type = "Regular Cavalry"
         self.armament = "Sabre"
         self.hand_to_hand = 9

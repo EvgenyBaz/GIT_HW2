@@ -15,3 +15,6 @@ class Unit:
 
     def get_cost_of_battalion(self):
         return self.cost
+
+    def get_name_of_battalion(self):
+        return self.name

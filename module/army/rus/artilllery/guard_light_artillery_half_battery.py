@@ -2,7 +2,8 @@ from module.army.artillery import *
 class Guard_Light_Artillery_Half_Battery(Artillery):
 
     def __init__(self):
-        self.type = "Regular Artilery"
+        self.name = "Guard Light Artillery Half Battery"
+        self.type = "Regular Artillery"
         self.armament = "Smoothbore Artillery"
         self.hand_to_hand = 1
         self.shooting = (3, 1, 1)

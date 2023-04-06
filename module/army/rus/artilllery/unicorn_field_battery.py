@@ -2,6 +2,7 @@ from module.army.artillery import *
 class Unicorn_Field_Battery(Artillery):
 
     def __init__(self):
+        self.type = "Unicorn Field Battery"
         self.type = "Regular Artilery"
         self.armament = "Smoothbore Field Howizer"
         self.hand_to_hand = 1

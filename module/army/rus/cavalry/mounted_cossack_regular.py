@@ -2,6 +2,7 @@ from module.army.cavalry import *
 class MountedCossackRegular(Cavalry):
 
     def __init__(self):
+        self.name = "Regular Mounted Cossack"
         self.type = "Regular Cavalry"
         self.armament = "Lance"
         self.hand_to_hand = 5
