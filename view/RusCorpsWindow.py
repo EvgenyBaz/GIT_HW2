@@ -13,7 +13,13 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.presenter = Presenter()
 
     def brigadeLists(self):
-        brgd_ist = self.presenter.rusLineInfantryBrigadeCorrList()
-        for btln in brgd_ist:
-            self.firstBatallion.addItem(btln.name) # тут переписать . Из презентера должны возвращаться только ссписки имен
-#надо сделать обработчик где из списка бригады достаются только имена , только стоимосить и тд в виде списков и кним обращаться
+        brgd_list = self.presenter.rusLineInfantryBrigadeCoreList()
+        for btlnName in brgd_list:
+            self.aBrgdFirstBatallion.addItem(btlnName)
+            self.aBrgdSecondfirstBatallion.addItem(btlnName)
+            self.aBrgdThirdBatallion.addItem(btlnName)
+            self.aBrgdFourthBatallion.addItem(btlnName)
+    def brigadeAdditionalList(self):
+        brgd_list = self.presenter.rusLineInfantryBrigadeAddList()
+        for btlnName in brgd_list:
+            self.aBrgdAdditionalBatallion.addItem(btlnName)

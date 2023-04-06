@@ -17,8 +17,10 @@ class InfantryBrigade:
             unit.Unit(),
             line_Infantry.LineInfantry()
         ]
+        self.infantry_brigade_list_names=[]
 
         self.additional_infantry_brigade_list = [
+            unit.Unit(),
             combined_grenadier.CombinedGrenadier(),
             opolchenie_pike.OpolcheniePike(),
             opolchenie_musket.OpolchenieMusket(),
@@ -30,7 +32,14 @@ class InfantryBrigade:
         ]
 
     def get_list_of_infantry_brigade(self):
-        return self.infantry_brigade_list
+
+        for btln in self.infantry_brigade_list:
+            self.infantry_brigade_list_names.append(btln.name)
+        return self.infantry_brigade_list_names
 
     def get_additional_list_of_infantry_brigade(self):
-        return self.additional_infantry_brigade_list
+
+        for btln in self.additional_infantry_brigade_list:
+            self.infantry_brigade_list_names.append(btln.name)
+        return self.infantry_brigade_list_names
+

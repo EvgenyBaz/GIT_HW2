@@ -27,7 +27,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Line Infantry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="firstBatallion">
+   <widget class="QComboBox" name="aBrgdFirstBatallion">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -37,7 +37,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="secondfirstBatallion">
+   <widget class="QComboBox" name="aBrgdSecondfirstBatallion">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -47,7 +47,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="thirdBatallion">
+   <widget class="QComboBox" name="aBrgdThirdBatallion">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -57,7 +57,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="fourthBatallion">
+   <widget class="QComboBox" name="aBrgdFourthBatallion">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -67,7 +67,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="additionalfirstBatallion">
+   <widget class="QComboBox" name="aBrgdAdditionalBatallion">
     <property name="geometry">
      <rect>
       <x>70</x>

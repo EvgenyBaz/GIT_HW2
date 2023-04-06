@@ -29,6 +29,7 @@ class MainWindow(QMainWindow):
         self.rusCorpsWindow = RusCorpsWindow()
 
         self.rusCorpsWindow.brigadeLists()
+        self.rusCorpsWindow.brigadeAdditionalList()
 
         self.rusCorpsWindow.show()
 
