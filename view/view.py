@@ -1,4 +1,5 @@
 # pyuic6 StartGuiWindow.ui -o StartGuiWindow.py
+# pyuic6 RusCorpsGuiWindow.ui -o RusCorpsGuiWindow.py
 
 from PyQt6 import QtGui
 from PyQt6 import uic
@@ -20,6 +21,8 @@ class MainWindow(QMainWindow):
 
     def show_StartWindow(self):
         self.startWindow = StartWindow()
+        self.startWindow.setWindowTitle("Black Powder 2.0 Army Builder")
+
         self.startWindow.pushButton_Russia.clicked.connect(self.show_RusCorpsWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
         self.startWindow.pushButton_Russia.clicked.connect(self.startWindow.close) # выключаем текущее окно
         self.startWindow.pushButton_France.clicked.connect(self.the_fra_button_was_clicked) # заглушка
@@ -27,15 +30,17 @@ class MainWindow(QMainWindow):
 
     def show_RusCorpsWindow(self):
         self.rusCorpsWindow = RusCorpsWindow()
+        self.rusCorpsWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
-        self.rusCorpsWindow.brigadeLists()
-        self.rusCorpsWindow.brigadeAdditionalList()
+        self.rusCorpsWindow.brigade_bttln_Lists()
 
         self.rusCorpsWindow.show()
 
 
     def the_fra_button_was_clicked(self): # заглушка
         print("fra_clicked")
+
+
 
 
 app = QtWidgets.QApplication(sys.argv)
