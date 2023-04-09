@@ -1,35 +1,22 @@
 from module.army.rus.infantry_brigade import InfantryBrigade
+
+
 class Presenter():
     def __init__(self):
-        # self.rusInfantryBrigade1stBthn = []
-        # self.rusInfantryBrigade2ndBthn = []
-        # self.rusInfantryBrigade3rdBthn = []
-        # self.rusInfantryBrigade4thBthn = []
         self.infantry_brigade = InfantryBrigade()
-    def rusLineInfantryBrigade1stBttlnList(self):
-        return self.infantry_brigade.get_list_of_first_battalion_names()
-    def rusLineInfantryBrigade1stBttlnCost(self, index):
-        return self.infantry_brigade.get_cost_of_first_battalion(index)
 
-    def rusLineInfantryBrigade2ndBttlnList(self):
-        return self.infantry_brigade.get_list_of_second_battalion_names()
+    # запрос на список имен батальонов
+    def rusLineInfantryBrigadeBttlnList(self, order_number):
+        return self.infantry_brigade.get_list_battalion_names(order_number)
 
-    def rusLineInfantryBrigade2ndBttlnCost(self, index):
-        return self.infantry_brigade.get_cost_of_second_battalion(index)
-    def rusLineInfantryBrigade3rdBttlnList(self):
-        return self.infantry_brigade.get_list_of_third_battalion_names()
+        # отправляет данные в модель для заполнения списка бригады
+    def rusLineInfantryBrigadeBttlnChoosen(self, order_number, bttln_choosen_from_list):
+        self.infantry_brigade.set_battalion_to_list (order_number, bttln_choosen_from_list)
 
-    def rusLineInfantryBrigade3rdBttlnCost(self, index):
-        return self.infantry_brigade.get_cost_of_third_battalion(index)
+# запрос на стоимость текущего батальона
+    def rusLineInfantryBrigadeBttlnCost(self, order_number):
+        return self.infantry_brigade.get_cost_of_battalion(order_number)
 
-    def rusLineInfantryBrigade4thBttlnList(self):
-        return self.infantry_brigade.get_list_of_fourth_battalion_names()
-
-    def rusLineInfantryBrigade4thBttlnCost(self, index):
-        return self.infantry_brigade.get_cost_of_fourth_battalion(index)
-
-    def rusLineInfantryBrigadeAddList(self):
-        return self.infantry_brigade.get_additional_list_of_battalion_names()
-
-    def rusLineInfantryBrigadeAddBttlnCost(self, index):
-        return self.infantry_brigade.get_cost_of_additional_battalion(index)
+# запрос имени текущего батальона
+    def rusLineInfantryBrigadeBttlnName(self, order_number):
+        return self.infantry_brigade.get_name_of_battalion(order_number)

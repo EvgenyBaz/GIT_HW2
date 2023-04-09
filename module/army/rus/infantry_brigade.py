@@ -14,7 +14,21 @@ class InfantryBrigade:
 
     def __init__(self):
 
-        # self.infantry_brigade_list_names=[]
+        # список батальонов (обьектов) включенных в бригаду - по умолчанию unit - тоесть пустышка
+        self.infantry_brigade_list = []
+        self.infantry_brigade_list.append(unit.Unit()) # первый батальон
+        self.infantry_brigade_list.append(unit.Unit()) # второй батальон
+        self.infantry_brigade_list.append(unit.Unit()) # третий батальон
+        self.infantry_brigade_list.append(unit.Unit()) # четвертый батальон
+        self.infantry_brigade_list.append(unit.Unit()) # дополнительный батальон
+
+        # возможные вариации для каждого батальона
+        self.infantry_brigade_list_battalion_list = []
+        self.infantry_brigade_list_battalion_list.append(self.main_battalion_list()) # первый батальон - варианты
+        self.infantry_brigade_list_battalion_list.append(self.main_battalion_list()) # второй батальон - варианты
+        self.infantry_brigade_list_battalion_list.append(self.main_battalion_list()) # третий батальон - варианты
+        self.infantry_brigade_list_battalion_list.append(self.main_battalion_list()) # четвертый батальон - варианты
+        self.infantry_brigade_list_battalion_list.append(self.additional_battalion_list()) # дополнительный батальон - варианты
 
         self.infantry_brigade_first_battalion_list = self.main_battalion_list()
         self.infantry_brigade_second_battalion_list = self.main_battalion_list()
@@ -42,64 +56,22 @@ class InfantryBrigade:
             jager.Jager(),
             jager_two_battalions.JagerTwoBattalions()
         ]
+# создает список имен батальонов в зависимости от порядкового номера батальона в бригаде
+    def get_list_battalion_names(self, order_number):
 
-    def get_list_of_first_battalion_names(self):
-        infantry_brigade_list_names = []
-        for bttln in self.infantry_brigade_first_battalion_list:
-            infantry_brigade_list_names.append(bttln.name)
-        return infantry_brigade_list_names
+        infantry_brigade_bttln_list_names = []
 
-    def get_cost_of_first_battalion(self, index):
-        infantry_battalion_cost = []
-        for bttln in self.infantry_brigade_first_battalion_list:
-            infantry_battalion_cost.append(bttln.cost)
-        return infantry_battalion_cost[index]
+        for bttln in self.infantry_brigade_list_battalion_list[order_number]:
+            infantry_brigade_bttln_list_names.append(bttln.name)
+        return infantry_brigade_bttln_list_names
 
-    def get_list_of_second_battalion_names(self):
-        infantry_brigade_list_names = []
-        for bttln in self.infantry_brigade_second_battalion_list:
-            infantry_brigade_list_names.append(bttln.name)
-        return infantry_brigade_list_names
+#помещаетвыбраный в интерфейсе батальон (обьект) в список бригады на позицию соответствующую кнопке
+    def set_battalion_to_list(self, order_number, bttln_choosen_from_list):
+        self.infantry_brigade_list[order_number] = self.infantry_brigade_list_battalion_list[order_number][bttln_choosen_from_list]
 
-    def get_cost_of_second_battalion(self, index):
-        infantry_battalion_cost = []
-        for bttln in self.infantry_brigade_second_battalion_list:
-            infantry_battalion_cost.append(bttln.cost)
-        return infantry_battalion_cost[index]
+    def get_cost_of_battalion(self, order_number):
+        return self.infantry_brigade_list[order_number].cost
 
-    def get_list_of_third_battalion_names(self):
-        infantry_brigade_list_names = []
-        for bttln in self.infantry_brigade_third_battalion_list:
-            infantry_brigade_list_names.append(bttln.name)
-        return infantry_brigade_list_names
-
-    def get_cost_of_third_battalion(self, index):
-        infantry_battalion_cost = []
-        for bttln in self.infantry_brigade_third_battalion_list:
-            infantry_battalion_cost.append(bttln.cost)
-        return infantry_battalion_cost[index]
-
-    def get_list_of_fourth_battalion_names(self):
-        infantry_brigade_list_names = []
-        for bttln in self.infantry_brigade_first_battalion_list:
-            infantry_brigade_list_names.append(bttln.name)
-        return infantry_brigade_list_names
-
-    def get_cost_of_fourth_battalion(self, index):
-        infantry_battalion_cost = []
-        for bttln in self.infantry_brigade_fourth_battalion_list:
-            infantry_battalion_cost.append(bttln.cost)
-        return infantry_battalion_cost[index]
-
-    def get_additional_list_of_battalion_names(self):
-        infantry_brigade_list_names = []
-        for bttln in self.infantry_brigade_additional_battalion_list:
-            infantry_brigade_list_names.append(bttln.name)
-        return infantry_brigade_list_names
-
-    def get_cost_of_additional_battalion(self, index):
-        infantry_battalion_cost = []
-        for bttln in self.infantry_brigade_additional_battalion_list:
-            infantry_battalion_cost.append(bttln.cost)
-        return infantry_battalion_cost[index]
+    def get_name_of_battalion(self, order_number):
+        return self.infantry_brigade_list[order_number].name
 
