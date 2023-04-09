@@ -12,6 +12,8 @@ class Unit:
             "property"
         }
         self.cost = 0
+        self.bonus = {}
+        self.bonus_cost = 0
 
     def get_cost_of_battalion(self):
         return self.cost
