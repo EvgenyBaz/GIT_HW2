@@ -1,5 +1,6 @@
 # pyuic6 StartGuiWindow.ui -o StartGuiWindow.py
 # pyuic6 RusCorpsGuiWindow.ui -o RusCorpsGuiWindow.py
+# pyuic6 LineInfantryBonusGuiWindow.ui -o LineInfantryBonusGuiWindow.py
 
 from PyQt6 import QtGui
 from PyQt6 import uic
