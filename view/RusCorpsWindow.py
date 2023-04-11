@@ -1,3 +1,4 @@
+
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QHBoxLayout, QWidget, QVBoxLayout
 import sys
@@ -5,6 +6,7 @@ import sys
 from presenter import Presenter
 from view.RusCorpsGuiWindow import Ui_RusCorpsWindow
 from view.BonusWindow import BonusWindow
+
 
 # from RusCorpsGuiWindow import Ui_RusCorpsWindow
 
@@ -45,15 +47,14 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         for bttlnName in bttln_list:
             self.aBrgdAdditionalBattalion.addItem(bttlnName)
 
-
     def aBrgd1stBttlnCostView(self, index):
-# отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
-        order_number = 0 # порядковое место в бригаде
-        bttln_choosen_from_list = index # индекс выбранного баталльона из списка
-        self.presenter.rusLineInfantryBrigadeBttlnChoosen (order_number, bttln_choosen_from_list)
-# отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
+        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
+        order_number = 0  # порядковое место в бригаде
+        bttln_choosen_from_list = index  # индекс выбранного баталльона из списка
+        self.presenter.rusLineInfantryBrigadeBttlnChoosen(order_number, bttln_choosen_from_list)
+        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
         value = self.presenter.rusLineInfantryBrigadeBttlnCost(order_number)
-# записываем в соответствующее поле значение стоимости батальона
+        # записываем в соответствующее поле значение стоимости батальона
         self.aBrgdFirstBattalionCost.setText(str(value))
         self.aBrgdTotalCostView()
 
@@ -100,7 +101,7 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         bttln3_cost = self.presenter.rusLineInfantryBrigadeBttlnCost(2)
         bttln4_cost = self.presenter.rusLineInfantryBrigadeBttlnCost(3)
         bttlnAdd_cost = self.presenter.rusLineInfantryBrigadeBttlnCost(4)
-        total_cost = bttln1_cost+bttln2_cost+bttln3_cost+bttln4_cost+bttlnAdd_cost
+        total_cost = bttln1_cost + bttln2_cost + bttln3_cost + bttln4_cost + bttlnAdd_cost
         self.aBrgdTotalCost.setText(str(total_cost))
 
     def the_button_was_clicked(self):
@@ -108,9 +109,7 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.bonus2 = ""
         self.bonus3 = ""
 
-
-
-        if self.aBrgdFirstBattalion.currentIndex()!=0:
+        if self.aBrgdFirstBattalion.currentIndex() != 0:
             self.bonus_window = BonusWindow()
             self.bonus_window.setWindowTitle("First Battalion")
 
@@ -127,7 +126,7 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
 
                 # print(self.presenter.rusLineInfantryBrigadeBttlnBonusList(0))
 
-                #вводим проверку на наличие первого бонуса у батальона. Если есть то статус чекбокса - нажат
+                # вводим проверку на наличие первого бонуса у батальона. Если есть то статус чекбокса - нажат
                 if "Veteran" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(0):
                     self.bonus_window.checkBox.setChecked(True)
                 self.bonus_window.checkBox.stateChanged.connect(self.checkBox1_Action)
@@ -135,7 +134,6 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             self.bonus_window.ok_button.clicked.connect(self.ok_button_was_clicked)
             self.bonus_window.cancel_button.clicked.connect(self.cancel_button_was_clicked)
             self.bonus_window.show()
-
 
     def ok_button_was_clicked(self):
         # проверка - не переключил ли пользователь отряд , пока открыто окно выбора бонусов
@@ -152,11 +150,11 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
                     # проверяем, если такой бонус есть то удаляем
                     if "Veteran" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(0):
                         self.presenter.rusLineInfantryBrigadeBttlnBonusDel(self.bonus1, 0)
-                        self.presenter.rusLineInfantryBrigadeBttlnBonusCostAdd(self.bonus1_cost*(-1), 0)
-                # печатаем в основном окне стоимости первого батальона новое значение
-                self.aBrgdFirstBattalionCost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0)))
-                # и обновляем полную стоимость бригады
-                self.aBrgdTotalCostView()
+                        self.presenter.rusLineInfantryBrigadeBttlnBonusCostAdd(self.bonus1_cost * (-1), 0)
+            # печатаем в основном окне стоимости первого батальона новое значение
+            self.aBrgdFirstBattalionCost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0)))
+            # и обновляем полную стоимость бригады
+            self.aBrgdTotalCostView()
 
             self.bonus_window.close()
         else:
@@ -173,7 +171,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         # если чекбокс нажат и такой бонус уже есть, то показывается стоимость взятая из обьекта батальон
         if self.bonus_window.checkBox.isChecked():
             if "Veteran" not in self.presenter.rusLineInfantryBrigadeBttlnBonusList(0):
-                self.bonus_window.cost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0) + self.bonus1_cost))
+                self.bonus_window.cost.setText(
+                    str(self.presenter.rusLineInfantryBrigadeBttlnCost(0) + self.bonus1_cost))
             else:
                 self.bonus_window.cost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0)))
         # проверка если чекбокс отжат и такой бонус есть в списке бонусов батальона, то в окне отображения бонусов показывается стоимость за вычетом бонуса
@@ -181,7 +180,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         # если чекбокс отжат  и такого бонуса нет, то показывается стоимость взятая из обьекта батальон
         else:
             if "Veteran" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(0):
-                self.bonus_window.cost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0) - self.bonus1_cost))
+                self.bonus_window.cost.setText(
+                    str(self.presenter.rusLineInfantryBrigadeBttlnCost(0) - self.bonus1_cost))
             else:
                 self.bonus_window.cost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(0)))
 
