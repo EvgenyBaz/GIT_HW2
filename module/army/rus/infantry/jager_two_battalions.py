@@ -19,3 +19,5 @@ class JagerTwoBattalions(Infantry):
             "Sharpshooter"
         }
         self.cost = 90
+        self.bonus = {}
+        self.bonus_cost = 0

@@ -26,6 +26,7 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.aBrSecondBttlnModPushButton.clicked.connect(self.the_second_bttln_mod_button_was_clicked)
         self.aBrThirdBttlnModPushButton.clicked.connect(self.the_third_bttln_mod_button_was_clicked)
         self.aBrFourthBttlnModPushButton.clicked.connect(self.the_fourth_bttln_mod_button_was_clicked)
+        self.aBrAddBttlnModPushButton.clicked.connect(self.the_add_bttln_mod_button_was_clicked)
 
     def brigade_bttln_Lists(self):
         # задаем возможные варианты для первого батальона
@@ -142,6 +143,15 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
 
             self.bttln_mod_button_was_clicked(battalion_order)
 
+    def the_add_bttln_mod_button_was_clicked(self):
+
+        if self.aBrgdAdditionalBattalion.currentIndex() != 0:
+            battalion_order = "Additional Battalion"
+            self.order_number = 4  # пятый по порядку батальон
+            self.current_bttln_index = self.aBrgdAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
+
+            self.bttln_mod_button_was_clicked(battalion_order)
+
     def bttln_mod_button_was_clicked(self, battalion_order):
         self.bonus_window = BonusWindow()
         self.bonus_window.setWindowTitle(battalion_order)
@@ -158,15 +168,18 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.bonus_window.name.setText(str(self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number)))
         self.bonus_window.cost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(self.order_number)))
 
-        if str(self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number)) == "Line Infantry":
+        if str(self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number)) in [
+            "Line Infantry",
+            "Combined Grenadier",
+            "Jager",
+            "Jager 2 battalions"
+        ]:
             # подготовка к выводу бонусов
             self.bonus_window.bonus1.setText("Veteran")
             self.bonus_window.bonus2.setText("Small")
             # гасим лишнюю опцию
             self.bonus_window.bonus3.close()
             self.bonus_window.checkBox_3.close()
-
-            # print(self.presenter.rusLineInfantryBrigadeBttlnBonusList(0))
 
             # вводим проверку на наличие первого бонуса у батальона. Если есть то статус чекбокса - нажат
             if "Veteran" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
@@ -176,6 +189,51 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             if "Small" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
                 self.bonus_window.checkBox_2.setChecked(True)
             self.bonus_window.checkBox_2.stateChanged.connect(self.checkBox2_Action)
+
+        if str(self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number)) in [
+            "Opolchenie with Pike",
+            "Opolchenie with Musket",
+            "Opolchenie Jager"
+        ]:
+            # подготовка к выводу бонусов
+            self.bonus_window.bonus1.close()
+            self.bonus_window.checkBox_1.close()
+
+            self.bonus_window.bonus2.setText("Small")
+            # гасим лишнюю опцию
+            self.bonus_window.bonus3.close()
+            self.bonus_window.checkBox_3.close()
+
+            # вводим проверку на наличие второго бонуса у батальона. Если есть то статус чекбокса - нажат
+            if "Small" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                self.bonus_window.checkBox_2.setChecked(True)
+            self.bonus_window.checkBox_2.stateChanged.connect(self.checkBox2_Action)
+
+        if str(self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number)) in [
+            "Volunteer Jager with Musket",
+            "Volunteer Jager with Rifle"
+        ]:
+
+            # подготовка к выводу бонусов
+            self.bonus_window.bonus1.setText("Veteran")
+            self.bonus_window.bonus2.setText("Small")
+            self.bonus_window.bonus3.setText("Sharpshooter")
+
+            # вводим проверку на наличие первого бонуса у батальона. Если есть то статус чекбокса - нажат
+            if "Veteran" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                self.bonus_window.checkBox_1.setChecked(True)
+            self.bonus_window.checkBox_1.stateChanged.connect(self.checkBox1_Action)
+            # вводим проверку на наличие второго бонуса у батальона. Если есть то статус чекбокса - нажат
+            if "Small" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                self.bonus_window.checkBox_2.setChecked(True)
+            self.bonus_window.checkBox_2.stateChanged.connect(self.checkBox2_Action)
+            # вводим проверку на наличие второго бонуса у батальона. Если есть то статус чекбокса - нажат
+            if "Sharpshooter" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                self.bonus_window.checkBox_3.setChecked(True)
+            self.bonus_window.checkBox_3.stateChanged.connect(self.checkBox3_Action)
+
+
+
 
         self.bonus_window.ok_button.clicked.connect(self.ok_button_was_clicked)
         self.bonus_window.cancel_button.clicked.connect(self.cancel_button_was_clicked)
@@ -213,6 +271,20 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
                     if "Small" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
                         self.presenter.rusLineInfantryBrigadeBttlnBonusDel(self.bonus2, self.order_number)
                         self.presenter.rusLineInfantryBrigadeBttlnBonusCostAdd(self.bonus2_cost * (-1), self.order_number)
+                    # проверка если выбранный бонус 3 не пуст то тогда применяются свойства бонууса.
+            if self.bonus3 != "":
+                # проверяем если чекбокс был нажат то добавляем свойста, если отжат , то удаляем свойства и стоимость
+                if self.bonus_window.checkBox_3.isChecked():
+                    # проверяем, если такой такого юонуса еще нет то добавляем
+                    if "Sharpshooter" not in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                        self.presenter.rusLineInfantryBrigadeBttlnBonusAdd(self.bonus3, self.order_number)
+                        self.presenter.rusLineInfantryBrigadeBttlnBonusCostAdd(self.bonus3_cost, self.order_number)
+                        print(self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number))
+                else:
+                    # проверяем, если такой бонус есть то удаляем
+                    if "Sharpshooter" in self.presenter.rusLineInfantryBrigadeBttlnBonusList(self.order_number):
+                        self.presenter.rusLineInfantryBrigadeBttlnBonusDel(self.bonus3, self.order_number)
+                        self.presenter.rusLineInfantryBrigadeBttlnBonusCostAdd(self.bonus3_cost * (-1), self.order_number)
             # печатаем в основном окне стоимости первого батальона новое значение
             match self.order_number:
                 case 0:
@@ -223,6 +295,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
                     self.aBrgdThirdBattalionCost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(self.order_number)))
                 case 3:
                     self.aBrgdFourthBattalionCost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(self.order_number)))
+                case 4:
+                    self.aBrgdAddBattalionCost.setText(str(self.presenter.rusLineInfantryBrigadeBttlnCost(self.order_number)))
             # и обновляем полную стоимость бригады
             self.aBrgdTotalCostView()
 
@@ -236,6 +310,10 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
     def checkBox1_Action(self):
         self.bonus1 = "Veteran"
         self.bonus1_cost = 8
+        # изменение величины бонуса для двух батальонов егерей
+        if self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number) == "Jager 2 battalions":
+            self.bonus1_cost *= 2
+
         # проверка если чекбокс нажат и такого бонуса еще нет в списке бонусов батальона, то в окне отображения бонусов показывается стоимость с бонусом ()
         # предварительно, эта стоимость еще не применилась к батальону
         # если чекбокс нажат и такой бонус уже есть, то показывается стоимость взятая из обьекта батальон
@@ -260,6 +338,9 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
     def checkBox2_Action(self):
         self.bonus2 = "Small"
         self.bonus2_cost = -8
+        # изменение величины бонуса для двух батальонов егерей
+        if self.presenter.rusLineInfantryBrigadeBttlnName(self.order_number) == "Jager 2 battalions":
+            self.bonus2_cost *= 2
 
         if self.bonus_window.checkBox_2.isChecked():
             if "Small" not in self.temporary_bonus_list:
@@ -283,3 +364,22 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
     def checkBox3_Action(self):
         self.bonus3 = "Sharpshooter"
         self.bonus3_cost = 3
+
+        if self.bonus_window.checkBox_3.isChecked():
+            if "Sharpshooter" not in self.temporary_bonus_list:
+
+                self.temporary_bonus_cost += self.bonus3_cost  # к временной стоимости прибавляем стоимость бонуса
+                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
+                self.temporary_bonus_list["Sharpshooter"] = None  # вносим бонус во временный список
+
+            else:
+                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
+        else:
+            if "Sharpshooter" in self.temporary_bonus_list:
+
+                self.temporary_bonus_cost -= self.bonus3_cost  # от временной стоимости вычитаем стоимость бонуса
+                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
+                del self.temporary_bonus_list["Sharpshooter"]  # удаляем бонус из временный список
+
+            else:
+                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))

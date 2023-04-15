@@ -17,3 +17,5 @@ class Grenadier(Infantry):
             "Elite 4+"
         }
         self.cost = 48
+        self.bonus = {}
+        self.bonus_cost = 0

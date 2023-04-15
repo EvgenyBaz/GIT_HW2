@@ -14,3 +14,5 @@ class DragoonOnFoot(Infantry):
             "Small"
         }
         self.cost = 28
+        self.bonus = {}
+        self.bonus_cost = 0

@@ -19,3 +19,5 @@ class LifeGuardJager(Infantry):
             "Sharpshooter"
         }
         self.cost = 59
+        self.bonus = {}
+        self.bonus_cost = 0

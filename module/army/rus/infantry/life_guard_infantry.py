@@ -18,3 +18,5 @@ class LifeGuardInfantry(Infantry):
             "Valiant"
         }
         self.cost = 61
+        self.bonus = {}
+        self.bonus_cost = 0

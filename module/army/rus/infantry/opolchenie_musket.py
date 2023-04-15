@@ -16,3 +16,5 @@ class OpolchenieMusket(Infantry):
             "Lacking Initiative"
         }
         self.cost = 23
+        self.bonus = {}
+        self.bonus_cost = 0

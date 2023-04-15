@@ -16,3 +16,5 @@ class CombinedGrenadier(Infantry):
             "Lacking Initiative"
         }
         self.cost = 41
+        self.bonus = {}
+        self.bonus_cost = 0

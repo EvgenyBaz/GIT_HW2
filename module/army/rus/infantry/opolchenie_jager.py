@@ -16,3 +16,5 @@ class OpolchenieJager(Infantry):
             "Lacking Initiative"
         }
         self.cost = 30
+        self.bonus = {}
+        self.bonus_cost = 0

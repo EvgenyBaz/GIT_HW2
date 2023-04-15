@@ -16,3 +16,5 @@ class VolunteerJagerRifle(Infantry):
             "Lacking Initiative"
         }
         self.cost = 40
+        self.bonus = {}
+        self.bonus_cost = 0

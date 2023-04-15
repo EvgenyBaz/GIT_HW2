@@ -19,3 +19,5 @@ class Jager(Infantry):
             "Sharpshooter"
         }
         self.cost = 45
+        self.bonus = {}
+        self.bonus_cost = 0

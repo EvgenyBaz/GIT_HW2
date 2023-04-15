@@ -16,3 +16,5 @@ class OpolcheniePike(Infantry):
             "Lacking Initiative"
         }
         self.cost = 19
+        self.bonus = {}
+        self.bonus_cost = 0

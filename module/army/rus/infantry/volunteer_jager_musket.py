@@ -18,3 +18,5 @@ class VolunteerJagerMusket(Infantry):
             "Lacking Initiative"
         }
         self.cost = 37
+        self.bonus = {}
+        self.bonus_cost = 0

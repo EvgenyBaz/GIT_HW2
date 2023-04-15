@@ -301,7 +301,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>modifiy</string>
+     <string>modify</string>
     </property>
    </widget>
    <widget class="QPushButton" name="aBrSecondBttlnModPushButton">
@@ -314,7 +314,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>modifiy</string>
+     <string>modify</string>
     </property>
    </widget>
    <widget class="QPushButton" name="aBrThirdBttlnModPushButton">
@@ -327,7 +327,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>modifiy</string>
+     <string>modify</string>
     </property>
    </widget>
    <widget class="QPushButton" name="aBrFourthBttlnModPushButton">
@@ -340,7 +340,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>modifiy</string>
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="aBrAddBttlnModPushButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>200</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
     </property>
    </widget>
   </widget>
