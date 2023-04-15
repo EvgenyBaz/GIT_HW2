@@ -2,9 +2,9 @@ from module.army.infantry import *
 
 
 class VolunteerJagerMusket(Infantry):
-
+    name = "Volunteer Jager with Musket"
     def __init__(self):
-        self.name = "Volunteer Jager with Musket"
+        # self.name = "Volunteer Jager with Musket"
         self.type = "Regular Infantry"
         self.armament = "Smoothbore Musket"
         self.hand_to_hand = 6

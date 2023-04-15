@@ -1,8 +1,8 @@
 from module.army.infantry import *
 class OpolchenieJager(Infantry):
-
+    name = "Opolchenie Jager"
     def __init__(self):
-        self.name = "Opolchenie Jager"
+        # self.name = "Opolchenie Jager"
         self.type = "Regular Infantry"
         self.armament = "Smoothbore Musket and Rifled Musket"
         self.hand_to_hand = 5

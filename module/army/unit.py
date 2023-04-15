@@ -1,7 +1,8 @@
 class Unit:
+    name = "empty"
 
     def __init__(self):
-        self.name = "empty"
+        # self.name = "empty"
         self.type = "unit"
         self.armament = "weapon"
         self.hand_to_hand = 4
@@ -20,3 +21,7 @@ class Unit:
 
     def get_name_of_battalion(self):
         return self.name
+
+    @classmethod
+    def get_class_name_of_battalion(cls):
+        return cls.name

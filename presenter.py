@@ -22,6 +22,18 @@ class Presenter():
     def rusLineInfantryBrigadeBttlnName(self, order_number):
         return self.infantry_brigade.get_name_of_battalion(order_number)
 
+    #запрос на список бонусов для бригады
+    def rusLineInfantryBrigadeBonusNameList(self, order_number):
+        return self.infantry_brigade.get_infantry_brigade_bonus_list_names()[order_number]
+
+    # запрос на список стоимости бонусов для бригады
+    def rusLineInfantryBrigadeBonusCostList(self, order_number):
+        return self.infantry_brigade.get_infantry_brigade_bonus_list_costs()[order_number]
+
+    def rusLineInfantryBrigadeBonusToBattalion(self, bonus_name):
+        return self.infantry_brigade.get_infantry_brigade_bonus_to_battalion_list(bonus_name)
+
+
     # отправляем добавление бонуса к батальону
     def rusLineInfantryBrigadeBttlnBonusAdd(self, bonus, order_number):
         self.infantry_brigade.set_battalion_bonus(bonus, order_number)
