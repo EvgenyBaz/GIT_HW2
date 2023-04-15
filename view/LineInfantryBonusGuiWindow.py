@@ -16,7 +16,7 @@ class Ui_LineInfanntryBonusWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=LineInfanntryBonusWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.name = QtWidgets.QLabel(parent=self.centralwidget)
-        self.name.setGeometry(QtCore.QRect(70, 60, 131, 16))
+        self.name.setGeometry(QtCore.QRect(70, 60, 161, 16))
         self.name.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.name.setObjectName("name")
         self.cost = QtWidgets.QLabel(parent=self.centralwidget)

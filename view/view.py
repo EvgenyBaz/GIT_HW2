@@ -29,11 +29,12 @@ class MainWindow(QMainWindow):
         self.startWindow.pushButton_France.clicked.connect(self.the_fra_button_was_clicked) # заглушка
         self.startWindow.show()
 
+
     def show_RusCorpsWindow(self):
         self.rusCorpsWindow = RusCorpsWindow()
         self.rusCorpsWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
-        self.rusCorpsWindow.brigade_bttln_Lists()
+        self.rusCorpsWindow.a_brigade_bttln_Lists()
 
         self.rusCorpsWindow.show()
 

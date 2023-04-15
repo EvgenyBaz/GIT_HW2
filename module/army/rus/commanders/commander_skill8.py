@@ -1,0 +1,8 @@
+from module.army.rus.commanders.basic_commander import BasicCommander
+class CommanderSkill8(BasicCommander):
+    def __init__(self):
+        self.name = "command stuff 8"
+        self.cost = 20
+        self.special = {
+            "+1 to command"
+        }

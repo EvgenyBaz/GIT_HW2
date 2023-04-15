@@ -8,11 +8,18 @@ from module.army.rus.infantry import volunteer_jager_rifle
 from module.army.rus.infantry import jager
 from module.army.rus.infantry import jager_two_battalions
 from module.army import unit
+from module.army.rus.commanders import commander_skill7
+from module.army.rus.commanders import commander_skill8
 
 
 class InfantryBrigade:
 
     def __init__(self):
+        # список командиров
+        self.infantry_brigade_commanders_list = []
+        self.infantry_brigade_commanders_list.append(commander_skill7.CommanderSkill7())
+        self.infantry_brigade_commanders_list.append(commander_skill8.CommanderSkill8())
+
         # список батальонов (обьектов) включенных в бригаду - по умолчанию unit - тоесть пустышка
         self.infantry_brigade_list = []
         self.infantry_brigade_list.append(unit.Unit())  # первый батальон
@@ -30,13 +37,16 @@ class InfantryBrigade:
         self.infantry_brigade_list_battalion_list.append(
             self.additional_battalion_list())  # дополнительный батальон - варианты
 
-        self.infantry_brigade_first_battalion_list = self.main_battalion_list()
-        self.infantry_brigade_second_battalion_list = self.main_battalion_list()
-        self.infantry_brigade_third_battalion_list = self.main_battalion_list()
-        self.infantry_brigade_fourth_battalion_list = self.main_battalion_list()
-        self.infantry_brigade_additional_battalion_list = self.additional_battalion_list()
 
-        # self.additional_infantry_brigade_list =
+    def get_list_commanders_names(self):
+        infantry_brigade_cmndrs_names = []
+        for cmndr in self.infantry_brigade_commanders_list:
+            infantry_brigade_cmndrs_names.append(cmndr.get_name_of_commander())
+        return infantry_brigade_cmndrs_names
+
+# по порядковому номеру в списке командиров возвращает его стоимость
+    def get_costs_of_commander(self, index):
+        return self.infantry_brigade_commanders_list[index].get_cost_of_commander()
 
     def main_battalion_list(self):
         return [
@@ -65,7 +75,7 @@ class InfantryBrigade:
             infantry_brigade_bttln_list_names.append(bttln.name)
         return infantry_brigade_bttln_list_names
 
-    # помещаетвыбраный в интерфейсе батальон (обьект) в список бригады на позицию соответствующую кнопке
+    # помещает выбраный в интерфейсе батальон (обьект) в список бригады на позицию соответствующую кнопке
     def set_battalion_to_list(self, order_number, bttln_choosen_from_list):
         self.infantry_brigade_list[order_number] = self.infantry_brigade_list_battalion_list[order_number][
             bttln_choosen_from_list]
