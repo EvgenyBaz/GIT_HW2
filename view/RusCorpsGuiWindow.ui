@@ -1269,7 +1269,7 @@
    <widget class="QLabel" name="generalCost">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>560</x>
       <y>60</y>
       <width>51</width>
       <height>21</height>
@@ -1315,9 +1315,9 @@
    <widget class="QComboBox" name="generalName">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>660</x>
       <y>60</y>
-      <width>191</width>
+      <width>401</width>
       <height>22</height>
      </rect>
     </property>
@@ -1325,7 +1325,7 @@
    <widget class="QLabel" name="Cost_4">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>560</x>
       <y>40</y>
       <width>51</width>
       <height>21</height>
