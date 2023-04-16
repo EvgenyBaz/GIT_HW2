@@ -44,26 +44,26 @@ class InfantryBrigade:
         self.infantry_brigade_bonus_list.append(["Small", -8])
         self.infantry_brigade_bonus_list.append(["Sharpshooter", 3])
 
-        # зададим сллтветствие бонусу - батальона
+        # зададим соответствие бонусу - батальона
         self.infantry_brigade_bonus_battalion_correspondence = {}
         self.infantry_brigade_bonus_battalion_correspondence = \
-            {"Veteran": [LineInfantry.get_class_name_of_battalion(),
-                         CombinedGrenadier.get_class_name_of_battalion(),
-                         Jager.get_class_name_of_battalion(),
-                         JagerTwoBattalions.get_class_name_of_battalion(),
-                         VolunteerJagerRifle.get_class_name_of_battalion(),
-                         VolunteerJagerMusket.get_class_name_of_battalion()],
-             "Small": [LineInfantry.get_class_name_of_battalion(),
-                       CombinedGrenadier.get_class_name_of_battalion(),
-                       Jager.get_class_name_of_battalion(),
-                       JagerTwoBattalions.get_class_name_of_battalion(),
-                       OpolcheniePike.get_class_name_of_battalion(),
-                       OpolchenieMusket.get_class_name_of_battalion(),
-                       OpolchenieJager.get_class_name_of_battalion(),
-                       VolunteerJagerRifle.get_class_name_of_battalion(),
-                       VolunteerJagerMusket.get_class_name_of_battalion()],
-             "Sharpshooter": [VolunteerJagerRifle.get_class_name_of_battalion(),
-                              VolunteerJagerMusket.get_class_name_of_battalion()]
+            {"Veteran": [LineInfantry.get_name_of_battalion(),
+                         CombinedGrenadier.get_name_of_battalion(),
+                         Jager.get_name_of_battalion(),
+                         JagerTwoBattalions.get_name_of_battalion(),
+                         VolunteerJagerRifle.get_name_of_battalion(),
+                         VolunteerJagerMusket.get_name_of_battalion()],
+             "Small": [LineInfantry.get_name_of_battalion(),
+                       CombinedGrenadier.get_name_of_battalion(),
+                       Jager.get_name_of_battalion(),
+                       JagerTwoBattalions.get_name_of_battalion(),
+                       OpolcheniePike.get_name_of_battalion(),
+                       OpolchenieMusket.get_name_of_battalion(),
+                       OpolchenieJager.get_name_of_battalion(),
+                       VolunteerJagerRifle.get_name_of_battalion(),
+                       VolunteerJagerMusket.get_name_of_battalion()],
+             "Sharpshooter": [VolunteerJagerRifle.get_name_of_battalion(),
+                              VolunteerJagerMusket.get_name_of_battalion()]
              }
 
     def get_infantry_brigade_bonus_to_battalion_list(self, bonus_name):
