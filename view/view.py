@@ -35,6 +35,8 @@ class MainWindow(QMainWindow):
         self.rusCorpsWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
         self.rusCorpsWindow.a_brigade_bttln_Lists()
+        self.rusCorpsWindow.b_brigade_bttln_Lists()
+        self.rusCorpsWindow.c_brigade_bttln_Lists()
 
         self.rusCorpsWindow.show()
 
