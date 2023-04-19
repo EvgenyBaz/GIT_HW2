@@ -34,17 +34,17 @@ class MainWindow(QMainWindow):
         self.rusCorpsWindow = RusCorpsWindow()
         self.rusCorpsWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
-
         self.rusCorpsWindow.generalCost.setText("0")
         self.rusCorpsWindow.aBrgdTotalCost.setText("0")
         self.rusCorpsWindow.bBrgdTotalCost.setText("0")
         self.rusCorpsWindow.cBrgdTotalCost.setText("0")
-
+        self.rusCorpsWindow.JgrBrgdTotalCost.setText("0")
 
         self.rusCorpsWindow.corps_cmndrs_list()
         self.rusCorpsWindow.a_brigade_bttln_Lists()
         self.rusCorpsWindow.b_brigade_bttln_Lists()
         self.rusCorpsWindow.c_brigade_bttln_Lists()
+        self.rusCorpsWindow.jgr_brigade_bttln_Lists()
 
         self.rusCorpsWindow.show()
 

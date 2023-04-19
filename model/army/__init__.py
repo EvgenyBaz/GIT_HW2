@@ -1,1 +1,1 @@
-from model.army.rus import corps
+from model.army.rus import rus_corps

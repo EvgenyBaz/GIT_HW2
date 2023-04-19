@@ -22,7 +22,7 @@ from model.army.rus.commanders.stroganov import Stroganov
 from model.army.rus.commanders.vorontsov import Vorontsov
 from model.army.rus.commanders.bogdanovsky import Bogdanovsky
 
-class Corps:
+class RusCorps:
 
     def __init__(self):
         self.corps_list = [
