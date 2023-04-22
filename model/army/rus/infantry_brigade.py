@@ -11,6 +11,7 @@ from model.army.rus.infantry.volunteer_jager_rifle import VolunteerJagerRifle
 from model.army.rus.infantry.jager import Jager
 from model.army.rus.infantry.jager_two_battalions import JagerTwoBattalions
 
+from model.army.basic_commander import BasicCommander
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
 from model.army.rus.commanders.commander_skill8 import CommanderSkill8
 
@@ -20,6 +21,7 @@ class InfantryBrigade(Brigade):
     def __init__(self):
         # список командиров
         self.brigade_commanders_list = []
+        self.brigade_commanders_list.append(BasicCommander())
         self.brigade_commanders_list.append(CommanderSkill7())
         self.brigade_commanders_list.append(CommanderSkill8())
 
@@ -67,6 +69,7 @@ class InfantryBrigade(Brigade):
              "Sharpshooter": [VolunteerJagerRifle.get_name_of_battalion(),
                               VolunteerJagerMusket.get_name_of_battalion()]
              }
+
 
     def main_battalion_list(self):
         return [

@@ -1,4 +1,4 @@
-from model.army.rus.commanders.basic_commander import BasicCommander
+from model.army.basic_commander import BasicCommander
 class Bagration(BasicCommander):
     def __init__(self):
         self.name = "General of Infantry Pyotr Ivanovich Bargation. CS 9 "

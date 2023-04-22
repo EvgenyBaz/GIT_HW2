@@ -4,6 +4,7 @@ from model.army.unit import Unit
 from model.army.rus.infantry.jager import Jager
 from model.army.rus.infantry.grenadier import Grenadier
 
+from model.army.basic_commander import BasicCommander
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
 from model.army.rus.commanders.commander_skill8 import CommanderSkill8
 
@@ -12,6 +13,7 @@ class JagerBrigade(Brigade):
     def __init__(self):
         # список командиров
         self.brigade_commanders_list = []
+        self.brigade_commanders_list.append(BasicCommander())
         self.brigade_commanders_list.append(CommanderSkill7())
         self.brigade_commanders_list.append(CommanderSkill8())
 

@@ -1,6 +1,6 @@
 class BasicCommander:
     def __init__(self):
-        self.name = ""
+        self.name = "empty"
         self.cost = 0
         self.special = {}
 

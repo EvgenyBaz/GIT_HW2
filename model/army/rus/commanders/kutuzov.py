@@ -1,4 +1,4 @@
-from model.army.rus.commanders.basic_commander import BasicCommander
+from model.army.basic_commander import BasicCommander
 class Kutuzov(BasicCommander):
     def __init__(self):
         self.name = "General of Infantry Mikhail Illarionovich Golenischev-Kutuzov. CS 7 "

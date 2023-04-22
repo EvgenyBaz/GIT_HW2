@@ -1,4 +1,4 @@
-from model.army.rus.commanders.basic_commander import BasicCommander
+from model.army.basic_commander import BasicCommander
 class CommanderSkill7(BasicCommander):
     def __init__(self):
         self.name = "command stuff 7"
