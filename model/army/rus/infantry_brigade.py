@@ -47,6 +47,8 @@ class InfantryBrigade(Brigade):
         self.brigade_bonus_list.append(["Veteran", 8])
         self.brigade_bonus_list.append(["Small", -8])
         self.brigade_bonus_list.append(["Sharpshooter", 3])
+        self.brigade_bonus_list.append(["Veteran regiment", 16])
+        self.brigade_bonus_list.append(["Small regiment", -16])
 
         # зададим соответствие бонусу - батальона
         self.brigade_bonus_battalion_correspondence = {}
@@ -54,20 +56,20 @@ class InfantryBrigade(Brigade):
             {"Veteran": [LineInfantry.get_name_of_battalion(),
                          CombinedGrenadier.get_name_of_battalion(),
                          Jager.get_name_of_battalion(),
-                         JagerTwoBattalions.get_name_of_battalion(),
                          VolunteerJagerRifle.get_name_of_battalion(),
                          VolunteerJagerMusket.get_name_of_battalion()],
              "Small": [LineInfantry.get_name_of_battalion(),
                        CombinedGrenadier.get_name_of_battalion(),
                        Jager.get_name_of_battalion(),
-                       JagerTwoBattalions.get_name_of_battalion(),
                        OpolcheniePike.get_name_of_battalion(),
                        OpolchenieMusket.get_name_of_battalion(),
                        OpolchenieJager.get_name_of_battalion(),
                        VolunteerJagerRifle.get_name_of_battalion(),
                        VolunteerJagerMusket.get_name_of_battalion()],
              "Sharpshooter": [VolunteerJagerRifle.get_name_of_battalion(),
-                              VolunteerJagerMusket.get_name_of_battalion()]
+                              VolunteerJagerMusket.get_name_of_battalion()],
+             "Veteran regiment": [JagerTwoBattalions.get_name_of_battalion()],
+             "Small regiment": [JagerTwoBattalions.get_name_of_battalion()]
              }
 
 

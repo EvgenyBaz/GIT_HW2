@@ -46,16 +46,12 @@ class JagerBrigade(Brigade):
         self.brigade_bonus_list = []
         self.brigade_bonus_list.append(["Veteran", 8])
         self.brigade_bonus_list.append(["Small", -8])
-        self.brigade_bonus_list.append(["None", 0])
 
         # зададим соответствие бонусу - батальона
         self.brigade_bonus_battalion_correspondence = {}
         self.brigade_bonus_battalion_correspondence = \
             {"Veteran": [Jager.get_name_of_battalion()],
-             "Small": [Jager.get_name_of_battalion()],
-             "None": []
-             }
-
+             "Small": [Jager.get_name_of_battalion()]}
 
     def main_battalion_list(self):
         return [

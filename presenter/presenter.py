@@ -23,12 +23,15 @@ class Presenter():
         return self.corps.get_brigade(brigade_number).get_name_of_battalion(order_number)
 
     #запрос на список бонусов для бригады
-    def BrigadeBonusNameList(self, order_number, brigade_number):
-        return self.corps.get_brigade(brigade_number).get_brigade_bonus_list_names()[order_number]
+    def BrigadeBonusNameList(self,brigade_number):
+        return self.corps.get_brigade(brigade_number).get_brigade_bonus_list_names()
+
+    # def BrigadeBonusNameList(self, order_number, brigade_number):
+    #     return self.corps.get_brigade(brigade_number).get_brigade_bonus_list_names()[order_number]
 
     # запрос на список стоимости бонусов для бригады
-    def BrigadeBonusCostList(self, order_number, brigade_number):
-        return self.corps.get_brigade(brigade_number).get_brigade_bonus_list_costs()[order_number]
+    def BrigadeBonusCostList(self, brigade_number):
+        return self.corps.get_brigade(brigade_number).get_brigade_bonus_list_costs()
 
     def BrigadeBonusToBattalion(self, bonus_name, brigade_number):
         return self.corps.get_brigade(brigade_number).get_brigade_bonus_to_battalion_list(bonus_name)

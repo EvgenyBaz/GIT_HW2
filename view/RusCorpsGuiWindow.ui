@@ -313,6 +313,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>modify</string>
     </property>
@@ -1620,6 +1623,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="JgrBrgdFirstBattalion">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -4858,7 +4864,7 @@
      <rect>
       <x>1270</x>
       <y>750</y>
-      <width>191</width>
+      <width>201</width>
       <height>61</height>
      </rect>
     </property>

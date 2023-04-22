@@ -116,7 +116,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         # записываем в соответствующее поле значение стоимости батальона
         brgdBattalionCost.setText(str(value))
         brgdTotalCostView()
-        self.check_bttln_bonus_for_button_color(order_number, brigade_number, bttlnModPushButton)
+        if bttlnModPushButton != None:
+            self.check_bttln_bonus_for_button_color(order_number, brigade_number, bttlnModPushButton)
 
 
     # -------------------------------------------------------------------------------------------------------------------
@@ -618,9 +619,35 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.bonus_window.setWindowTitle(battalion_order)
         self.mod_button_name = mod_button_name
 
-        self.bonus1 = ""
-        self.bonus2 = ""
-        self.bonus3 = ""
+        self.bonuses = [
+            "",
+            "",
+            "",
+            "",
+            "",
+        ]
+
+        self.bonuses_list_in_window = [
+            self.bonus_window.bonus1,
+            self.bonus_window.bonus2,
+            self.bonus_window.bonus3,
+            self.bonus_window.bonus4,
+            self.bonus_window.bonus5,
+        ]
+
+        self.bonuses_checkboxes_in_window = [
+            self.bonus_window.checkBox_1,
+            self.bonus_window.checkBox_2,
+            self.bonus_window.checkBox_3,
+            self.bonus_window.checkBox_4,
+            self.bonus_window.checkBox_5,
+        ]
+
+        checkbox_Action_list =[
+            self.checkBox1_Action,
+            self.checkBox2_Action,
+            self.checkBox3_Action
+        ]
 
         # создаем временную переменную стоимости батальона , для отображения в окне бонусов
         self.temporary_bonus_cost = self.presenter.BrigadeBttlnCost(self.order_number, self.brigade_number)
@@ -630,111 +657,57 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.bonus_window.name.setText(str(self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number)))
         self.bonus_window.cost.setText(str(self.presenter.BrigadeBttlnCost(self.order_number, self.brigade_number)))
 
-        # заполняем названия бонусов
-        self.bonus_window.bonus1.setText(self.presenter.BrigadeBonusNameList(0, self.brigade_number))
-        self.bonus_window.bonus2.setText(self.presenter.BrigadeBonusNameList(1, self.brigade_number))
-        self.bonus_window.bonus3.setText(self.presenter.BrigadeBonusNameList(2, self.brigade_number))
+        self.btln_bonus_list =[]
+        self.btln_bonus_cost_list = []
 
-        # если имя выбранного батальона не соответствует списку имен для данного бонуса, то выключаем этот пункт меню
-        if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) not in \
-                self.presenter.BrigadeBonusToBattalion(
-                    self.presenter.BrigadeBonusNameList(0, self.brigade_number), self.brigade_number):
-            self.bonus_window.bonus1.close()
-            self.bonus_window.checkBox_1.close()
+        apply_bonus_count = 0
+        for bonus_count in range (0, len(self.presenter.BrigadeBonusNameList(self.brigade_number))):
+            # проверяем Имя текущего батальона находится среди имен батальонов списка соответствия бонуса к батальонам
+            if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) in self.presenter.BrigadeBonusToBattalion(self.presenter.BrigadeBonusNameList(self.brigade_number)[bonus_count], self.brigade_number):
 
-        if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) not in \
-                self.presenter.BrigadeBonusToBattalion(
-                    self.presenter.BrigadeBonusNameList(1, self.brigade_number), self.brigade_number):
-            self.bonus_window.bonus2.close()
-            self.bonus_window.checkBox_2.close()
+                self.bonuses_list_in_window[apply_bonus_count].setText(self.presenter.BrigadeBonusNameList(self.brigade_number)[bonus_count])
+                #создаем локальтный список всех возможных бонусов батальона
+                self.btln_bonus_list.append(self.presenter.BrigadeBonusNameList(self.brigade_number)[bonus_count])
+                self.btln_bonus_cost_list.append(self.presenter.BrigadeBonusCostList(self.brigade_number)[bonus_count])
 
-        if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) not in \
-                self.presenter.BrigadeBonusToBattalion(
-                    self.presenter.BrigadeBonusNameList(2, self.brigade_number), self.brigade_number):
-            self.bonus_window.bonus3.close()
-            self.bonus_window.checkBox_3.close()
+                apply_bonus_count +=1
 
-        # вводим проверку на наличие первого бонуса у батальона. Если есть то статус чекбокса - нажат
-        if self.presenter.BrigadeBonusNameList(0, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(
-                self.order_number, self.brigade_number):
-            self.bonus_window.checkBox_1.setChecked(True)
-        self.bonus_window.checkBox_1.stateChanged.connect(self.checkBox1_Action)
-        # вводим проверку на наличие второго бонуса у батальона. Если есть то статус чекбокса - нажат
-        if self.presenter.BrigadeBonusNameList(1, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(
-                self.order_number, self.brigade_number):
-            self.bonus_window.checkBox_2.setChecked(True)
-        self.bonus_window.checkBox_2.stateChanged.connect(self.checkBox2_Action)
-        # вводим проверку на наличие второго бонуса у батальона. Если есть то статус чекбокса - нажат
-        if self.presenter.BrigadeBonusNameList(2, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(
-                self.order_number, self.brigade_number):
-            self.bonus_window.checkBox_3.setChecked(True)
-        self.bonus_window.checkBox_3.stateChanged.connect(self.checkBox3_Action)
+        #закрываем оставшиеся ненужные строки
+        for i in range (apply_bonus_count, 5):
+            self.bonuses_list_in_window[i].close()
+            self.bonuses_checkboxes_in_window[i].close()
+
+        # расставляем статус "нажато" если такой бонус был ранее добавлен
+        for i in range (0, len(self.btln_bonus_list)):
+            if self.btln_bonus_list[i] in self.presenter.BrigadeBttlnBonusList(
+                    self.order_number, self.brigade_number):
+                self.bonuses_checkboxes_in_window[i].setChecked(True)
+            self.bonuses_checkboxes_in_window[i].stateChanged.connect(checkbox_Action_list[i])
 
         self.bonus_window.ok_button.clicked.connect(self.ok_button_was_clicked)
-
         self.bonus_window.cancel_button.clicked.connect(self.cancel_button_was_clicked)
         self.bonus_window.show()
 
     def ok_button_was_clicked(self):
+
         # проверка - не переключил ли пользователь отряд , пока открыто окно выбора бонусов
         if self.current_bttln_index != 0:
-            # проверка если выбранный бонус не пуст то тогда применяются свойства бонууса.
-            if self.bonus1 != "":
-                # проверяем если чекбокс был нажат то добавляем свойста, если отжат , то удаляем свойства и стоимость
-                if self.bonus_window.checkBox_1.isChecked():
-                    # проверяем, если такой такого юонуса еще нет то добавляем
-                    if self.presenter.BrigadeBonusNameList(
-                            0, self.brigade_number) not in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                                self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusAdd(self.bonus1, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus1_cost, self.order_number,
-                                                                self.brigade_number)
-                else:
-                    # проверяем, если такой бонус есть то удаляем
-                    if self.presenter.BrigadeBonusNameList(
-                            0, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                            self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusDel(self.bonus1, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus1_cost * (-1),
-                                                                self.order_number, self.brigade_number)
-            # проверка если выбранный бонус 2 не пуст то тогда применяются свойства бонууса.
-            if self.bonus2 != "":
-                # проверяем если чекбокс был нажат то добавляем свойста, если отжат , то удаляем свойства и стоимость
-                if self.bonus_window.checkBox_2.isChecked():
-                    # проверяем, если такой такого юонуса еще нет то добавляем
-                    if self.presenter.BrigadeBonusNameList(
-                            1, self.brigade_number) not in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                                self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusAdd(self.bonus2, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus2_cost, self.order_number,
-                                                                self.brigade_number)
-                else:
-                    # проверяем, если такой бонус есть то удаляем
-                    if self.presenter.BrigadeBonusNameList(
-                            1, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                            self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusDel(self.bonus2, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus2_cost * (-1),
-                                                                self.order_number, self.brigade_number)
-                    # проверка если выбранный бонус 3 не пуст то тогда применяются свойства бонууса.
-            if self.bonus3 != "":
-                # проверяем если чекбокс был нажат то добавляем свойста, если отжат , то удаляем свойства и стоимость
-                if self.bonus_window.checkBox_3.isChecked():
-                    # проверяем, если такой такого юонуса еще нет то добавляем
-                    if self.presenter.BrigadeBonusNameList(
-                            2, self.brigade_number) not in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                                self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusAdd(self.bonus3, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus3_cost, self.order_number,
-                                                                self.brigade_number)
-                else:
-                    # проверяем, если такой бонус есть то удаляем
-                    if self.presenter.BrigadeBonusNameList(
-                            2, self.brigade_number) in self.presenter.BrigadeBttlnBonusList(self.order_number,
-                                                                                            self.brigade_number):
-                        self.presenter.BrigadeBttlnBonusDel(self.bonus3, self.order_number, self.brigade_number)
-                        self.presenter.BrigadeBttlnBonusCostAdd(self.bonus3_cost * (-1),
-                                                                self.order_number, self.brigade_number)
+
+            for i in range(0, len(self.btln_bonus_list)):
+                # проверка если выбранный бонус не пуст то тогда применяются свойства бонууса.
+                if self.bonuses[i] != "":
+                    # проверяем если чекбокс был нажат то добавляем свойста, если отжат , то удаляем свойства и стоимость
+                    if self.bonuses_checkboxes_in_window[i].isChecked():
+                        # проверяем, если такой такого юонуса еще нет то добавляем
+                        if self.btln_bonus_list[i] not in self.presenter.BrigadeBttlnBonusList(self.order_number,self.brigade_number):
+                            self.presenter.BrigadeBttlnBonusAdd(self.bonuses[i], self.order_number, self.brigade_number)
+                            self.presenter.BrigadeBttlnBonusCostAdd(self.btln_bonus_cost_list[i], self.order_number,self.brigade_number)
+                    else:
+                        # проверяем, если такой бонус есть то удаляем
+                        if self.btln_bonus_list[i] in self.presenter.BrigadeBttlnBonusList(self.order_number,self.brigade_number):
+                            self.presenter.BrigadeBttlnBonusDel(self.bonuses[i], self.order_number, self.brigade_number)
+                            self.presenter.BrigadeBttlnBonusCostAdd(self.btln_bonus_cost_list[i] * (-1),self.order_number, self.brigade_number)
+
             match self.order_number:
                 case 0:
                     self.brgdFirstBattalionCostSetText(
@@ -769,94 +742,40 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.bonus_window.close()
 
     def check_bttln_bonus_for_button_color(self, order_number, brigade_number, mod_button_name):
-        if mod_button_name!= None:
-            if len(self.presenter.BrigadeBttlnBonusList(order_number, brigade_number)) == 0:
-                mod_button_name.setStyleSheet("background-color : rgb(225,225,225) ")
-            else:
-                mod_button_name.setStyleSheet("background-color : white")
+        if len(self.presenter.BrigadeBttlnBonusList(order_number, brigade_number)) == 0:
+            mod_button_name.setStyleSheet("background-color : rgb(225,225,225) ")
+        else:
+            mod_button_name.setStyleSheet("background-color : white")
 
     def checkBox1_Action(self):
-        self.bonus1 = self.presenter.BrigadeBonusNameList(0, self.brigade_number)
-        self.bonus1_cost = self.presenter.BrigadeBonusCostList(0, self.brigade_number)
-        # изменение величины бонуса для двух батальонов егерей
-        if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) == "Jager 2 battalions":
-            self.bonus1_cost *= 2
+        self.checkBox_Action(0)
+
+    def checkBox2_Action(self):
+        self.checkBox_Action(1)
+
+    def checkBox3_Action(self):
+        self.checkBox_Action(2)
+
+    def checkBox_Action(self, order_number):
+        self.bonuses[order_number] = self.btln_bonus_list[order_number]
 
         # проверка если чекбокс нажат и такого бонуса еще нет в списке бонусов батальона, то в окне отображения бонусов показывается стоимость с бонусом ()
         # предварительно, эта стоимость еще не применилась к батальону
         # если чекбокс нажат и такой бонус уже есть, то показывается стоимость взятая из обьекта батальон
-        if self.bonus_window.checkBox_1.isChecked():
-            if self.presenter.BrigadeBonusNameList(0, self.brigade_number) not in self.temporary_bonus_list:
-                self.temporary_bonus_cost += self.bonus1_cost  # к временной стоимости прибавляем стоимость бонуса
+        if self.bonuses_checkboxes_in_window[order_number].isChecked():
+            if self.btln_bonus_list[order_number] not in self.temporary_bonus_list:
+                self.temporary_bonus_cost += self.btln_bonus_cost_list[order_number]  # к временной стоимости прибавляем стоимость бонуса
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(0,
-                                                        self.brigade_number)] = None  # вносим бонус во временный список
+                self.temporary_bonus_list[self.btln_bonus_list[order_number]] = None  # вносим бонус во временный список
             else:
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
         # проверка если чекбокс отжат и такой бонус есть в списке бонусов батальона, то в окне отображения бонусов показывается стоимость за вычетом бонуса
         # предварительно, эта стоимость еще не применилась к батальону
         # если чекбокс отжат  и такого бонуса нет, то показывается стоимость взятая из обьекта батальон
         else:
-            if self.presenter.BrigadeBonusNameList(0, self.brigade_number) in self.temporary_bonus_list:
-                self.temporary_bonus_cost -= self.bonus1_cost  # от временной стоимости вычитаем стоимость бонуса
+            if self.btln_bonus_list[order_number] in self.temporary_bonus_list:
+                self.temporary_bonus_cost -= self.btln_bonus_cost_list[order_number]  # от временной стоимости вычитаем стоимость бонуса
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                del self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(0, self.brigade_number)]  # удаляем бонус из временный список
-            else:
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
-
-    def checkBox2_Action(self):
-        self.bonus2 = self.presenter.BrigadeBonusNameList(1, self.brigade_number)
-        self.bonus2_cost = self.presenter.BrigadeBonusCostList(1, self.brigade_number)
-        # изменение величины бонуса для двух батальонов егерей
-        if self.presenter.BrigadeBttlnName(self.order_number, self.brigade_number) == "Jager 2 battalions":
-            self.bonus2_cost *= 2
-
-        if self.bonus_window.checkBox_2.isChecked():
-            if self.presenter.BrigadeBonusNameList(1, self.brigade_number) not in self.temporary_bonus_list:
-
-                self.temporary_bonus_cost += self.bonus2_cost  # к временной стоимости прибавляем стоимость бонуса
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(1,
-                                                        self.brigade_number)] = None  # вносим бонус во временный список
-
-            else:
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
-        else:
-            if self.presenter.BrigadeBonusNameList(1, self.brigade_number) in self.temporary_bonus_list:
-
-                self.temporary_bonus_cost -= self.bonus2_cost  # от временной стоимости вычитаем стоимость бонуса
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                del self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(1, self.brigade_number)]  # удаляем бонус из временный список
-
-            else:
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
-
-    def checkBox3_Action(self):
-        self.bonus3 = self.presenter.BrigadeBonusNameList(2, self.brigade_number)
-        self.bonus3_cost = self.presenter.BrigadeBonusCostList(2, self.brigade_number)
-
-        if self.bonus_window.checkBox_3.isChecked():
-            if self.presenter.BrigadeBonusNameList(2, self.brigade_number) not in self.temporary_bonus_list:
-
-                self.temporary_bonus_cost += self.bonus3_cost  # к временной стоимости прибавляем стоимость бонуса
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(2,
-                                                        self.brigade_number)] = None  # вносим бонус во временный список
-
-            else:
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
-        else:
-            if self.presenter.BrigadeBonusNameList(2, self.brigade_number) in self.temporary_bonus_list:
-
-                self.temporary_bonus_cost -= self.bonus3_cost  # от временной стоимости вычитаем стоимость бонуса
-                self.bonus_window.cost.setText(str(self.temporary_bonus_cost))  # печатаем стоимость в окне бонусов
-                del self.temporary_bonus_list[
-                    self.presenter.BrigadeBonusNameList(2, self.brigade_number)]  # удаляем бонус из временный список
-
+                del self.temporary_bonus_list[self.btln_bonus_list[order_number] ]  # удаляем бонус из временный список
             else:
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
