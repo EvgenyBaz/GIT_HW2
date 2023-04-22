@@ -6,6 +6,9 @@ from presenter.presenter import Presenter
 from view.RusCorpsGuiWindow import Ui_RusCorpsWindow
 from view.BonusWindow import BonusWindow
 
+from view.brigades.infantry_brigade_view import *
+from view.brigades.jager_brigade_view import *
+
 
 class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
     def __init__(self, *args, obj=None, **kwargs):
@@ -91,184 +94,55 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.generalCost.setText(str(value))
         self.corpsTotalCostView()
 
-
-    def a_brigade_bttln_Lists(self):
-        # задаем возможны варианты имен командиров
-
-        cmndrs_list = self.presenter.BrigadeCmndrsNamesList(self.a_brigade_number)
-        for cmndrName in cmndrs_list:
-            self.aBrgdCmndr.addItem(cmndrName)
-        # задаем возможные варианты для первого батальона
-
-        bttln_list = self.presenter.BrigadeBttlnList(0, self.a_brigade_number)
-
-        for bttlnName in bttln_list:
-            self.aBrgdFirstBattalion.addItem(bttlnName)
-        # задаем возможные варианты для второго батальона
-        bttln_list = self.presenter.BrigadeBttlnList(1, self.a_brigade_number)
-        for bttlnName in bttln_list:
-            self.aBrgdSecondBattalion.addItem(bttlnName)
-        # задаем возможные варианты для третьего батальона
-        bttln_list = self.presenter.BrigadeBttlnList(2, self.a_brigade_number)
-        for bttlnName in bttln_list:
-            self.aBrgdThirdBattalion.addItem(bttlnName)
-        # задаем возможные варианты для четвертого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(3, self.a_brigade_number)
-        for bttlnName in bttln_list:
-            self.aBrgdFourthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для дополнительного батальона
-        bttln_list = self.presenter.BrigadeBttlnList(4, self.a_brigade_number)
-        for bttlnName in bttln_list:
-            self.aBrgdAdditionalBattalion.addItem(bttlnName)
-
-    def b_brigade_bttln_Lists(self):
-        # задаем возможны варианты имен командиров
-        cmndrs_list = self.presenter.BrigadeCmndrsNamesList(self.b_brigade_number)
-        for cmndrName in cmndrs_list:
-            self.bBrgdCmndr.addItem(cmndrName)
-        # задаем возможные варианты для первого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(0, self.b_brigade_number)
-        for bttlnName in bttln_list:
-            self.bBrgdFirstBattalion.addItem(bttlnName)
-        # задаем возможные варианты для второго батальона
-        bttln_list = self.presenter.BrigadeBttlnList(1, self.b_brigade_number)
-        for bttlnName in bttln_list:
-            self.bBrgdSecondBattalion.addItem(bttlnName)
-        # задаем возможные варианты для третьего батальона
-        bttln_list = self.presenter.BrigadeBttlnList(2, self.b_brigade_number)
-        for bttlnName in bttln_list:
-            self.bBrgdThirdBattalion.addItem(bttlnName)
-        # задаем возможные варианты для четвертого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(3, self.b_brigade_number)
-        for bttlnName in bttln_list:
-            self.bBrgdFourthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для дополнительного батальона
-        bttln_list = self.presenter.BrigadeBttlnList(4, self.b_brigade_number)
-        for bttlnName in bttln_list:
-            self.bBrgdAdditionalBattalion.addItem(bttlnName)
-
-    def c_brigade_bttln_Lists(self):
-        # задаем возможны варианты имен командиров
-        cmndrs_list = self.presenter.BrigadeCmndrsNamesList(self.c_brigade_number)
-        for cmndrName in cmndrs_list:
-            self.cBrgdCmndr.addItem(cmndrName)
-        # задаем возможные варианты для первого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(0, self.c_brigade_number)
-        for bttlnName in bttln_list:
-            self.cBrgdFirstBattalion.addItem(bttlnName)
-        # задаем возможные варианты для второго батальона
-        bttln_list = self.presenter.BrigadeBttlnList(1, self.c_brigade_number)
-        for bttlnName in bttln_list:
-            self.cBrgdSecondBattalion.addItem(bttlnName)
-        # задаем возможные варианты для третьего батальона
-        bttln_list = self.presenter.BrigadeBttlnList(2, self.c_brigade_number)
-        for bttlnName in bttln_list:
-            self.cBrgdThirdBattalion.addItem(bttlnName)
-        # задаем возможные варианты для четвертого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(3, self.c_brigade_number)
-        for bttlnName in bttln_list:
-            self.cBrgdFourthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для дополнительного батальона
-        bttln_list = self.presenter.BrigadeBttlnList(4, self.c_brigade_number)
-        for bttlnName in bttln_list:
-            self.cBrgdAdditionalBattalion.addItem(bttlnName)
-
-    def jgr_brigade_bttln_Lists(self):
-        # задаем возможны варианты имен командиров
-
-        cmndrs_list = self.presenter.BrigadeCmndrsNamesList(self.jgr_brigade_number)
-        for cmndrName in cmndrs_list:
-            self.JgrBrgdCmndr.addItem(cmndrName)
-
-        # задаем возможные варианты для первого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(0, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdFirstBattalion.addItem(bttlnName)
-
-        # задаем возможные варианты для второго батальона
-        bttln_list = self.presenter.BrigadeBttlnList(1, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdSecondBattalion.addItem(bttlnName)
-        # задаем возможные варианты для третьего батальона
-        bttln_list = self.presenter.BrigadeBttlnList(2, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdThirdBattalion.addItem(bttlnName)
-        # задаем возможные варианты для четвертого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(3, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdFourthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для пятого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(4, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdFifthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для шестого батальона
-        bttln_list = self.presenter.BrigadeBttlnList(5, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdSixthBattalion.addItem(bttlnName)
-        # задаем возможные варианты для дополнительного батальона
-        bttln_list = self.presenter.BrigadeBttlnList(6, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdAdditional1Battalion.addItem(bttlnName)
-        bttln_list = self.presenter.BrigadeBttlnList(7, self.jgr_brigade_number)
-        for bttlnName in bttln_list:
-            self.JgrBrgdAdditional2Battalion.addItem(bttlnName)
-
-
     def corpsTotalCostView(self):
-
         total_cost =int(self.generalCost.text())+int(self.aBrgdTotalCost.text()) + int(self.bBrgdTotalCost.text()) + int(self.cBrgdTotalCost.text())+ int(self.JgrBrgdTotalCost.text())
         self.corpsTotalCost.setText(str(total_cost))
+#------------------------------------------------------------------------------------------------------------------
+    def brgdCommanderCostView(self, index, brigade_number, brgdCmndrCost):
+        value = self.presenter.BrigadeCmndrsCost(index, brigade_number)
+        brgdCmndrCost.setText(str(value))
 
-        # отправляем индекс в презентер для передачи в модель чтобы получить стоимост выбранного командира
+    def brgdBttlnCostView(self, bttln_choosen_from_list, brigade_number, brgdBattalionCost,
+                          brgdTotalCostView, order_number):
+        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
+        # order_number =  порядковое место в бригаде
+        # индекс выбранного баталльона из списка
+        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, brigade_number)
+        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
+        value = self.presenter.BrigadeBttlnCost(order_number, brigade_number)
+        # записываем в соответствующее поле значение стоимости батальона
+        brgdBattalionCost.setText(str(value))
+        brgdTotalCostView()
+
+# -------------------------------------------------------------------------------------------------------------------
+    def a_brigade_bttln_Lists(self):
+        inf_brigade_bttln_Lists(self.a_brigade_number, self.presenter, self.aBrgdCmndr, self.aBrgdFirstBattalion,
+                              self.aBrgdSecondBattalion, self.aBrgdThirdBattalion, self.aBrgdFourthBattalion,
+                              self.aBrgdAdditionalBattalion)
 
     def aBrgdCommanderCostView(self, index):
-        value = self.presenter.BrigadeCmndrsCost(index, self.a_brigade_number)
-        self.aBrgdCmndrCost.setText(str(value))
+        self.brgdCommanderCostView(index,  self.a_brigade_number, self.aBrgdCmndrCost)
         self.aBrgdTotalCostView()
 
     def aBrgd1stBttlnCostView(self, bttln_choosen_from_list):
-        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
-        order_number = 0  # порядковое место в бригаде
-        # индекс выбранного баталльона из списка
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.a_brigade_number)
-        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
-        value = self.presenter.BrigadeBttlnCost(order_number, self.a_brigade_number)
-        # записываем в соответствующее поле значение стоимости батальона
-        self.aBrgdFirstBattalionCost.setText(str(value))
-
-        self.aBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list,  self.a_brigade_number,
+                              self.aBrgdFirstBattalionCost, self.aBrgdTotalCostView, 0)
 
     def aBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 1
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.a_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.a_brigade_number)
-        self.aBrgdSecondBattalionCost.setText(str(value))
-        self.aBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
+                              self.aBrgdSecondBattalionCost, self.aBrgdTotalCostView, 1)
 
     def aBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 2
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.a_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.a_brigade_number)
-        self.aBrgdThirdBattalionCost.setText(str(value))
-        self.aBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
+                              self.aBrgdThirdBattalionCost, self.aBrgdTotalCostView, 2)
 
     def aBrgd4thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 3
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.a_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.a_brigade_number)
-        self.aBrgdFourthBattalionCost.setText(str(value))
-        self.aBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list,  self.a_brigade_number,
+                              self.aBrgdFourthBattalionCost, self.aBrgdTotalCostView, 3)
 
     def aBrgdAddBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 4
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.a_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.a_brigade_number)
-        self.aBrgdAddBattalionCost.setText(str(value))
-        self.aBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
+                              self.aBrgdAddBattalionCost, self.aBrgdTotalCostView, 4)
 
     def aBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.aBrgdCmndr.currentIndex(), self.a_brigade_number) + \
@@ -278,56 +152,42 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
         self.corpsTotalCostView()
 
     def a_the_first_bttln_mod_button_was_clicked(self):
-
         if self.aBrgdFirstBattalion.currentIndex() != 0:
-
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
             self.current_bttln_index = self.aBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFirstBattalionCostSetText = self.aBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number)
 
     def a_the_second_bttln_mod_button_was_clicked(self):
-
         if self.aBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
             self.current_bttln_index = self.aBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdSecondBattalionCostSetText = self.aBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number)
 
     def a_the_third_bttln_mod_button_was_clicked(self):
-
         if self.aBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
             self.current_bttln_index = self.aBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdThirdBattalionCostSetText = self.aBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number)
 
     def a_the_fourth_bttln_mod_button_was_clicked(self):
-
         if self.aBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
             self.current_bttln_index = self.aBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFourthBattalionCostSetText = self.aBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number)
 
     def a_the_add_bttln_mod_button_was_clicked(self):
-
         if self.aBrgdAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 4  # пятый по порядку батальон
@@ -337,56 +197,34 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number)
 
     # -------------------------------------------------------------------------------------------------------------------
+    def b_brigade_bttln_Lists(self):
+        inf_brigade_bttln_Lists(self.b_brigade_number, self.presenter, self.bBrgdCmndr, self.bBrgdFirstBattalion,
+                              self.bBrgdSecondBattalion, self.bBrgdThirdBattalion, self.bBrgdFourthBattalion,
+                              self.bBrgdAdditionalBattalion)
     # описание кнопок второй бригады
     def bBrgdCommanderCostView(self, index):
-        value = self.presenter.BrigadeCmndrsCost(index, self.b_brigade_number)
-        self.bBrgdCmndrCost.setText(str(value))
+        self.brgdCommanderCostView(index, self.b_brigade_number, self.bBrgdCmndrCost)
         self.bBrgdTotalCostView()
 
     def bBrgd1stBttlnCostView(self, bttln_choosen_from_list):
-        # создаем универсальную ссылку для стоимости первого батальона
-        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
-        order_number = 0  # порядковое место в бригаде
-        # индекс выбранного баталльона из списка
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.b_brigade_number)
-        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
-        value = self.presenter.BrigadeBttlnCost(order_number, self.b_brigade_number)
-        # записываем в соответствующее поле значение стоимости батальона
-        self.bBrgdFirstBattalionCost.setText(str(value))
-
-        self.bBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                              self.bBrgdFirstBattalionCost, self.bBrgdTotalCostView, 0)
 
     def bBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 1
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.b_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.b_brigade_number)
-        self.bBrgdSecondBattalionCost.setText(str(value))
-        self.bBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                              self.bBrgdSecondBattalionCost, self.bBrgdTotalCostView, 1)
 
     def bBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 2
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.b_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.b_brigade_number)
-        self.bBrgdThirdBattalionCost.setText(str(value))
-        self.bBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                              self.bBrgdThirdBattalionCost, self.bBrgdTotalCostView, 2)
 
     def bBrgd4thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 3
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.b_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.b_brigade_number)
-        self.bBrgdFourthBattalionCost.setText(str(value))
-        self.bBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                              self.bBrgdFourthBattalionCost, self.bBrgdTotalCostView, 3)
 
     def bBrgdAddBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 4
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.b_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.b_brigade_number)
-        self.bBrgdAddBattalionCost.setText(str(value))
-        self.bBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                              self.bBrgdAddBattalionCost, self.bBrgdTotalCostView, 4)
 
     def bBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.bBrgdCmndr.currentIndex(), self.b_brigade_number) + \
@@ -394,18 +232,16 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
 
         self.bBrgdTotalCost.setText(str(total_cost))
         self.corpsTotalCostView()
+
     def b_the_first_bttln_mod_button_was_clicked(self):
 
         if self.bBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
             self.current_bttln_index = self.bBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFirstBattalionCostSetText = self.bBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number)
-
 
     def b_the_second_bttln_mod_button_was_clicked(self):
 
@@ -413,10 +249,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
             self.current_bttln_index = self.bBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdSecondBattalionCostSetText = self.bBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number)
 
     def b_the_third_bttln_mod_button_was_clicked(self):
@@ -425,10 +259,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
             self.current_bttln_index = self.bBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdThirdBattalionCostSetText = self.bBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number)
 
     def b_the_fourth_bttln_mod_button_was_clicked(self):
@@ -437,10 +269,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
             self.current_bttln_index = self.bBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFourthBattalionCostSetText = self.bBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number)
 
     def b_the_add_bttln_mod_button_was_clicked(self):
@@ -449,61 +279,40 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Additional Battalion"
             self.order_number = 4  # пятый по порядку батальон
             self.current_bttln_index = self.bBrgdAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFifthBattalionCostSetText = self.bBrgdAddBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number)
 
-#-------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------
+
+    def c_brigade_bttln_Lists(self):
+        inf_brigade_bttln_Lists(self.c_brigade_number, self.presenter, self.cBrgdCmndr, self.cBrgdFirstBattalion,
+                              self.cBrgdSecondBattalion, self.cBrgdThirdBattalion, self.cBrgdFourthBattalion,
+                              self.cBrgdAdditionalBattalion)
+
     def cBrgdCommanderCostView(self, index):
-        value = self.presenter.BrigadeCmndrsCost(index, self.c_brigade_number)
-        self.cBrgdCmndrCost.setText(str(value))
+        self.brgdCommanderCostView(index, self.c_brigade_number, self.cBrgdCmndrCost)
         self.cBrgdTotalCostView()
 
     def cBrgd1stBttlnCostView(self, bttln_choosen_from_list):
-        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
-        order_number = 0  # порядковое место в бригаде
-        # индекс выбранного баталльона из списка
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.c_brigade_number)
-        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
-        value = self.presenter.BrigadeBttlnCost(order_number, self.c_brigade_number)
-        # записываем в соответствующее поле значение стоимости батальона
-        self.cBrgdFirstBattalionCost.setText(str(value))
-
-        self.cBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                              self.cBrgdFirstBattalionCost, self.cBrgdTotalCostView, 0)
 
     def cBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 1
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.c_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.c_brigade_number)
-        self.cBrgdSecondBattalionCost.setText(str(value))
-        self.cBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                              self.cBrgdSecondBattalionCost, self.cBrgdTotalCostView, 1)
 
     def cBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 2
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.c_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.c_brigade_number)
-        self.cBrgdThirdBattalionCost.setText(str(value))
-        self.cBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                              self.cBrgdThirdBattalionCost, self.cBrgdTotalCostView, 2)
 
     def cBrgd4thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 3
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.c_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.c_brigade_number)
-        self.cBrgdFourthBattalionCost.setText(str(value))
-        self.cBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                              self.cBrgdFourthBattalionCost, self.cBrgdTotalCostView, 3)
 
     def cBrgdAddBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 4
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list, self.c_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.c_brigade_number)
-        self.cBrgdAddBattalionCost.setText(str(value))
-        self.cBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                              self.cBrgdAddBattalionCost, self.cBrgdTotalCostView, 4)
 
     def cBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.cBrgdCmndr.currentIndex(), self.c_brigade_number) + \
@@ -514,14 +323,11 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
     def c_the_first_bttln_mod_button_was_clicked(self):
 
         if self.cBrgdFirstBattalion.currentIndex() != 0:
-
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
             self.current_bttln_index = self.cBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFirstBattalionCostSetText = self.cBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number)
 
     def c_the_second_bttln_mod_button_was_clicked(self):
@@ -530,10 +336,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
             self.current_bttln_index = self.cBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdSecondBattalionCostSetText = self.cBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number)
 
     def c_the_third_bttln_mod_button_was_clicked(self):
@@ -542,10 +346,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
             self.current_bttln_index = self.cBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdThirdBattalionCostSetText = self.cBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number)
 
     def c_the_fourth_bttln_mod_button_was_clicked(self):
@@ -554,10 +356,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
             self.current_bttln_index = self.cBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFourthBattalionCostSetText = self.cBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number)
 
     def c_the_add_bttln_mod_button_was_clicked(self):
@@ -570,93 +370,53 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             self.brgdTotalCostView = self.cBrgdTotalCostView
             self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number)
 
-
     # -------------------------------------------------------------------------------------------------------------------
+    def jgr_brigade_bttln_Lists(self):
+        jgr_brigade_bttln_Lists(self.jgr_brigade_number, self.presenter, self.JgrBrgdCmndr, self.JgrBrgdFirstBattalion,
+                              self.JgrBrgdSecondBattalion, self.JgrBrgdThirdBattalion, self.JgrBrgdFourthBattalion,
+                              self.JgrBrgdFifthBattalion, self.JgrBrgdSixthBattalion, self.JgrBrgdAdditional1Battalion,
+                              self.JgrBrgdAdditional2Battalion)
     def jgrBrgdCommanderCostView(self, index):
         value = self.presenter.BrigadeCmndrsCost(index, self.jgr_brigade_number)
         self.JgrBrgdCmndrCost.setText(str(value))
         self.jgrBrgdTotalCostView()
 
     def jgrBrgd1stBttlnCostView(self, bttln_choosen_from_list):
-        # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
-        order_number = 0  # порядковое место в бригаде
-        # индекс выбранного баталльона из списка
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-        # отправляем запрос стоимости батальона стоящего на соответствующем месте в бригаде
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        # записываем в соответствующее поле значение стоимости батальона
-        self.JgrBrgdFirstBattalionCost.setText(str(value))
-
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdFirstBattalionCost, self.jgrBrgdTotalCostView, 0)
 
     def jgrBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 1
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdSecondBattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdSecondBattalionCost, self.jgrBrgdTotalCostView, 1)
 
     def jgrBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 2
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdThirdBattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdThirdBattalionCost, self.jgrBrgdTotalCostView, 2)
 
     def jgrBrgd4thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 3
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdFourthBattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdFourthBattalionCost, self.jgrBrgdTotalCostView, 3)
 
     def jgrBrgd5thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 4
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdFifthBattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdFifthBattalionCost, self.jgrBrgdTotalCostView, 4)
 
     def jgrBrgd6thBttlnCostView(self, bttln_choosen_from_list):
-        order_number = 5
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdSixthBattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdSixthBattalionCost, self.jgrBrgdTotalCostView, 5)
 
     def jgrBrgdAdd1BttlnCostView(self, bttln_choosen_from_list):
-        order_number = 6
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdAdd1BattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdAdd1BattalionCost, self.jgrBrgdTotalCostView, 6)
 
     def jgrBrgdAdd2BttlnCostView(self, bttln_choosen_from_list):
-        order_number = 7
-        self.presenter.BrigadeBttlnChoosen(order_number, bttln_choosen_from_list,
-                                                          self.jgr_brigade_number)
-
-        value = self.presenter.BrigadeBttlnCost(order_number, self.jgr_brigade_number)
-        self.JgrBrgdAdd2BattalionCost.setText(str(value))
-        self.jgrBrgdTotalCostView()
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.jgr_brigade_number,
+                              self.JgrBrgdAdd2BattalionCost, self.jgrBrgdTotalCostView, 7)
 
     def jgrBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.JgrBrgdCmndr.currentIndex(),
                                                                      self.jgr_brigade_number) + \
-                     sum(self.presenter.BrigadeBttlnCost(i, self.jgr_brigade_number) for i in range(5))
+                     sum(self.presenter.BrigadeBttlnCost(i, self.jgr_brigade_number) for i in range(8))
 
         self.JgrBrgdTotalCost.setText(str(total_cost))
         self.corpsTotalCostView()
@@ -667,10 +427,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
             self.current_bttln_index = self.JgrBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFirstBattalionCostSetText = self.JgrBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
 
     def jgr_the_second_bttln_mod_button_was_clicked(self):
@@ -679,10 +437,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
             self.current_bttln_index = self.JgrBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdSecondBattalionCostSetText = self.JgrBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
 
     def jgr_the_third_bttln_mod_button_was_clicked(self):
@@ -691,10 +447,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
             self.current_bttln_index = self.JgrBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdThirdBattalionCostSetText = self.JgrBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
 
     def jgr_the_fourth_bttln_mod_button_was_clicked(self):
@@ -703,10 +457,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
             self.current_bttln_index = self.JgrBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFourthBattalionCostSetText = self.JgrBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
 
     def jgr_the_fifth_bttln_mod_button_was_clicked(self):
@@ -715,10 +467,8 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Fifth Battalion"
             self.order_number = 4  # четвертый по порядку батальон
             self.current_bttln_index = self.JgrBrgdFifthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdFifthBattalionCostSetText = self.JgrBrgdFifthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
     def jgr_the_sixth_bttln_mod_button_was_clicked(self):
 
@@ -726,15 +476,10 @@ class RusCorpsWindow(QtWidgets.QMainWindow, Ui_RusCorpsWindow):
             battalion_order = "Sixth Battalion"
             self.order_number = 5  # четвертый по порядку батальон
             self.current_bttln_index = self.JgrBrgdSixthBattalion.currentIndex()  # имя батальона выбраного на данный момент
-
             self.brgdSixthBattalionCostSetText = self.JgrBrgdSixthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-
             self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number)
-
-
     # -------------------------------------------------------------------------------------------------------------------
-
 
     def bttln_mod_button_was_clicked(self, battalion_order, brigade_number):
 

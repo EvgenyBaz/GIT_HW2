@@ -41,6 +41,7 @@ class MainWindow(QMainWindow):
         self.rusCorpsWindow.JgrBrgdTotalCost.setText("0")
 
         self.rusCorpsWindow.corps_cmndrs_list()
+        # self.rusCorpsWindow.a_brigade_bttln_Lists()
         self.rusCorpsWindow.a_brigade_bttln_Lists()
         self.rusCorpsWindow.b_brigade_bttln_Lists()
         self.rusCorpsWindow.c_brigade_bttln_Lists()

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1780</width>
-    <height>1066</height>
+    <width>1606</width>
+    <height>1224</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -447,8 +447,8 @@
    <widget class="QPushButton" name="bBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>260</y>
+      <x>300</x>
+      <y>610</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -460,8 +460,8 @@
    <widget class="QLabel" name="bBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>280</y>
+      <x>20</x>
+      <y>630</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -487,8 +487,8 @@
    <widget class="QLabel" name="bBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>240</y>
+      <x>20</x>
+      <y>590</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -517,8 +517,8 @@
    <widget class="QLabel" name="bBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>300</y>
+      <x>20</x>
+      <y>650</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -544,8 +544,8 @@
    <widget class="QLabel" name="bBrgdCmndrCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>190</y>
+      <x>20</x>
+      <y>540</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -574,8 +574,8 @@
    <widget class="QComboBox" name="bBrgdThirdBattalion">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>280</y>
+      <x>90</x>
+      <y>630</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -584,8 +584,8 @@
    <widget class="QPushButton" name="bBrAddBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>350</y>
+      <x>300</x>
+      <y>700</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -597,8 +597,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>220</y>
+      <x>90</x>
+      <y>570</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -613,8 +613,8 @@
    <widget class="QLabel" name="bBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>260</y>
+      <x>20</x>
+      <y>610</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -640,8 +640,8 @@
    <widget class="QPushButton" name="bBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>300</y>
+      <x>300</x>
+      <y>650</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -653,8 +653,8 @@
    <widget class="QPushButton" name="bBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>280</y>
+      <x>300</x>
+      <y>630</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -666,8 +666,8 @@
    <widget class="QLabel" name="bBrgdTotalCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>140</y>
+      <x>20</x>
+      <y>490</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -693,8 +693,8 @@
    <widget class="QPushButton" name="bBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>240</y>
+      <x>300</x>
+      <y>590</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -706,8 +706,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>170</y>
+      <x>90</x>
+      <y>520</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -722,8 +722,8 @@
    <widget class="QComboBox" name="bBrgdFirstBattalion">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>240</y>
+      <x>90</x>
+      <y>590</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -732,8 +732,8 @@
    <widget class="QComboBox" name="bBrgdFourthBattalion">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>300</y>
+      <x>90</x>
+      <y>650</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -742,8 +742,8 @@
    <widget class="QComboBox" name="bBrgdSecondBattalion">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>260</y>
+      <x>90</x>
+      <y>610</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -752,8 +752,8 @@
    <widget class="QLabel" name="bBrgdAddBattalionCost">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>350</y>
+      <x>20</x>
+      <y>700</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -782,8 +782,8 @@
    <widget class="QLabel" name="Cost_2">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>120</y>
+      <x>20</x>
+      <y>470</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -809,8 +809,8 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>330</y>
+      <x>90</x>
+      <y>680</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -825,8 +825,8 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>130</y>
+      <x>90</x>
+      <y>480</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -838,8 +838,8 @@
    <widget class="QComboBox" name="bBrgdCmndr">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>190</y>
+      <x>90</x>
+      <y>540</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -848,8 +848,8 @@
    <widget class="QComboBox" name="bBrgdAdditionalBattalion">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>350</y>
+      <x>90</x>
+      <y>700</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -858,8 +858,8 @@
    <widget class="QPushButton" name="cBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>240</y>
+      <x>300</x>
+      <y>880</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -871,8 +871,8 @@
    <widget class="QLabel" name="cBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>260</y>
+      <x>20</x>
+      <y>900</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -898,8 +898,8 @@
    <widget class="QComboBox" name="cBrgdAdditionalBattalion">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>350</y>
+      <x>90</x>
+      <y>990</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -908,8 +908,8 @@
    <widget class="QComboBox" name="cBrgdSecondBattalion">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>260</y>
+      <x>90</x>
+      <y>900</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -918,8 +918,8 @@
    <widget class="QPushButton" name="cBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>300</y>
+      <x>300</x>
+      <y>940</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -931,8 +931,8 @@
    <widget class="QLabel" name="Cost_3">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>120</y>
+      <x>20</x>
+      <y>760</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -958,8 +958,8 @@
    <widget class="QLabel" name="cBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>300</y>
+      <x>20</x>
+      <y>940</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -985,8 +985,8 @@
    <widget class="QComboBox" name="cBrgdFirstBattalion">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>240</y>
+      <x>90</x>
+      <y>880</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -995,8 +995,8 @@
    <widget class="QLabel" name="cBrgdAddBattalionCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>350</y>
+      <x>20</x>
+      <y>990</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1025,8 +1025,8 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>130</y>
+      <x>90</x>
+      <y>770</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -1038,8 +1038,8 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>330</y>
+      <x>90</x>
+      <y>970</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -1054,8 +1054,8 @@
    <widget class="QPushButton" name="cBrAddBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>350</y>
+      <x>300</x>
+      <y>990</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -1067,8 +1067,8 @@
    <widget class="QLabel" name="cBrgdTotalCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>140</y>
+      <x>20</x>
+      <y>780</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1094,8 +1094,8 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>220</y>
+      <x>90</x>
+      <y>860</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -1110,8 +1110,8 @@
    <widget class="QLabel" name="cBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>240</y>
+      <x>20</x>
+      <y>880</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1140,8 +1140,8 @@
    <widget class="QComboBox" name="cBrgdCmndr">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>190</y>
+      <x>90</x>
+      <y>830</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -1150,8 +1150,8 @@
    <widget class="QComboBox" name="cBrgdFourthBattalion">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>300</y>
+      <x>90</x>
+      <y>940</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -1160,8 +1160,8 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>170</y>
+      <x>90</x>
+      <y>810</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -1176,8 +1176,8 @@
    <widget class="QLabel" name="cBrgdCmndrCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>190</y>
+      <x>20</x>
+      <y>830</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1206,8 +1206,8 @@
    <widget class="QPushButton" name="cBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>280</y>
+      <x>300</x>
+      <y>920</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -1219,8 +1219,8 @@
    <widget class="QLabel" name="cBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>280</y>
+      <x>20</x>
+      <y>920</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1246,8 +1246,8 @@
    <widget class="QComboBox" name="cBrgdThirdBattalion">
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>280</y>
+      <x>90</x>
+      <y>920</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -1256,8 +1256,8 @@
    <widget class="QPushButton" name="cBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1100</x>
-      <y>260</y>
+      <x>300</x>
+      <y>900</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -1409,7 +1409,7 @@
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>220</y>
       <width>191</width>
       <height>16</height>
@@ -1425,7 +1425,7 @@
    <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>300</y>
       <width>71</width>
       <height>21</height>
@@ -1438,7 +1438,7 @@
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>170</y>
       <width>191</width>
       <height>16</height>
@@ -1454,7 +1454,7 @@
    <widget class="QComboBox" name="JgrBrgdThirdBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>280</y>
       <width>191</width>
       <height>22</height>
@@ -1464,7 +1464,7 @@
    <widget class="QLabel" name="JgrBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>280</y>
       <width>51</width>
       <height>21</height>
@@ -1491,7 +1491,7 @@
    <widget class="QLabel" name="JgrBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>240</y>
       <width>51</width>
       <height>21</height>
@@ -1521,7 +1521,7 @@
    <widget class="QLabel" name="JgrBrgdTotalCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>140</y>
       <width>51</width>
       <height>21</height>
@@ -1548,7 +1548,7 @@
    <widget class="QLabel" name="Cost_6">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>120</y>
       <width>51</width>
       <height>21</height>
@@ -1575,7 +1575,7 @@
    <widget class="QComboBox" name="JgrBrgdSecondBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>260</y>
       <width>191</width>
       <height>22</height>
@@ -1585,7 +1585,7 @@
    <widget class="QComboBox" name="JgrBrgdCmndr">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>190</y>
       <width>191</width>
       <height>22</height>
@@ -1595,7 +1595,7 @@
    <widget class="QLabel" name="JgrBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>300</y>
       <width>51</width>
       <height>21</height>
@@ -1622,7 +1622,7 @@
    <widget class="QComboBox" name="JgrBrgdFirstBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>240</y>
       <width>191</width>
       <height>22</height>
@@ -1632,8 +1632,8 @@
    <widget class="QLabel" name="JgrBrgdAdd1BattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
-      <y>410</y>
+      <x>410</x>
+      <y>390</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1662,7 +1662,7 @@
    <widget class="QLabel" name="JgrBrgdCmndrCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>190</y>
       <width>51</width>
       <height>21</height>
@@ -1692,7 +1692,7 @@
    <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>260</y>
       <width>71</width>
       <height>21</height>
@@ -1705,8 +1705,8 @@
    <widget class="QComboBox" name="JgrBrgdAdditional1Battalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>410</y>
+      <x>480</x>
+      <y>390</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -1715,7 +1715,7 @@
    <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>280</y>
       <width>71</width>
       <height>21</height>
@@ -1728,7 +1728,7 @@
    <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>240</y>
       <width>71</width>
       <height>21</height>
@@ -1741,7 +1741,7 @@
    <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>130</y>
       <width>191</width>
       <height>41</height>
@@ -1757,7 +1757,7 @@
    <widget class="QLabel" name="JgrBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>260</y>
       <width>51</width>
       <height>21</height>
@@ -1784,8 +1784,8 @@
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>390</y>
+      <x>480</x>
+      <y>370</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -1800,7 +1800,7 @@
    <widget class="QComboBox" name="JgrBrgdFourthBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>300</y>
       <width>191</width>
       <height>22</height>
@@ -1810,7 +1810,7 @@
    <widget class="QLabel" name="JgrBrgdFifthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>320</y>
       <width>51</width>
       <height>21</height>
@@ -1837,7 +1837,7 @@
    <widget class="QLabel" name="JgrBrgdSixthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
+      <x>410</x>
       <y>340</y>
       <width>51</width>
       <height>21</height>
@@ -1864,7 +1864,7 @@
    <widget class="QComboBox" name="JgrBrgdFifthBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>320</y>
       <width>191</width>
       <height>22</height>
@@ -1874,7 +1874,7 @@
    <widget class="QComboBox" name="JgrBrgdSixthBattalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>480</x>
       <y>340</y>
       <width>191</width>
       <height>22</height>
@@ -1884,8 +1884,8 @@
    <widget class="QComboBox" name="JgrBrgdAdditional2Battalion">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>430</y>
+      <x>480</x>
+      <y>410</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -1894,8 +1894,8 @@
    <widget class="QLabel" name="JgrBrgdAdd2BattalionCost">
     <property name="geometry">
      <rect>
-      <x>1220</x>
-      <y>430</y>
+      <x>410</x>
+      <y>410</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -1924,7 +1924,7 @@
    <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>320</y>
       <width>71</width>
       <height>21</height>
@@ -1937,7 +1937,7 @@
    <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1500</x>
+      <x>690</x>
       <y>340</y>
       <width>71</width>
       <height>21</height>
@@ -1947,13 +1947,2945 @@
      <string>modify</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>560</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>620</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>480</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>620</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>580</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFourthBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>640</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSixthBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>680</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>680</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>510</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>640</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>530</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>660</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>530</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>600</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>640</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>580</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>620</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>470</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Combined Grenadier brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>600</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>600</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFifthBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>660</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>580</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>680</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_7">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>460</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFifthBattalion_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>660</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>700</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSixthBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>700</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>700</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>860</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>940</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>920</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>900</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>830</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>810</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>830</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>900</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>920</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>900</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>920</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>940</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_8">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>760</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>880</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>880</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>770</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Grenadier brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>880</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFourthBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>940</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>780</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_9">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>120</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>190</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>140</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_4">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>280</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_4">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>260</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>280</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>220</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>260</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>280</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>240</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_4">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>190</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>170</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>240</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>260</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>130</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Light Cavalry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_4">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>240</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>580</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_10">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>460</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_5">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>600</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_5">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>620</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>510</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_5">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>620</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_5">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>530</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_5">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>580</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>600</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_28">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>470</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Heavy Cavalry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>620</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_5">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>530</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_29">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>560</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_5">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>580</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_5">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>480</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_5">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>600</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>960</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_30">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>860</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>940</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>920</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_6">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>900</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>980</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFifthBattalionCost_3">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>960</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>830</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_31">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>810</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_6">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>830</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>900</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_6">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>920</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>900</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFifthBattalion_3">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>960</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>920</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>940</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_11">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>760</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>880</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>880</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_32">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>770</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Cossack brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>980</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSixthBattalion_5">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>980</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_6">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>880</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFourthBattalion_4">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>940</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_6">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>780</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_7">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>190</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_7">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>240</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFourthBattalion_5">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>300</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>300</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdThirdBattalion_7">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>280</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFifthBattalion_4">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>320</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_5">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>300</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>260</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_7">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>190</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>280</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_33">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>220</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_12">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>120</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>320</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_34">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>130</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Infantry Guard Infantry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_7">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>280</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_5">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>340</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_7">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>260</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_7">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>140</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_35">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>170</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_7">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>260</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFifthBattalionCost_4">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>320</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>240</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSixthBattalion_6">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>340</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_7">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>240</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>340</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdAdditional1Battalion_2">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>390</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdAdd1BattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>390</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdAdditional2Battalion_2">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>410</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_36">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>370</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Additional Battalion</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdAdd2BattalionCost_2">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>410</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>410</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>390</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>580</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_13">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>460</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_8">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>600</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_37">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>510</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_8">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>530</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_8">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>580</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>1470</x>
+      <y>600</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_38">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>450</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Imperial Guard &lt;br/&gt;Light Cavalry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_8">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>530</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_39">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>560</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_8">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>580</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_8">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>480</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_8">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>600</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdCmndr_9">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>830</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_40">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>860</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Core Battalions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>1480</x>
+      <y>880</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdSecondBattalion_9">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>900</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>1480</x>
+      <y>900</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>modify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdTotalCost_9">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>780</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_9">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>900</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_9">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>880</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_14">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>760</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_41">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>810</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brigade Commander</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="JgrBrgdCmndrCost_9">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>830</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_42">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>750</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Imperial Guard &lt;br/&gt;Heavy Cavalry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="JgrBrgdFirstBattalion_9">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>880</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1780</width>
+     <width>1606</width>
      <height>26</height>
     </rect>
    </property>
