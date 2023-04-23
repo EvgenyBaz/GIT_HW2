@@ -1,5 +1,5 @@
 # pyuic6 StartGuiWindow.ui -o StartGuiWindow.py
-# pyuic6 RusCorpsGuiWindow.ui -o RusCorpsGuiWindow.py
+# pyuic6 RusDivisionGuiWindow.ui -o RusDivisionGuiWindow.py
 # pyuic6 LineInfantryBonusGuiWindow.ui -o LineInfantryBonusGuiWindow.py
 
 from PyQt6 import QtGui
@@ -8,11 +8,8 @@ from PyQt6.QtWidgets import QApplication, QPushButton, QMainWindow
 import sys
 from PyQt6 import QtWidgets, uic
 
-
-# from StartWindow import StartWindow
-# from RusCorpsWindow import RusCorpsWindow
 from view.StartWindow import StartWindow
-from view.RusCorpsWindow import RusCorpsWindow
+from view.RusDivisionWindow import RusDivisionWindow
 
 class MainWindow(QMainWindow):
     def __init__(self, *args, obj=None, **kwargs):
@@ -24,29 +21,31 @@ class MainWindow(QMainWindow):
         self.startWindow = StartWindow()
         self.startWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
-        self.startWindow.pushButton_Russia.clicked.connect(self.show_RusCorpsWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
+        self.startWindow.pushButton_Russia.clicked.connect(self.show_RusDivisionWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
         self.startWindow.pushButton_Russia.clicked.connect(self.startWindow.close) # выключаем текущее окно
         self.startWindow.pushButton_France.clicked.connect(self.the_fra_button_was_clicked) # заглушка
         self.startWindow.show()
 
 
-    def show_RusCorpsWindow(self):
-        self.rusCorpsWindow = RusCorpsWindow()
-        self.rusCorpsWindow.setWindowTitle("Black Powder 2.0 Army Builder")
+    def show_RusDivisionWindow(self):
+        self.rusDivisionWindow = RusDivisionWindow()
+        self.rusDivisionWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
-        self.rusCorpsWindow.generalCost.setText("0")
-        self.rusCorpsWindow.aBrgdTotalCost.setText("0")
-        self.rusCorpsWindow.bBrgdTotalCost.setText("0")
-        self.rusCorpsWindow.cBrgdTotalCost.setText("0")
-        self.rusCorpsWindow.JgrBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.generalCost.setText("0")
+        self.rusDivisionWindow.aBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.bBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.cBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.JgrBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.CombGrndrBrgdTotalCost.setText("0")
 
-        self.rusCorpsWindow.corps_cmndrs_list()
-        self.rusCorpsWindow.a_brigade_bttln_Lists()
-        self.rusCorpsWindow.b_brigade_bttln_Lists()
-        self.rusCorpsWindow.c_brigade_bttln_Lists()
-        self.rusCorpsWindow.jgr_brigade_bttln_Lists()
+        self.rusDivisionWindow.division_cmndrs_list()
+        self.rusDivisionWindow.a_brigade_bttln_Lists()
+        self.rusDivisionWindow.b_brigade_bttln_Lists()
+        self.rusDivisionWindow.c_brigade_bttln_Lists()
+        self.rusDivisionWindow.jgr_brigade_bttln_Lists()
+        self.rusDivisionWindow.comb_grndr_brigade_bttln_Lists()
 
-        self.rusCorpsWindow.show()
+        self.rusDivisionWindow.show()
 
 
     def the_fra_button_was_clicked(self): # заглушка

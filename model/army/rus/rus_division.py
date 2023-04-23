@@ -22,10 +22,10 @@ from model.army.rus.commanders.stroganov import Stroganov
 from model.army.rus.commanders.vorontsov import Vorontsov
 from model.army.rus.commanders.bogdanovsky import Bogdanovsky
 
-class RusCorps:
+class RusDivision:
 
     def __init__(self):
-        self.corps_list = [
+        self.division_list = [
             InfantryBrigade(),
             InfantryBrigade(),
             InfantryBrigade(),
@@ -40,7 +40,7 @@ class RusCorps:
             LifeGuadHeavyCavalryBrigade()
         ]
 
-        self.corps_commanders_list = [
+        self.division_commanders_list = [
             CommanderSkill7(),
             CommanderSkill8(),
             Bagration(),
@@ -56,17 +56,17 @@ class RusCorps:
         ]
 
     def get_list_commanders_names(self):
-        corps_cmndrs_names = []
-        for cmndr in self.corps_commanders_list:
-            corps_cmndrs_names.append(cmndr.get_name_of_commander())
-        return corps_cmndrs_names
+        division_cmndrs_names = []
+        for cmndr in self.division_commanders_list:
+            division_cmndrs_names.append(cmndr.get_name_of_commander())
+        return division_cmndrs_names
 
     # по порядковому номеру в списке командиров возвращает его стоимость
     def get_costs_of_commander(self, index):
-        return self.corps_commanders_list[index].get_cost_of_commander()
+        return self.division_commanders_list[index].get_cost_of_commander()
 
-    def get_list_of_corps(self):
-        return self.corps_list
+    def get_list_of_division(self):
+        return self.division_list
 
     def get_brigade(self, brigade_order):
-        return self.corps_list[brigade_order]
+        return self.division_list[brigade_order]

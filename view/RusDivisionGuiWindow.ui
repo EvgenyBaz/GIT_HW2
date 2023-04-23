@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RusCorpsWindow</class>
- <widget class="QMainWindow" name="RusCorpsWindow">
+ <class>RusDivisionWindow</class>
+ <widget class="QMainWindow" name="RusDivisionWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -90,7 +90,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Imperial Russian Army Corps&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Imperial Russian Army Division&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1379,7 +1379,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="corpsTotalCost">
+   <widget class="QLabel" name="divisionTotalCost">
     <property name="geometry">
      <rect>
       <x>1100</x>
@@ -1969,7 +1969,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -1982,7 +1982,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdTotalCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdTotalCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2009,7 +2009,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2036,7 +2036,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -2049,7 +2049,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFourthBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdFourthBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2059,7 +2059,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSixthBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdSixthBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2069,7 +2069,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrSixthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -2098,7 +2098,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -2111,7 +2111,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdCmndr_2">
+   <widget class="QComboBox" name="CombGrndrBrgdCmndr">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2121,7 +2121,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrFifthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -2134,7 +2134,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdCmndrCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdCmndrCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2164,7 +2164,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2191,7 +2191,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2218,7 +2218,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2248,7 +2248,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdThirdBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdThirdBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2261,20 +2261,20 @@
    <widget class="QLabel" name="label_20">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>470</y>
-      <width>271</width>
-      <height>41</height>
+      <x>470</x>
+      <y>460</y>
+      <width>201</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Combined Grenadier brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Combined Grenadier&lt;br/&gt; brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_2">
+   <widget class="QPushButton" name="CombGrndrBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -2287,7 +2287,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSecondBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdSecondBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2297,7 +2297,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFifthBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdFifthBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2324,7 +2324,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFirstBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdFirstBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2334,7 +2334,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_2">
+   <widget class="QLabel" name="CombGrndrBrgdSixthBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2388,7 +2388,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFifthBattalion_2">
+   <widget class="QComboBox" name="CombGrndrBrgdFifthBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2398,7 +2398,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_3">
+   <widget class="QLabel" name="CombGrndrBrgdSeventhBattalionCost">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -2425,7 +2425,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSixthBattalion_3">
+   <widget class="QComboBox" name="CombGrndrBrgdSeventhBattalion">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -2435,7 +2435,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_3">
+   <widget class="QPushButton" name="CombGrndrBrSeventhBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -4034,13 +4034,13 @@
     <property name="geometry">
      <rect>
       <x>1260</x>
-      <y>130</y>
-      <width>281</width>
-      <height>41</height>
+      <y>120</y>
+      <width>191</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Infantry Guard Infantry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Imperial Guard&lt;br/&gt; Infantry brigade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
