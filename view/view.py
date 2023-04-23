@@ -37,6 +37,7 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.cBrgdTotalCost.setText("0")
         self.rusDivisionWindow.JgrBrgdTotalCost.setText("0")
         self.rusDivisionWindow.CombGrndrBrgdTotalCost.setText("0")
+        self.rusDivisionWindow.GrndrBrgdTotalCost.setText("0")
 
         self.rusDivisionWindow.division_cmndrs_list()
         self.rusDivisionWindow.a_brigade_bttln_Lists()
@@ -44,6 +45,7 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.c_brigade_bttln_Lists()
         self.rusDivisionWindow.jgr_brigade_bttln_Lists()
         self.rusDivisionWindow.comb_grndr_brigade_bttln_Lists()
+        self.rusDivisionWindow.grndr_brigade_bttln_Lists()
 
         self.rusDivisionWindow.show()
 

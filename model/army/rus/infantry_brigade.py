@@ -32,6 +32,7 @@ class InfantryBrigade(Brigade):
         self.brigade_list.append(Unit())  # третий батальон
         self.brigade_list.append(Unit())  # четвертый батальон
         self.brigade_list.append(Unit())  # дополнительный батальон
+        self.brigade_list.append(Unit())  # дополнительный батальон - егеря
 
         # возможные вариации для каждого батальона
         self.brigade_list_battalion_list = []
@@ -41,14 +42,16 @@ class InfantryBrigade(Brigade):
         self.brigade_list_battalion_list.append(self.main_battalion_list())  # четвертый батальон - варианты
         self.brigade_list_battalion_list.append(
             self.additional_battalion_list())  # дополнительный батальон - варианты
+        self.brigade_list_battalion_list.append(
+            self.additional_jgr_battalion_list())  # дополнительный батальон ereря
 
         # возможные бонусы для батальонов в бригаде
         self.brigade_bonus_list = []
         self.brigade_bonus_list.append(["Veteran", 8])
         self.brigade_bonus_list.append(["Small", -8])
         self.brigade_bonus_list.append(["Sharpshooter", 3])
-        self.brigade_bonus_list.append(["Veteran regiment", 16])
-        self.brigade_bonus_list.append(["Small regiment", -16])
+        # self.brigade_bonus_list.append(["Veteran regiment", 16])
+        # self.brigade_bonus_list.append(["Small regiment", -16])
 
         # зададим соответствие бонусу - батальона
         self.brigade_bonus_battalion_correspondence = {}
@@ -68,8 +71,8 @@ class InfantryBrigade(Brigade):
                        VolunteerJagerMusket.get_name_of_battalion()],
              "Sharpshooter": [VolunteerJagerRifle.get_name_of_battalion(),
                               VolunteerJagerMusket.get_name_of_battalion()],
-             "Veteran regiment": [JagerTwoBattalions.get_name_of_battalion()],
-             "Small regiment": [JagerTwoBattalions.get_name_of_battalion()]
+             # "Veteran regiment": [JagerTwoBattalions.get_name_of_battalion()],
+             # "Small regiment": [JagerTwoBattalions.get_name_of_battalion()]
              }
 
 
@@ -89,7 +92,11 @@ class InfantryBrigade(Brigade):
             VolunteerJagerMusket(),
             VolunteerJagerRifle(),
             Jager(),
-            JagerTwoBattalions()
+            # JagerTwoBattalions()
         ]
 
-
+    def additional_jgr_battalion_list(self):
+        return [
+            Unit(),
+            Jager()
+        ]
