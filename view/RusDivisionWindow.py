@@ -14,7 +14,9 @@ from view.brigades.grenadier_brigade_view import *
 class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
     def __init__(self, *args, obj=None, **kwargs):
         super(RusDivisionWindow, self).__init__(*args, **kwargs)
+
         self.setupUi(self)
+
         self.country = "Rus"  # определяем страну
         self.presenter = Presenter(self.country)
 

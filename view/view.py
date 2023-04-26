@@ -16,6 +16,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
         # self.setupUi(self)
 
+    #
 
     def show_StartWindow(self):
         self.startWindow = StartWindow()
@@ -27,9 +28,29 @@ class MainWindow(QMainWindow):
         self.startWindow.show()
 
 
+
+
     def show_RusDivisionWindow(self):
         self.rusDivisionWindow = RusDivisionWindow()
-        self.rusDivisionWindow.setWindowTitle("Black Powder 2.0 Army Builder")
+
+
+        # self.move(qr.topLeft())
+
+
+# добавляем прокрутку
+        self.scrollArea = QtWidgets.QScrollArea()
+        self.scrollArea.setWidget(self.rusDivisionWindow)
+        self.scrollArea.show()
+        self.scrollArea.resize(1600, 1000)
+# поещаем окно в левый верхний угол
+        qr=self.frameGeometry()
+        cp=QtGui.QGuiApplication.primaryScreen().availableGeometry().topLeft()
+        qr.moveTopLeft(cp)
+        self.scrollArea.move(qr.topLeft())
+
+        self.scrollArea.setWindowTitle("Black Powder 2.0 Army Builder")
+
+        # self.rusDivisionWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
         self.rusDivisionWindow.generalCost.setText("0")
         self.rusDivisionWindow.aBrgdTotalCost.setText("0")
