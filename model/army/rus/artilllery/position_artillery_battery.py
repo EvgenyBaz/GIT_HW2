@@ -1,8 +1,8 @@
 from model.army.artillery import *
 class Position_Artillery_Battery(Artillery):
-
+    name = "Position_Artillery_Battery"
     def __init__(self):
-        self.name = "Position_Artillery_Battery"
+
         self.type = "Regular Artillery"
         self.armament = "Smoothbore Heavy Artillery"
         self.hand_to_hand = 2
@@ -13,3 +13,5 @@ class Position_Artillery_Battery(Artillery):
             "Large"
         }
         self.cost = 40
+        self.bonus = {}
+        self.bonus_cost = 0

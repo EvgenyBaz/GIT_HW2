@@ -1,7 +1,7 @@
 from model.army.infantry import *
 class Jager(Infantry):
     name = "Jager"
-
+    presence = 1
     def __init__(self):
         # self.name = "Jager"
         self.type = "Regular Infantry"

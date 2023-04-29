@@ -1,8 +1,8 @@
 from model.army.cavalry import *
 class MountedCossackRegular(Cavalry):
-
+    name = "Regular Mounted Cossack"
     def __init__(self):
-        self.name = "Regular Mounted Cossack"
+
         self.type = "Regular Cavalry"
         self.armament = "Lance"
         self.hand_to_hand = 5
@@ -15,3 +15,5 @@ class MountedCossackRegular(Cavalry):
             "Unreliable"
         }
         self.cost = 39
+        self.bonus = {}
+        self.bonus_cost = 0

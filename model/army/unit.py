@@ -1,5 +1,6 @@
 class Unit:
     name = "empty"
+    presence = 0
 
     def __init__(self):
         # self.name = "empty"

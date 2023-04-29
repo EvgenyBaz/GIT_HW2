@@ -22,6 +22,10 @@ class Presenter():
     def BrigadeBttlnName(self, order_number, brigade_number):
         return self.division.get_brigade(brigade_number).get_name_of_battalion(order_number)
 
+    def BrigadeBttlnPresence(self, order_number, brigade_number):
+         return self.division.get_brigade(brigade_number).get_presence_of_battalion(order_number)
+
+
     #запрос на список бонусов для бригады
     def BrigadeBonusNameList(self,brigade_number):
         return self.division.get_brigade(brigade_number).get_brigade_bonus_list_names()

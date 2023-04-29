@@ -2,6 +2,7 @@ from model.army.infantry import *
 class LineInfantry(Infantry):
 
     name = "Line Infantry"
+    presence = 1
     def __init__(self):
         # self.name = "Line Infantry"
         self.type = "Regular Infantry"

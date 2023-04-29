@@ -5045,6 +5045,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5055,6 +5058,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5065,6 +5071,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5075,6 +5084,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5085,6 +5097,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -5095,6 +5110,9 @@
     </property>
    </widget>
    <widget class="QComboBox" name="LightArtilleryBattery5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>520</x>

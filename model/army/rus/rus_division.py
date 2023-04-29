@@ -8,6 +8,10 @@ from model.army.rus.cossack_brigade import CossackBrigade
 from model.army.rus.imperial_guard_infantry_brigade import LifeGuardInfantryBrigade
 from model.army.rus.imperial_guard_light_cavalry_brigade import LifeGuadLightCavalryBrigade
 from model.army.rus.imperial_guard_heavy_cavalry_brigade import LifeGuadHeavyCavalryBrigade
+from model.army.rus.all_artillery import AllArtillery
+
+
+
 
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
 from model.army.rus.commanders.commander_skill8 import CommanderSkill8
@@ -26,18 +30,19 @@ class RusDivision:
 
     def __init__(self):
         self.division_list = [
-            InfantryBrigade(),
-            InfantryBrigade(),
-            InfantryBrigade(),
-            JagerBrigade(),
-            CombinedGrenadierBrigade(),
-            GrenadierBrigade(),
-            LightCavalryBrigade(),
-            HeavyCavalryBrigade(),
-            CossackBrigade(),
-            LifeGuardInfantryBrigade(),
-            LifeGuadLightCavalryBrigade(),
-            LifeGuadHeavyCavalryBrigade()
+            InfantryBrigade(),              #0
+            InfantryBrigade(),              #1
+            InfantryBrigade(),              #2
+            JagerBrigade(),                 #3
+            CombinedGrenadierBrigade(),     #4
+            GrenadierBrigade(),             #5
+            LightCavalryBrigade(),          #6
+            HeavyCavalryBrigade(),          #7
+            CossackBrigade(),               #8
+            LifeGuardInfantryBrigade(),     #9
+            LifeGuadLightCavalryBrigade(),  #10
+            LifeGuadHeavyCavalryBrigade(),  #11
+            AllArtillery()                  #12
         ]
 
         self.division_commanders_list = [

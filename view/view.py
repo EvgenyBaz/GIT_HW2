@@ -68,6 +68,8 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.comb_grndr_brigade_bttln_Lists()
         self.rusDivisionWindow.grndr_brigade_bttln_Lists()
 
+        self.rusDivisionWindow.all_artillery_batteries_Lists()
+
         self.rusDivisionWindow.show()
 
 

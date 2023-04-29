@@ -1,8 +1,8 @@
 from model.army.cavalry import *
 class Ulan(Cavalry):
-
+    name = "Ulan"
     def __init__(self):
-        self.name = "Ulan"
+
         self.type = "Regular Cavalry"
         self.armament = "Lance"
         self.hand_to_hand = 7
@@ -14,3 +14,5 @@ class Ulan(Cavalry):
             "Marauder"
         }
         self.cost = 48
+        self.bonus = {}
+        self.bonus_cost = 0

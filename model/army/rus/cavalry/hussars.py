@@ -1,8 +1,8 @@
 from model.army.cavalry import *
 class Hussars(Cavalry):
-
+    name = "Hussars"
     def __init__(self):
-        self.name = "Hussars"
+
         self.type = "Regular Cavalry"
         self.armament = "Sabre"
         self.hand_to_hand = 6
@@ -14,3 +14,5 @@ class Hussars(Cavalry):
             "Marauder"
         }
         self.cost = 46
+        self.bonus = {}
+        self.bonus_cost = 0
