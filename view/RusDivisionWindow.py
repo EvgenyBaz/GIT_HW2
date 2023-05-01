@@ -10,6 +10,7 @@ from view.brigades.infantry_brigade_view import *
 from view.brigades.jager_brigade_view import *
 from view.brigades.combined_grenadier_brigade_view import *
 from view.brigades.grenadier_brigade_view import *
+from view.brigades.light_cavalry_brigade_view import *
 from view.brigades.all_artillery_view import *
 
 class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
@@ -125,6 +126,21 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.GrndrBrThirdBttlnModPushButton.clicked.connect(self.grndr_the_third_bttln_mod_button_was_clicked)
         self.GrndrBrFourthBttlnModPushButton.clicked.connect(self.grndr_the_fourth_bttln_mod_button_was_clicked)
 
+        self.light_cvlry_brigade_number = 6
+
+        self.LCvlryBrgdCmndr.currentIndexChanged.connect(self.lightCvlryBrgdCommanderCostView)
+        self.LCvlryBrgdFirstBattalion.currentIndexChanged.connect(self.lightCvlryBrgd1stBttlnCostView)
+        self.LCvlryBrgdSecondBattalion.currentIndexChanged.connect(self.lightCvlryBrgd2ndBttlnCostView)
+        self.LCvlryBrgdThirdBattalion.currentIndexChanged.connect(self.lightCvlryBrgd3rdBttlnCostView)
+
+
+        self.LCvlryBrFirstBttlnModPushButton.clicked.connect(self.lightCvlry_the_first_bttln_mod_button_was_clicked)
+        self.LCvlryBrSecondBttlnModPushButton.clicked.connect(self.lightCvlry_the_second_bttln_mod_button_was_clicked)
+        self.LCvlryBrThirdBttlnModPushButton.clicked.connect(self.lightCvlry_the_third_bttln_mod_button_was_clicked)
+
+
+
+
         self.artillery_quasy_brigade_number = 12
 
         self.artillery_total_cost = 0
@@ -175,7 +191,8 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         total_cost = int(self.generalCost.text()) + int(self.aBrgdTotalCost.text()) +\
                      int(self.bBrgdTotalCost.text()) + int(self.cBrgdTotalCost.text()) +\
                      int(self.JgrBrgdTotalCost.text()) + int(self.CombGrndrBrgdTotalCost.text()) +\
-                     int(self.GrndrBrgdTotalCost.text()) + self.artillery_total_cost
+                     int(self.GrndrBrgdTotalCost.text()) + int(self.LCvlryBrgdTotalCost.text()) +\
+                     self.artillery_total_cost
         self.divisionTotalCost.setText(str(total_cost))
         self.artilleryBatteryVisible()
     def artilleryBatteryVisible(self):
@@ -1115,6 +1132,86 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.brgdFourthBattalionCostSetText = self.GrndrBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.grndrBrgdTotalCostView
             self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrFourthBttlnModPushButton)
+
+    #--------------------------------------------------------------------------------------------------------------------
+    def light_cvlry_brigade_bttln_Lists(self):
+        l_cvlry_brigade_bttln_Lists(self.light_cvlry_brigade_number, self.presenter, self.LCvlryBrgdCmndr,
+                                    self.LCvlryBrgdFirstBattalion, self.LCvlryBrgdSecondBattalion,
+                                    self.LCvlryBrgdThirdBattalion)
+
+    def lightCvlryBrgdCommanderCostView(self, index):
+        value = self.presenter.BrigadeCmndrsCost(index, self.light_cvlry_brigade_number)
+        self.LCvlryBrgdCmndrCost.setText(str(value))
+        self.lightCvlryBrgdTotalCostView()
+
+        if self.LCvlryBrgdCmndr.currentIndex() < 1:
+            self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+            self.LCvlryBrgdFirstBattalion.setDisabled(True)
+            self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
+            self.LCvlryBrgdSecondBattalion.setDisabled(True)
+            self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
+            self.LCvlryBrgdThirdBattalion.setDisabled(True)
+
+            self.LCvlryBrFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.LCvlryBrSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.LCvlryBrThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+        else:
+            self.LCvlryBrgdFirstBattalion.setDisabled(False)
+            self.LCvlryBrgdSecondBattalion.setDisabled(False)
+            self.LCvlryBrgdThirdBattalion.setDisabled(False)
+
+    def lightCvlryBrgd1stBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
+                               self.LCvlryBrgdFirstBattalionCost, self.lightCvlryBrgdTotalCostView, 0, self.LCvlryBrFirstBttlnModPushButton)
+
+    def lightCvlryBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
+                               self.LCvlryBrgdSecondBattalionCost, self.lightCvlryBrgdTotalCostView, 1, self.LCvlryBrFirstBttlnModPushButton)
+
+    def lightCvlryBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
+                               self.LCvlryBrgdThirdBattalionCost, self.lightCvlryBrgdTotalCostView, 2, self.LCvlryBrFirstBttlnModPushButton)
+
+    def lightCvlryBrgdTotalCostView(self):
+        total_cost = self.presenter.BrigadeCmndrsCost(self.LCvlryBrgdCmndr.currentIndex(),self.light_cvlry_brigade_number) + \
+                     sum(self.presenter.BrigadeBttlnCost(i, self.light_cvlry_brigade_number) for i in range(3))
+
+        self.LCvlryBrgdTotalCost.setText(str(total_cost))
+        self.light_cvlry_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.light_cvlry_brigade_number) for i in range(3)))
+
+        self.divisionTotalCostView()
+
+    def lightCvlry_the_first_bttln_mod_button_was_clicked(self):
+
+        if self.LCvlryBrgdFirstBattalion.currentIndex() != 0:
+            battalion_order = "First Regiment"
+            self.order_number = 0  # первый по порядку кав полк
+            self.current_bttln_index = self.LCvlryBrgdFirstBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.brgdFirstBattalionCostSetText = self.LCvlryBrgdFirstBattalionCost.setText
+            self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrFirstBttlnModPushButton)
+
+    def lightCvlry_the_second_bttln_mod_button_was_clicked(self):
+
+        if self.LCvlryBrgdSecondBattalion.currentIndex() != 0:
+            battalion_order = "Second Regiment"
+            self.order_number = 1  # второй по порядку кав полк
+            self.current_bttln_index = self.LCvlryBrgdSecondBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.brgdSecondBattalionCostSetText = self.LCvlryBrgdSecondBattalionCost.setText
+            self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrSecondBttlnModPushButton)
+
+    def lightCvlry_the_third_bttln_mod_button_was_clicked(self):
+
+        if self.LCvlryBrgdThirdBattalion.currentIndex() != 0:
+            battalion_order = "Third Regiment"
+            self.order_number = 2  # третий по порядку кав полк
+            self.current_bttln_index = self.LCvlryBrgdThirdBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.brgdThirdBattalionCostSetText = self.LCvlryBrgdThirdBattalionCost.setText
+            self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrThirdBttlnModPushButton)
 
     #--------------------------------------------------------------------------------------------------------------------
     def all_artillery_batteries_Lists(self):

@@ -2820,7 +2820,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdCmndrCost_4">
+   <widget class="QLabel" name="LCvlryBrgdCmndrCost">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -2850,7 +2850,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdTotalCost_4">
+   <widget class="QLabel" name="LCvlryBrgdTotalCost">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -2877,7 +2877,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdThirdBattalion_4">
+   <widget class="QComboBox" name="LCvlryBrgdThirdBattalion">
     <property name="geometry">
      <rect>
       <x>870</x>
@@ -2887,7 +2887,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSecondBattalion_4">
+   <widget class="QComboBox" name="LCvlryBrgdSecondBattalion">
     <property name="geometry">
      <rect>
       <x>870</x>
@@ -2897,7 +2897,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_4">
+   <widget class="QLabel" name="LCvlryBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -2940,7 +2940,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_4">
+   <widget class="QLabel" name="LCvlryBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -2967,7 +2967,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_4">
+   <widget class="QPushButton" name="LCvlryBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1080</x>
@@ -2980,7 +2980,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_4">
+   <widget class="QPushButton" name="LCvlryBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1080</x>
@@ -2993,7 +2993,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdCmndr_4">
+   <widget class="QComboBox" name="LCvlryBrgdCmndr">
     <property name="geometry">
      <rect>
       <x>870</x>
@@ -3019,7 +3019,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_4">
+   <widget class="QLabel" name="LCvlryBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -3049,7 +3049,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_4">
+   <widget class="QPushButton" name="LCvlryBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1080</x>
@@ -3078,7 +3078,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFirstBattalion_4">
+   <widget class="QComboBox" name="LCvlryBrgdFirstBattalion">
     <property name="geometry">
      <rect>
       <x>870</x>

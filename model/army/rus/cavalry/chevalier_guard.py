@@ -1,6 +1,7 @@
 from model.army.cavalry import *
 class ChevalierGuard(Cavalry):
     name = "Chevalier Guard"
+
     def __init__(self):
 
         self.type = "Regular Cavalry"
