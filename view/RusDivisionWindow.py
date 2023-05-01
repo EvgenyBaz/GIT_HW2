@@ -24,6 +24,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
         self.generalName.currentIndexChanged.connect(self.divisionCommanderCostView)
 
+        # изменяемая переменная для прхождения проверки  - используется для кавполков с неоднозначным выбором первоко полка в списке, при изменении списка
+        self.battalion_index_add = 0
+
         self.a_brigade_number = 0  # номер бригады попорядку
 
         self.aBrgdCmndr.currentIndexChanged.connect(self.aBrgdCommanderCostView)
@@ -960,7 +963,6 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.comb_grndr_nmbr_of_battalions = (
             sum(self.presenter.BrigadeBttlnPresence(i, self.comb_grndr_brigade_number) for i in range(7)))
 
-
         self.divisionTotalCostView()
 
 
@@ -1144,7 +1146,20 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.LCvlryBrgdCmndrCost.setText(str(value))
         self.lightCvlryBrgdTotalCostView()
 
+        print("test0")
         if self.LCvlryBrgdCmndr.currentIndex() < 1:
+
+            if self.presenter.BrigadeBttlnName(0, self.light_cvlry_brigade_number) != "empty":
+                self.presenter.LCvlryFirstBttlnListChange(0, self.light_cvlry_brigade_number)
+
+                self.LCvlryBrgdFirstBattalion.clear()
+                bttln_list = self.presenter.BrigadeBttlnList(0, self.light_cvlry_brigade_number)
+                for bttlnName in bttln_list:
+                    self.LCvlryBrgdFirstBattalion.addItem(bttlnName)
+
+                self.battalion_index_add = 0
+
+
             self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
             self.LCvlryBrgdFirstBattalion.setDisabled(True)
             self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
@@ -1157,21 +1172,86 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.LCvlryBrThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
 
         else:
+
+            # убираем обьект empty из списка выбора
+
+            self.LCvlryBrgdFirstBattalion.clear()
+            self.presenter.LCvlryFirstBttlnListChangeToShow(0, self.light_cvlry_brigade_number)
+            bttln_list = self.presenter.BrigadeBttlnList(0, self.light_cvlry_brigade_number)
+            for bttlnName in bttln_list:
+                self.LCvlryBrgdFirstBattalion.addItem(bttlnName)
+  # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
+            self.battalion_index_add = 1
+
             self.LCvlryBrgdFirstBattalion.setDisabled(False)
             self.LCvlryBrgdSecondBattalion.setDisabled(False)
             self.LCvlryBrgdThirdBattalion.setDisabled(False)
 
     def lightCvlryBrgd1stBttlnCostView(self, bttln_choosen_from_list):
+
         self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
-                               self.LCvlryBrgdFirstBattalionCost, self.lightCvlryBrgdTotalCostView, 0, self.LCvlryBrFirstBttlnModPushButton)
+                               self.LCvlryBrgdFirstBattalionCost, self.lightCvlryBrgdTotalCostView, 0,
+                               self.LCvlryBrFirstBttlnModPushButton)
+
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Ulan":
+            if self.LCvlryBrgdSecondBattalion.currentText() == "Ulan" or self.LCvlryBrgdThirdBattalion.currentText() == "Ulan":
+                self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Dragoon":
+            if self.LCvlryBrgdSecondBattalion.currentText() == "Dragoon" and self.LCvlryBrgdThirdBattalion.currentText()  == "Dragoon":
+                self.LCvlryBrgdFirstBattalion.setCurrentIndex(1)
+
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars":
+            if self.LCvlryBrgdSecondBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText()  == "Hussars":
+                self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+                self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+
 
     def lightCvlryBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
-                               self.LCvlryBrgdSecondBattalionCost, self.lightCvlryBrgdTotalCostView, 1, self.LCvlryBrFirstBttlnModPushButton)
+                               self.LCvlryBrgdSecondBattalionCost, self.lightCvlryBrgdTotalCostView, 1, self.LCvlryBrSecondBttlnModPushButton)
+
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Ulan":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Ulan" or self.LCvlryBrgdThirdBattalion.currentText() == "Ulan":
+                self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Dragoon":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Dragoon" and self.LCvlryBrgdThirdBattalion.currentText() == "Dragoon" :
+                self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Hussars":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText() == "Hussars" :
+                self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+                self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.light_cvlry_brigade_number,
-                               self.LCvlryBrgdThirdBattalionCost, self.lightCvlryBrgdTotalCostView, 2, self.LCvlryBrFirstBttlnModPushButton)
+                               self.LCvlryBrgdThirdBattalionCost, self.lightCvlryBrgdTotalCostView, 2, self.LCvlryBrThirdBttlnModPushButton)
+
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Ulan":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Ulan" or self.LCvlryBrgdSecondBattalion.currentText() == "Ulan":
+                self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Dragoon":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Dragoon" and self.LCvlryBrgdSecondBattalion.currentText() == "Dragoon":
+                self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Hussars":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdSecondBattalion.currentText() == "Hussars":
+                self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack"):
+                self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.LCvlryBrgdCmndr.currentIndex(),self.light_cvlry_brigade_number) + \
@@ -1185,10 +1265,10 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
     def lightCvlry_the_first_bttln_mod_button_was_clicked(self):
 
-        if self.LCvlryBrgdFirstBattalion.currentIndex() != 0:
+        if self.LCvlryBrgdFirstBattalion.currentIndex() +self.battalion_index_add != 0:
             battalion_order = "First Regiment"
             self.order_number = 0  # первый по порядку кав полк
-            self.current_bttln_index = self.LCvlryBrgdFirstBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.current_bttln_index = self.LCvlryBrgdFirstBattalion.currentIndex() # имя кав полка выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.LCvlryBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
             self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrFirstBttlnModPushButton)
@@ -1378,7 +1458,11 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.btln_bonus_list[i] in self.presenter.BrigadeBttlnBonusList(
                     self.order_number, self.brigade_number):
                 self.bonuses_checkboxes_in_window[i].setChecked(True)
+
+                self.check_contradiction(self.btln_bonus_list[i] , self.btln_bonus_list)
+
             self.bonuses_checkboxes_in_window[i].stateChanged.connect(checkbox_Action_list[i])
+
 
         self.bonus_window.ok_button.clicked.connect(self.ok_button_was_clicked)
         self.bonus_window.cancel_button.clicked.connect(self.cancel_button_was_clicked)
@@ -1387,7 +1471,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
     def ok_button_was_clicked(self):
 
         # проверка - не переключил ли пользователь отряд , пока открыто окно выбора бонусов
-        if self.current_bttln_index != 0:
+        if self.current_bttln_index + self.battalion_index_add != 0:
 
             for i in range(0, len(self.btln_bonus_list)):
                 # проверка если выбранный бонус не пуст то тогда применяются свойства бонууса.
@@ -1468,6 +1552,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                 self.temporary_bonus_list[self.btln_bonus_list[order_number]] = None  # вносим бонус во временный список
             else:
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
+            self.check_contradiction(self.btln_bonus_list[order_number], self.btln_bonus_list)
         # проверка если чекбокс отжат и такой бонус есть в списке бонусов батальона, то в окне отображения бонусов показывается стоимость за вычетом бонуса
         # предварительно, эта стоимость еще не применилась к батальону
         # если чекбокс отжат  и такого бонуса нет, то показывается стоимость взятая из обьекта батальон
@@ -1478,3 +1563,32 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                 del self.temporary_bonus_list[self.btln_bonus_list[order_number] ]  # удаляем бонус из временный список
             else:
                 self.bonus_window.cost.setText(str(self.temporary_bonus_cost))
+            self.check_contradiction(self.btln_bonus_list[order_number], self.btln_bonus_list)
+
+    def check_contradiction(self, current_bonus, bonuses_list):
+        if current_bonus == "Large":
+            count = False
+            position = 0
+            for i in range (0, len(bonuses_list)):
+                if bonuses_list[i] == "Small":
+                    count = True
+                    position = i
+            if count:
+                print(self.bonuses_checkboxes_in_window[position].isEnabled())
+                if self.bonuses_checkboxes_in_window[position].isEnabled():
+                    self.bonuses_checkboxes_in_window[position].setDisabled(True)
+                else:
+                    self.bonuses_checkboxes_in_window[position].setDisabled(False)
+
+        if current_bonus == "Small":
+            count = False
+            position = 0
+            for i in range(0, len(bonuses_list)):
+                if bonuses_list[i] == "Large":
+                    count = True
+                    position = i
+            if count:
+                if self.bonuses_checkboxes_in_window[position].isEnabled():
+                    self.bonuses_checkboxes_in_window[position].setDisabled(True)
+                else:
+                    self.bonuses_checkboxes_in_window[position].setDisabled(False)

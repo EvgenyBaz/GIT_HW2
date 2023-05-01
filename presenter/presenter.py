@@ -10,6 +10,11 @@ class Presenter():
     def BrigadeBttlnList(self, order_number, brigade_number):
         return self.division.get_brigade(brigade_number).get_list_battalion_names(order_number)
 
+    def LCvlryFirstBttlnListChange(self, order_number, brigade_number):
+        self.division.get_brigade(brigade_number).set_common_list_of_battalions(order_number)
+    def LCvlryFirstBttlnListChangeToShow(self, order_number, brigade_number):
+        self.division.get_brigade(brigade_number).set_list_of_battalions(order_number)
+
         # отправляет данные в модель для заполнения списка бригады
     def BrigadeBttlnChoosen(self, order_number, bttln_choosen_from_list, brigade_number):
         return self.division.get_brigade(brigade_number).set_battalion_to_list(order_number, bttln_choosen_from_list)

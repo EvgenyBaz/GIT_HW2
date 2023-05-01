@@ -67,3 +67,9 @@ class LightCavalryBrigade(Brigade):
             MountedCossackIrregular()
         ]
 
+
+    def set_common_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].insert(0, Unit())
+    def set_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].pop(0)
+
