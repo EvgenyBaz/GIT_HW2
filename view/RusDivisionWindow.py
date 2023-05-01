@@ -11,6 +11,8 @@ from view.brigades.jager_brigade_view import *
 from view.brigades.combined_grenadier_brigade_view import *
 from view.brigades.grenadier_brigade_view import *
 from view.brigades.light_cavalry_brigade_view import *
+from view.brigades.heavy_cavalry_brigade_view import *
+
 from view.brigades.all_artillery_view import *
 
 class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
@@ -25,7 +27,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.generalName.currentIndexChanged.connect(self.divisionCommanderCostView)
 
         # изменяемая переменная для прхождения проверки  - используется для кавполков с неоднозначным выбором первоко полка в списке, при изменении списка
-        self.battalion_index_add = 0
+
 
         self.a_brigade_number = 0  # номер бригады попорядку
 
@@ -130,19 +132,28 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.GrndrBrFourthBttlnModPushButton.clicked.connect(self.grndr_the_fourth_bttln_mod_button_was_clicked)
 
         self.light_cvlry_brigade_number = 6
+        self.l_cvlry_battalion_index_add = 0
 
         self.LCvlryBrgdCmndr.currentIndexChanged.connect(self.lightCvlryBrgdCommanderCostView)
         self.LCvlryBrgdFirstBattalion.currentIndexChanged.connect(self.lightCvlryBrgd1stBttlnCostView)
         self.LCvlryBrgdSecondBattalion.currentIndexChanged.connect(self.lightCvlryBrgd2ndBttlnCostView)
         self.LCvlryBrgdThirdBattalion.currentIndexChanged.connect(self.lightCvlryBrgd3rdBttlnCostView)
 
-
         self.LCvlryBrFirstBttlnModPushButton.clicked.connect(self.lightCvlry_the_first_bttln_mod_button_was_clicked)
         self.LCvlryBrSecondBttlnModPushButton.clicked.connect(self.lightCvlry_the_second_bttln_mod_button_was_clicked)
         self.LCvlryBrThirdBttlnModPushButton.clicked.connect(self.lightCvlry_the_third_bttln_mod_button_was_clicked)
 
+        self.heavy_cvlry_brigade_number = 7
+        self.h_cvlry_battalion_index_add = 0
 
+        self.HCvlryBrgdCmndr.currentIndexChanged.connect(self.heavyCvlryBrgdCommanderCostView)
+        self.HCvlryBrgdFirstBattalion.currentIndexChanged.connect(self.heavyCvlryBrgd1stBttlnCostView)
+        self.HCvlryBrgdSecondBattalion.currentIndexChanged.connect(self.heavyCvlryBrgd2ndBttlnCostView)
+        self.HCvlryBrgdThirdBattalion.currentIndexChanged.connect(self.heavyCvlryBrgd3rdBttlnCostView)
 
+        self.HCvlryBrFirstBttlnModPushButton.clicked.connect(self.heavyCvlry_the_first_bttln_mod_button_was_clicked)
+        self.HCvlryBrSecondBttlnModPushButton.clicked.connect(self.heavyCvlry_the_second_bttln_mod_button_was_clicked)
+        self.HCvlryBrThirdBttlnModPushButton.clicked.connect(self.heavyCvlry_the_third_bttln_mod_button_was_clicked)
 
         self.artillery_quasy_brigade_number = 12
 
@@ -194,8 +205,10 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         total_cost = int(self.generalCost.text()) + int(self.aBrgdTotalCost.text()) +\
                      int(self.bBrgdTotalCost.text()) + int(self.cBrgdTotalCost.text()) +\
                      int(self.JgrBrgdTotalCost.text()) + int(self.CombGrndrBrgdTotalCost.text()) +\
-                     int(self.GrndrBrgdTotalCost.text()) + int(self.LCvlryBrgdTotalCost.text()) +\
+                     int(self.GrndrBrgdTotalCost.text()) + int(self.LCvlryBrgdTotalCost.text()) + \
+                     int(self.HCvlryBrgdTotalCost.text())+ \
                      self.artillery_total_cost
+
         self.divisionTotalCost.setText(str(total_cost))
         self.artilleryBatteryVisible()
     def artilleryBatteryVisible(self):
@@ -1146,19 +1159,17 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.LCvlryBrgdCmndrCost.setText(str(value))
         self.lightCvlryBrgdTotalCostView()
 
-        print("test0")
         if self.LCvlryBrgdCmndr.currentIndex() < 1:
 
             if self.presenter.BrigadeBttlnName(0, self.light_cvlry_brigade_number) != "empty":
-                self.presenter.LCvlryFirstBttlnListChange(0, self.light_cvlry_brigade_number)
+                self.presenter.FirstBttlnListChange(0, self.light_cvlry_brigade_number)
 
                 self.LCvlryBrgdFirstBattalion.clear()
                 bttln_list = self.presenter.BrigadeBttlnList(0, self.light_cvlry_brigade_number)
                 for bttlnName in bttln_list:
                     self.LCvlryBrgdFirstBattalion.addItem(bttlnName)
 
-                self.battalion_index_add = 0
-
+                self.l_cvlry_battalion_index_add = 0
 
             self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
             self.LCvlryBrgdFirstBattalion.setDisabled(True)
@@ -1173,15 +1184,15 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
         else:
 
+            if self.l_cvlry_battalion_index_add == 0:
             # убираем обьект empty из списка выбора
-
-            self.LCvlryBrgdFirstBattalion.clear()
-            self.presenter.LCvlryFirstBttlnListChangeToShow(0, self.light_cvlry_brigade_number)
-            bttln_list = self.presenter.BrigadeBttlnList(0, self.light_cvlry_brigade_number)
-            for bttlnName in bttln_list:
-                self.LCvlryBrgdFirstBattalion.addItem(bttlnName)
+                self.LCvlryBrgdFirstBattalion.clear()
+                self.presenter.FirstBttlnListChangeToShow(0, self.light_cvlry_brigade_number)
+                bttln_list = self.presenter.BrigadeBttlnList(0, self.light_cvlry_brigade_number)
+                for bttlnName in bttln_list:
+                    self.LCvlryBrgdFirstBattalion.addItem(bttlnName)
   # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
-            self.battalion_index_add = 1
+                self.l_cvlry_battalion_index_add = 1
 
             self.LCvlryBrgdFirstBattalion.setDisabled(False)
             self.LCvlryBrgdSecondBattalion.setDisabled(False)
@@ -1265,7 +1276,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
     def lightCvlry_the_first_bttln_mod_button_was_clicked(self):
 
-        if self.LCvlryBrgdFirstBattalion.currentIndex() +self.battalion_index_add != 0:
+        if self.LCvlryBrgdFirstBattalion.currentIndex() +self.l_cvlry_battalion_index_add != 0:
             battalion_order = "First Regiment"
             self.order_number = 0  # первый по порядку кав полк
             self.current_bttln_index = self.LCvlryBrgdFirstBattalion.currentIndex() # имя кав полка выбраного на данный момент
@@ -1292,6 +1303,156 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.brgdThirdBattalionCostSetText = self.LCvlryBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
             self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrThirdBttlnModPushButton)
+    #--------------------------------------------------------------------------------------------------------------------
+
+    def heavy_cvlry_brigade_bttln_Lists(self):
+
+        h_cvlry_brigade_bttln_Lists(self.heavy_cvlry_brigade_number, self.presenter, self.HCvlryBrgdCmndr,
+                                    self.HCvlryBrgdFirstBattalion, self.HCvlryBrgdSecondBattalion,
+                                    self.HCvlryBrgdThirdBattalion)
+
+    def heavyCvlryBrgdCommanderCostView(self, index):
+        value = self.presenter.BrigadeCmndrsCost(index, self.heavy_cvlry_brigade_number)
+        self.HCvlryBrgdCmndrCost.setText(str(value))
+        self.heavyCvlryBrgdTotalCostView()
+
+        if self.HCvlryBrgdCmndr.currentIndex() < 1:
+
+            if self.presenter.BrigadeBttlnName(0, self.heavy_cvlry_brigade_number) != "empty":
+                self.presenter.FirstBttlnListChange(0, self.heavy_cvlry_brigade_number)
+
+                self.HCvlryBrgdFirstBattalion.clear()
+                bttln_list = self.presenter.BrigadeBttlnList(0, self.heavy_cvlry_brigade_number)
+                for bttlnName in bttln_list:
+                    self.HCvlryBrgdFirstBattalion.addItem(bttlnName)
+
+                self.h_cvlry_battalion_index_add = 0
+
+            self.HCvlryBrgdFirstBattalion.setCurrentIndex(0)
+            self.HCvlryBrgdFirstBattalion.setDisabled(True)
+            self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+            self.HCvlryBrgdSecondBattalion.setDisabled(True)
+            self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+            self.HCvlryBrgdThirdBattalion.setDisabled(True)
+
+            self.HCvlryBrFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.HCvlryBrSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.HCvlryBrThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+        else:
+            if self.h_cvlry_battalion_index_add == 0:
+            # убираем обьект empty из списка выбора
+                self.HCvlryBrgdFirstBattalion.clear()
+                self.presenter.FirstBttlnListChangeToShow(0, self.heavy_cvlry_brigade_number)
+                bttln_list = self.presenter.BrigadeBttlnList(0, self.heavy_cvlry_brigade_number)
+                for bttlnName in bttln_list:
+                    self.HCvlryBrgdFirstBattalion.addItem(bttlnName)
+                # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
+                self.h_cvlry_battalion_index_add = 1
+            self.battalion_index_add = 1
+            self.HCvlryBrgdFirstBattalion.setDisabled(False)
+            self.HCvlryBrgdSecondBattalion.setDisabled(False)
+            if self.HCvlryBrgdFirstBattalion.currentText() != "Cuirassier":
+                self.HCvlryBrgdThirdBattalion.setDisabled(False)
+
+
+    def heavyCvlryBrgdTotalCostView(self):
+        total_cost = self.presenter.BrigadeCmndrsCost(self.HCvlryBrgdCmndr.currentIndex(),self.heavy_cvlry_brigade_number) + \
+                     sum(self.presenter.BrigadeBttlnCost(i, self.heavy_cvlry_brigade_number) for i in range(3))
+
+        self.HCvlryBrgdTotalCost.setText(str(total_cost))
+        self.heavy_cvlry_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.heavy_cvlry_brigade_number) for i in range(3)))
+
+        self.divisionTotalCostView()
+
+    def heavyCvlryBrgd1stBttlnCostView(self, bttln_choosen_from_list):
+
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.heavy_cvlry_brigade_number,
+                               self.HCvlryBrgdFirstBattalionCost, self.heavyCvlryBrgdTotalCostView, 0,
+                               self.HCvlryBrFirstBttlnModPushButton)
+
+        match self.HCvlryBrgdFirstBattalion.currentText():
+            case "empty":
+                self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+                self.HCvlryBrgdThirdBattalion.setDisabled(True)
+            case "Cuirassier":
+                self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+                self.HCvlryBrgdThirdBattalion.setDisabled(True)
+                if self.HCvlryBrgdSecondBattalion.currentText() != "Cuirassier":
+                    self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+            case "Dragoon":
+                self.HCvlryBrgdThirdBattalion.setDisabled(False)
+                if self.HCvlryBrgdSecondBattalion.currentText() != "Dragoon":
+                    self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+                if self.HCvlryBrgdThirdBattalion.currentText() != "Dragoon":
+                    self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+            case "Dragoon on foot":
+                self.HCvlryBrgdThirdBattalion.setDisabled(False)
+                if self.HCvlryBrgdSecondBattalion.currentText() != "Dragoon on foot":
+                    self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+                if self.HCvlryBrgdThirdBattalion.currentText() != "Dragoon on foot":
+                    self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+    def heavyCvlryBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
+
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.heavy_cvlry_brigade_number,
+                               self.HCvlryBrgdSecondBattalionCost, self.heavyCvlryBrgdTotalCostView, 1,
+                               self.HCvlryBrSecondBttlnModPushButton)
+
+        if self.HCvlryBrgdFirstBattalion.currentText() == "Dragoon":
+            if self.HCvlryBrgdSecondBattalion.currentText() == "Cuirassier" or self.HCvlryBrgdSecondBattalion.currentText() == "Dragoon on foot":
+                self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+        elif self.HCvlryBrgdFirstBattalion.currentText() == "Dragoon on foot":
+            if self.HCvlryBrgdSecondBattalion.currentText() == "Cuirassier" or self.HCvlryBrgdSecondBattalion.currentText() == "Dragoon":
+                self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+        elif self.HCvlryBrgdFirstBattalion.currentText() == "Cuirassier":
+            if self.HCvlryBrgdSecondBattalion.currentText() == "Dragoon" or self.HCvlryBrgdSecondBattalion.currentText() == "Dragoon on foot":
+                self.HCvlryBrgdSecondBattalion.setCurrentIndex(0)
+
+    def heavyCvlryBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
+
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.heavy_cvlry_brigade_number,
+                               self.HCvlryBrgdThirdBattalionCost, self.heavyCvlryBrgdTotalCostView, 2,
+                               self.HCvlryBrThirdBttlnModPushButton)
+
+        if self.HCvlryBrgdFirstBattalion.currentText() == "Dragoon":
+            if self.HCvlryBrgdThirdBattalion.currentText() == "Cuirassier" or self.HCvlryBrgdThirdBattalion.currentText() == "Dragoon on foot":
+                self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+        elif self.HCvlryBrgdFirstBattalion.currentText() == "Dragoon on foot":
+            if self.HCvlryBrgdThirdBattalion.currentText() == "Cuirassier" or self.HCvlryBrgdThirdBattalion.currentText() == "Dragoon":
+                self.HCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+    def heavyCvlry_the_first_bttln_mod_button_was_clicked(self):
+
+        if self.HCvlryBrgdFirstBattalion.currentIndex() +self.h_cvlry_battalion_index_add != 0:
+            battalion_order = "First Regiment"
+            self.order_number = 0  # первый по порядку кав полк
+            self.current_bttln_index = self.HCvlryBrgdFirstBattalion.currentIndex() # имя кав полка выбраного на данный момент
+            self.brgdFirstBattalionCostSetText = self.HCvlryBrgdFirstBattalionCost.setText
+            self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrFirstBttlnModPushButton)
+
+    def heavyCvlry_the_second_bttln_mod_button_was_clicked(self):
+
+        if self.HCvlryBrgdSecondBattalion.currentIndex() != 0:
+            battalion_order = "Second Regiment"
+            self.order_number = 1  # второй по порядку кав полк
+            self.current_bttln_index = self.HCvlryBrgdSecondBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.brgdSecondBattalionCostSetText = self.HCvlryBrgdSecondBattalionCost.setText
+            self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrSecondBttlnModPushButton)
+
+    def heavyCvlry_the_third_bttln_mod_button_was_clicked(self):
+
+        if self.HCvlryBrgdThirdBattalion.currentIndex() != 0:
+            battalion_order = "Third Regiment"
+            self.order_number = 2  # третий по порядку кав полк
+            self.current_bttln_index = self.HCvlryBrgdThirdBattalion.currentIndex()  # имя кав полка выбраного на данный момент
+            self.brgdThirdBattalionCostSetText = self.HCvlryBrgdThirdBattalionCost.setText
+            self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrThirdBttlnModPushButton)
+
 
     #--------------------------------------------------------------------------------------------------------------------
     def all_artillery_batteries_Lists(self):
@@ -1387,10 +1548,18 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
     def bttln_mod_button_was_clicked(self, battalion_order, brigade_number, mod_button_name):
 
+
         self.brigade_number = brigade_number
         self.bonus_window = BonusWindow()
         self.bonus_window.setWindowTitle(battalion_order)
         self.mod_button_name = mod_button_name
+
+        if brigade_number == 6:
+            self.battalion_index_add = self.l_cvlry_battalion_index_add
+        elif brigade_number == 7:
+            self.battalion_index_add = self.h_cvlry_battalion_index_add
+        else:
+            self.battalion_index_add = 0
 
         self.bonuses = [
             "",
@@ -1574,7 +1743,6 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                     count = True
                     position = i
             if count:
-                print(self.bonuses_checkboxes_in_window[position].isEnabled())
                 if self.bonuses_checkboxes_in_window[position].isEnabled():
                     self.bonuses_checkboxes_in_window[position].setDisabled(True)
                 else:
