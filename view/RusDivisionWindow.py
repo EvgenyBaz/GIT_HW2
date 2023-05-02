@@ -415,55 +415,49 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.aBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.aBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.aBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrFirstBttlnModPushButton, self.aBrgdFirstBattalion.currentText(), self.order_number)
 
     def a_the_second_bttln_mod_button_was_clicked(self):
         if self.aBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.aBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.aBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrSecondBttlnModPushButton, self.aBrgdSecondBattalion.currentText(), self.order_number)
 
     def a_the_third_bttln_mod_button_was_clicked(self):
         if self.aBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.aBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.aBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrThirdBttlnModPushButton, self.aBrgdThirdBattalion.currentText(), self.order_number)
 
     def a_the_fourth_bttln_mod_button_was_clicked(self):
         if self.aBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.aBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.aBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrFourthBttlnModPushButton, self.aBrgdFourthBattalion.currentText(), self.order_number)
 
     def a_the_add_bttln_mod_button_was_clicked(self):
         if self.aBrgdAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 4  # пятый по порядку батальон
-            self.current_bttln_index = self.aBrgdAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFifthBattalionCostSetText = self.aBrgdAddBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrAddBttlnModPushButton, self.aBrgdAdditionalBattalion.currentText(), self.order_number)
 
     def a_the_jgr_add_bttln_mod_button_was_clicked(self):
         if self.aBrgdJgrAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 5  # шестой по порядку батальон
-            self.current_bttln_index = self.aBrgdJgrAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSixthBattalionCostSetText = self.aBrgdJgrAddBattalionCost.setText
             self.brgdTotalCostView = self.aBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrJgrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBrJgrAddBttlnModPushButton, self.aBrgdJgrAdditionalBattalion.currentText(), self.order_number)
 
     # -------------------------------------------------------------------------------------------------------------------
     def b_brigade_bttln_Lists(self):
@@ -550,59 +544,53 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.bBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.bBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.bBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrFirstBttlnModPushButton, self.bBrgdFirstBattalion.currentText(), self.order_number)
 
     def b_the_second_bttln_mod_button_was_clicked(self):
 
         if self.bBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.bBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.bBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrSecondBttlnModPushButton, self.bBrgdSecondBattalion.currentText(), self.order_number)
 
     def b_the_third_bttln_mod_button_was_clicked(self):
 
         if self.bBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.bBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.bBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrThirdBttlnModPushButton, self.bBrgdThirdBattalion.currentText(), self.order_number)
 
     def b_the_fourth_bttln_mod_button_was_clicked(self):
 
         if self.bBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.bBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.bBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrFourthBttlnModPushButton, self.bBrgdFourthBattalion.currentText(), self.order_number)
 
     def b_the_add_bttln_mod_button_was_clicked(self):
 
         if self.bBrgdAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 4  # пятый по порядку батальон
-            self.current_bttln_index = self.bBrgdAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFifthBattalionCostSetText = self.bBrgdAddBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrAddBttlnModPushButton, self.bBrgdAdditionalBattalion.currentText(), self.order_number)
 
     def b_the_jgr_add_bttln_mod_button_was_clicked(self):
         if self.bBrgdJgrAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 5  # шестой по порядку батальон
-            self.current_bttln_index = self.bBrgdJgrAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSixthBattalionCostSetText = self.bBrgdJgrAddBattalionCost.setText
             self.brgdTotalCostView = self.bBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrJgrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number, self.bBrJgrAddBttlnModPushButton, self.bBrgdJgrAdditionalBattalion.currentText(), self.order_number)
 
     # -------------------------------------------------------------------------------------------------------------------
 
@@ -690,59 +678,53 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.cBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.cBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.cBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrFirstBttlnModPushButton, self.cBrgdFirstBattalion.currentText(), self.order_number)
 
     def c_the_second_bttln_mod_button_was_clicked(self):
 
         if self.cBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.cBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.cBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrSecondBttlnModPushButton, self.cBrgdSecondBattalion.currentText(), self.order_number)
 
     def c_the_third_bttln_mod_button_was_clicked(self):
 
         if self.cBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.cBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.cBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrThirdBttlnModPushButton, self.cBrgdThirdBattalion.currentText(), self.order_number)
 
     def c_the_fourth_bttln_mod_button_was_clicked(self):
 
         if self.cBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.cBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.cBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrFourthBttlnModPushButton, self.cBrgdFourthBattalion.currentText(), self.order_number)
 
     def c_the_add_bttln_mod_button_was_clicked(self):
 
         if self.cBrgdAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 4  # пятый по порядку батальон
-            self.current_bttln_index = self.cBrgdAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFifthBattalionCostSetText = self.cBrgdAddBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrAddBttlnModPushButton, self.cBrgdAdditionalBattalion.currentText(), self.order_number)
 
     def c_the_jgr_add_bttln_mod_button_was_clicked(self):
         if self.cBrgdJgrAdditionalBattalion.currentIndex() != 0:
             battalion_order = "Additional Battalion"
             self.order_number = 5  # шестой по порядку батальон
-            self.current_bttln_index = self.cBrgdJgrAdditionalBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSixthBattalionCostSetText = self.cBrgdJgrAddBattalionCost.setText
             self.brgdTotalCostView = self.cBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrJgrAddBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number, self.cBrJgrAddBttlnModPushButton, self.cBrgdJgrAdditionalBattalion.currentText(), self.order_number)
 
     # -------------------------------------------------------------------------------------------------------------------
     def jgr_brigade_bttln_Lists(self):
@@ -841,60 +823,53 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.JgrBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.JgrBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.JgrBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFirstBttlnModPushButton)
-
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFirstBttlnModPushButton, self.JgrBrgdFirstBattalion.currentText(), self.order_number)
     def jgr_the_second_bttln_mod_button_was_clicked(self):
 
         if self.JgrBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.JgrBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.JgrBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrSecondBttlnModPushButton, self.JgrBrgdSecondBattalion.currentText(), self.order_number)
 
     def jgr_the_third_bttln_mod_button_was_clicked(self):
 
         if self.JgrBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.JgrBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.JgrBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrThirdBttlnModPushButton, self.JgrBrgdThirdBattalion.currentText(), self.order_number)
 
     def jgr_the_fourth_bttln_mod_button_was_clicked(self):
 
         if self.JgrBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.JgrBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.JgrBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFourthBttlnModPushButton, self.JgrBrgdFourthBattalion.currentText(), self.order_number)
 
     def jgr_the_fifth_bttln_mod_button_was_clicked(self):
 
         if self.JgrBrgdFifthBattalion.currentIndex() != 0:
             battalion_order = "Fifth Battalion"
             self.order_number = 4  # четвертый по порядку батальон
-            self.current_bttln_index = self.JgrBrgdFifthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFifthBattalionCostSetText = self.JgrBrgdFifthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFifthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrFifthBttlnModPushButton, self.JgrBrgdFifthBattalion.currentText(), self.order_number)
 
     def jgr_the_sixth_bttln_mod_button_was_clicked(self):
 
         if self.JgrBrgdSixthBattalion.currentIndex() != 0:
             battalion_order = "Sixth Battalion"
             self.order_number = 5  # четвертый по порядку батальон
-            self.current_bttln_index = self.JgrBrgdSixthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSixthBattalionCostSetText = self.JgrBrgdSixthBattalionCost.setText
             self.brgdTotalCostView = self.jgrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrSixthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.jgr_brigade_number, self.JgrBrSixthBttlnModPushButton, self.JgrBrgdSixthBattalion.currentText(), self.order_number)
 
     # -------------------------------------------------------------------------------------------------------------------
     def comb_grndr_brigade_bttln_Lists(self):
@@ -984,70 +959,63 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.CombGrndrBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.CombGrndrBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFirstBttlnModPushButton, self.CombGrndrBrgdFirstBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_second_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.CombGrndrBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSecondBttlnModPushButton, self.CombGrndrBrgdSecondBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_third_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.CombGrndrBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrThirdBttlnModPushButton, self.CombGrndrBrgdThirdBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_fourth_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.CombGrndrBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFourthBttlnModPushButton, self.CombGrndrBrgdFourthBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_fifth_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdFifthBattalion.currentIndex() != 0:
             battalion_order = "Fifth Battalion"
             self.order_number = 4  # пятый по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdFifthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFifthBattalionCostSetText = self.CombGrndrBrgdFifthBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFifthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrFifthBttlnModPushButton, self.CombGrndrBrgdFifthBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_sixth_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdSixthBattalion.currentIndex() != 0:
             battalion_order = "Sixth Battalion"
             self.order_number = 5  # шестой по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdSixthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSixthBattalionCostSetText = self.CombGrndrBrgdSixthBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSixthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSixthBttlnModPushButton, self.CombGrndrBrgdSixthBattalion.currentText(), self.order_number)
 
     def comb_grndr_the_seventh_bttln_mod_button_was_clicked(self):
 
         if self.CombGrndrBrgdSeventhBattalion.currentIndex() != 0:
             battalion_order = "Seventh Battalion"
             self.order_number = 6  # седьмой по порядку батальон
-            self.current_bttln_index = self.CombGrndrBrgdSeventhBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSeventhBattalionCostSetText = self.CombGrndrBrgdSeventhBattalionCost.setText
             self.brgdTotalCostView = self.combGrndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSeventhBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.comb_grndr_brigade_number, self.CombGrndrBrSeventhBttlnModPushButton, self.CombGrndrBrgdSeventhBattalion.currentText(), self.order_number)
 
     # -------------------------------------------------------------------------------------------------------------------
     def grndr_brigade_bttln_Lists(self):
@@ -1113,40 +1081,36 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.GrndrBrgdFirstBattalion.currentIndex() != 0:
             battalion_order = "First Battalion"
             self.order_number = 0  # первый по порядку батальон
-            self.current_bttln_index = self.GrndrBrgdFirstBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.GrndrBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.grndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrFirstBttlnModPushButton, self.GrndrBrgdFirstBattalion.currentText(), self.order_number)
 
     def grndr_the_second_bttln_mod_button_was_clicked(self):
 
         if self.GrndrBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Battalion"
             self.order_number = 1  # второй по порядку батальон
-            self.current_bttln_index = self.GrndrBrgdSecondBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.GrndrBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.grndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrSecondBttlnModPushButton, self.GrndrBrgdSecondBattalion.currentText(), self.order_number)
 
     def grndr_the_third_bttln_mod_button_was_clicked(self):
 
         if self.GrndrBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Battalion"
             self.order_number = 2  # третий по порядку батальон
-            self.current_bttln_index = self.GrndrBrgdThirdBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.GrndrBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.grndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrThirdBttlnModPushButton, self.GrndrBrgdThirdBattalion.currentText(), self.order_number)
 
     def grndr_the_fourth_bttln_mod_button_was_clicked(self):
 
         if self.GrndrBrgdFourthBattalion.currentIndex() != 0:
             battalion_order = "Fourth Battalion"
             self.order_number = 3  # четвертый по порядку батальон
-            self.current_bttln_index = self.GrndrBrgdFourthBattalion.currentIndex()  # имя батальона выбраного на данный момент
             self.brgdFourthBattalionCostSetText = self.GrndrBrgdFourthBattalionCost.setText
             self.brgdTotalCostView = self.grndrBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrFourthBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.grndr_brigade_number, self.GrndrBrFourthBttlnModPushButton, self.GrndrBrgdFourthBattalion.currentText(), self.order_number)
 
     #--------------------------------------------------------------------------------------------------------------------
     def light_cvlry_brigade_bttln_Lists(self):
@@ -1216,9 +1180,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdSecondBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText()  == "Hussars":
                 self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
                 self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
 
 
@@ -1238,9 +1202,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText() == "Hussars" :
                 self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
                 self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
@@ -1259,9 +1223,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdSecondBattalion.currentText() == "Hussars":
                 self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdThirdBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdFirstBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdSecondBattalion.currentText() == "Regular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
+                    (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack"):
                 self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgdTotalCostView(self):
@@ -1279,30 +1243,27 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.LCvlryBrgdFirstBattalion.currentIndex() +self.l_cvlry_battalion_index_add != 0:
             battalion_order = "First Regiment"
             self.order_number = 0  # первый по порядку кав полк
-            self.current_bttln_index = self.LCvlryBrgdFirstBattalion.currentIndex() # имя кав полка выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.LCvlryBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrFirstBttlnModPushButton, self.LCvlryBrgdFirstBattalion.currentText(), self.order_number)
 
     def lightCvlry_the_second_bttln_mod_button_was_clicked(self):
 
         if self.LCvlryBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Regiment"
             self.order_number = 1  # второй по порядку кав полк
-            self.current_bttln_index = self.LCvlryBrgdSecondBattalion.currentIndex()  # имя кав полка выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.LCvlryBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrSecondBttlnModPushButton, self.LCvlryBrgdSecondBattalion.currentText(), self.order_number)
 
     def lightCvlry_the_third_bttln_mod_button_was_clicked(self):
 
         if self.LCvlryBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Regiment"
             self.order_number = 2  # третий по порядку кав полк
-            self.current_bttln_index = self.LCvlryBrgdThirdBattalion.currentIndex()  # имя кав полка выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.LCvlryBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.lightCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.light_cvlry_brigade_number, self.LCvlryBrThirdBttlnModPushButton, self.LCvlryBrgdThirdBattalion.currentText(), self.order_number)
     #--------------------------------------------------------------------------------------------------------------------
 
     def heavy_cvlry_brigade_bttln_Lists(self):
@@ -1349,7 +1310,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                     self.HCvlryBrgdFirstBattalion.addItem(bttlnName)
                 # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
                 self.h_cvlry_battalion_index_add = 1
-            self.battalion_index_add = 1
+
             self.HCvlryBrgdFirstBattalion.setDisabled(False)
             self.HCvlryBrgdSecondBattalion.setDisabled(False)
             if self.HCvlryBrgdFirstBattalion.currentText() != "Cuirassier":
@@ -1428,30 +1389,27 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         if self.HCvlryBrgdFirstBattalion.currentIndex() +self.h_cvlry_battalion_index_add != 0:
             battalion_order = "First Regiment"
             self.order_number = 0  # первый по порядку кав полк
-            self.current_bttln_index = self.HCvlryBrgdFirstBattalion.currentIndex() # имя кав полка выбраного на данный момент
             self.brgdFirstBattalionCostSetText = self.HCvlryBrgdFirstBattalionCost.setText
             self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrFirstBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrFirstBttlnModPushButton, self.HCvlryBrgdFirstBattalion.currentText(), self.order_number)
 
     def heavyCvlry_the_second_bttln_mod_button_was_clicked(self):
 
         if self.HCvlryBrgdSecondBattalion.currentIndex() != 0:
             battalion_order = "Second Regiment"
             self.order_number = 1  # второй по порядку кав полк
-            self.current_bttln_index = self.HCvlryBrgdSecondBattalion.currentIndex()  # имя кав полка выбраного на данный момент
             self.brgdSecondBattalionCostSetText = self.HCvlryBrgdSecondBattalionCost.setText
             self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrSecondBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrSecondBttlnModPushButton, self.HCvlryBrgdSecondBattalion.currentText(), self.order_number)
 
     def heavyCvlry_the_third_bttln_mod_button_was_clicked(self):
 
         if self.HCvlryBrgdThirdBattalion.currentIndex() != 0:
             battalion_order = "Third Regiment"
             self.order_number = 2  # третий по порядку кав полк
-            self.current_bttln_index = self.HCvlryBrgdThirdBattalion.currentIndex()  # имя кав полка выбраного на данный момент
             self.brgdThirdBattalionCostSetText = self.HCvlryBrgdThirdBattalionCost.setText
             self.brgdTotalCostView = self.heavyCvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrThirdBttlnModPushButton)
+            self.bttln_mod_button_was_clicked(battalion_order, self.heavy_cvlry_brigade_number, self.HCvlryBrThirdBttlnModPushButton, self.HCvlryBrgdThirdBattalion.currentText(), self.order_number)
 
 
     #--------------------------------------------------------------------------------------------------------------------
@@ -1546,20 +1504,21 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
     #--------------------------------------------------------------------------------------------------------------------
 
-    def bttln_mod_button_was_clicked(self, battalion_order, brigade_number, mod_button_name):
+    def bttln_mod_button_was_clicked(self, battalion_order, brigade_number, mod_button_name, battalion_choosen_name, battalion_choosen_order):
 
-
-        self.brigade_number = brigade_number
+        self.current_bttln_name_choosen = battalion_choosen_name # имя батальона который был выбран при нажатии окна МОД
+        self.current_bttln_order_choosen = battalion_choosen_order # порядновый номер батальона в бригаде, который был выбран при нажатии окна МОД
+        self.brigade_number = brigade_number #порядковый номер бригады
         self.bonus_window = BonusWindow()
         self.bonus_window.setWindowTitle(battalion_order)
         self.mod_button_name = mod_button_name
 
-        if brigade_number == 6:
-            self.battalion_index_add = self.l_cvlry_battalion_index_add
-        elif brigade_number == 7:
-            self.battalion_index_add = self.h_cvlry_battalion_index_add
-        else:
-            self.battalion_index_add = 0
+        # if brigade_number == 6:
+        #     self.battalion_index_add = self.l_cvlry_battalion_index_add
+        # elif brigade_number == 7:
+        #     self.battalion_index_add = self.h_cvlry_battalion_index_add
+        # else:
+        #     self.battalion_index_add = 0
 
         self.bonuses = [
             "",
@@ -1638,9 +1597,8 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.bonus_window.show()
 
     def ok_button_was_clicked(self):
-
-        # проверка - не переключил ли пользователь отряд , пока открыто окно выбора бонусов
-        if self.current_bttln_index + self.battalion_index_add != 0:
+# gпроверка условия , что текущий выбор батальона тот же , что и при нажатии на кнопку модификации
+        if self.presenter.BrigadeBttlnName(self.current_bttln_order_choosen, self.brigade_number) == self.current_bttln_name_choosen:
 
             for i in range(0, len(self.btln_bonus_list)):
                 # проверка если выбранный бонус не пуст то тогда применяются свойства бонууса.

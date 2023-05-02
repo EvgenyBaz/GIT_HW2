@@ -45,10 +45,8 @@ class HeavyCavalryBrigade(Brigade):
                          DragoonOnFoot.get_name_of_battalion(),
                          Cuirassier.get_name_of_battalion()],
              "Large": [Dragoon.get_name_of_battalion(),
-                         DragoonOnFoot.get_name_of_battalion(),
                          Cuirassier.get_name_of_battalion()],
              "Small": [Dragoon.get_name_of_battalion(),
-                         DragoonOnFoot.get_name_of_battalion(),
                          Cuirassier.get_name_of_battalion()]
              }
 
