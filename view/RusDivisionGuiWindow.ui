@@ -3383,7 +3383,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFifthBttlnModPushButton_3">
+   <widget class="QPushButton" name="CossackBrFifthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3412,7 +3412,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFourthBattalionCost_4">
+   <widget class="QLabel" name="CossackBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3439,7 +3439,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrThirdBttlnModPushButton_6">
+   <widget class="QPushButton" name="CossackBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3452,7 +3452,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSecondBattalion_6">
+   <widget class="QComboBox" name="CossackBrgdSecondBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3462,7 +3462,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSixthBttlnModPushButton_4">
+   <widget class="QPushButton" name="CossackBrSixthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3475,7 +3475,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFifthBattalionCost_3">
+   <widget class="QLabel" name="CossackBrgdFifthBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3502,7 +3502,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdCmndrCost_6">
+   <widget class="QLabel" name="CossackBrgdCmndrCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3548,7 +3548,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdCmndr_6">
+   <widget class="QComboBox" name="CossackBrgdCmndr">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3558,7 +3558,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSecondBattalionCost_6">
+   <widget class="QLabel" name="CossackBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3585,7 +3585,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdThirdBattalion_6">
+   <widget class="QComboBox" name="CossackBrgdThirdBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3595,7 +3595,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrSecondBttlnModPushButton_6">
+   <widget class="QPushButton" name="CossackBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3608,7 +3608,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFifthBattalion_3">
+   <widget class="QComboBox" name="CossackBrgdFifthBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3618,7 +3618,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdThirdBattalionCost_6">
+   <widget class="QLabel" name="CossackBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3645,7 +3645,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFourthBttlnModPushButton_4">
+   <widget class="QPushButton" name="CossackBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3685,7 +3685,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="JgrBrFirstBttlnModPushButton_6">
+   <widget class="QPushButton" name="CossackBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>1090</x>
@@ -3698,7 +3698,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdFirstBattalionCost_6">
+   <widget class="QLabel" name="CossackBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3744,7 +3744,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdSixthBattalionCost_4">
+   <widget class="QLabel" name="CossackBrgdSixthBattalionCost">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -3771,7 +3771,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdSixthBattalion_5">
+   <widget class="QComboBox" name="CossackBrgdSixthBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3781,7 +3781,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFirstBattalion_6">
+   <widget class="QComboBox" name="CossackBrgdFirstBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3791,7 +3791,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="JgrBrgdFourthBattalion_4">
+   <widget class="QComboBox" name="CossackBrgdFourthBattalion">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -3801,7 +3801,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="JgrBrgdTotalCost_6">
+   <widget class="QLabel" name="CossackBrgdTotalCost">
     <property name="geometry">
      <rect>
       <x>810</x>

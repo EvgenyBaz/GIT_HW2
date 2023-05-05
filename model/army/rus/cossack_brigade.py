@@ -1,18 +1,60 @@
-from model.army.rus.cavalry import mounted_cossack_regular
-from model.army.rus.cavalry import mounted_cossack_irregular
+from model.army.brigade import Brigade
+
+from model.army.unit import Unit
+from model.army.rus.cavalry.mounted_cossack_regular import MountedCossackRegular
+from model.army.rus.cavalry.mounted_cossack_irregular import MountedCossackIrregular
+
+from model.army.basic_commander import BasicCommander
+from model.army.rus.commanders.commander_skill7 import CommanderSkill7
+from model.army.rus.commanders.commander_skill8 import CommanderSkill8
 
 
-class CossackBrigade:
+class CossackBrigade(Brigade):
 
     def __init__(self):
-        self.cossack_brigade_list = [
+        # список командиров
+        self.brigade_commanders_list = []
+        self.brigade_commanders_list.append(BasicCommander())
+        self.brigade_commanders_list.append(CommanderSkill7())
+        self.brigade_commanders_list.append(CommanderSkill8())
 
-            mounted_cossack_regular.MountedCossackRegular(),
-            mounted_cossack_irregular.MountedCossackIrregular()
+        # список батальонов (обьектов) включенных в бригаду - по умолчанию unit - тоесть пустышка
+        self.brigade_list = []
+        self.brigade_list.append(Unit())  # первый батальон
+        self.brigade_list.append(Unit())  # второй батальон
+        self.brigade_list.append(Unit())  # третий батальон
+        self.brigade_list.append(Unit())  # четвертыйбатальон
+        self.brigade_list.append(Unit())  # пятый батальон
+        self.brigade_list.append(Unit())  # шестой батальон
 
+        # возможные вариации для каждого батальона
+        self.brigade_list_battalion_list = []
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # первый батальон - варианты
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # второй батальон - варианты
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # третий батальон - варианты
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # четвертый батальон - варианты
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # пятый батальон - варианты
+        self.brigade_list_battalion_list.append(self.main_battalion_list())  # шестой батальон - варианты
+
+        # возможные бонусы для батальонов в бригаде
+        self.brigade_bonus_list = []
+        self.brigade_bonus_list.append(["Small", -8])
+
+        # зададим соответствие бонусу - батальона
+        self.brigade_bonus_battalion_correspondence = {}
+        self.brigade_bonus_battalion_correspondence = \
+            {"Small": [MountedCossackRegular.get_name_of_battalion(),
+                       MountedCossackIrregular.get_name_of_battalion()]
+             }
+
+    def main_battalion_list(self):
+        return [
+            Unit(),
+            MountedCossackRegular(),
+            MountedCossackIrregular()
         ]
 
-    def get_list_of_cossack_brigade(self):
-        return self.cossack_brigade_list
-
-
+    def set_common_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].insert(0, Unit())
+    def set_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].pop(0)
