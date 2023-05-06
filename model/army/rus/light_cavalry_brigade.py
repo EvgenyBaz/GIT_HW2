@@ -6,6 +6,8 @@ from model.army.rus.cavalry.hussars import Hussars
 from model.army.rus.cavalry.ulan import Ulan
 from model.army.rus.cavalry.mounted_cossack_regular import MountedCossackRegular
 from model.army.rus.cavalry.mounted_cossack_irregular import MountedCossackIrregular
+from model.army.rus.cavalry.free_cossack import FreeCossack
+
 
 from model.army.basic_commander import BasicCommander
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
@@ -38,6 +40,8 @@ class LightCavalryBrigade(Brigade):
         self.brigade_bonus_list.append(["Veteran", 6])
         self.brigade_bonus_list.append(["Large", 8])
         self.brigade_bonus_list.append(["Small", -8])
+        self.brigade_bonus_list.append(["Large free", 0])
+        self.brigade_bonus_list.append(["Small free", 0])
 
         # зададим соответствие бонусу - батальона
         self.brigade_bonus_battalion_correspondence = {}
@@ -54,7 +58,9 @@ class LightCavalryBrigade(Brigade):
                        Hussars.get_name_of_battalion(),
                        Ulan.get_name_of_battalion(),
                        MountedCossackRegular.get_name_of_battalion(),
-                       MountedCossackIrregular.get_name_of_battalion()]
+                       MountedCossackIrregular.get_name_of_battalion()],
+             "Large free": [FreeCossack.get_name_of_battalion()],
+             "Small free": [FreeCossack.get_name_of_battalion()]
              }
 
     def main_battalion_list(self):
@@ -64,7 +70,8 @@ class LightCavalryBrigade(Brigade):
             Hussars(),
             Ulan(),
             MountedCossackRegular(),
-            MountedCossackIrregular()
+            MountedCossackIrregular(),
+            FreeCossack()
         ]
 
 

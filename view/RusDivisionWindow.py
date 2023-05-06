@@ -1227,10 +1227,15 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdSecondBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText()  == "Hussars":
                 self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment":
+            if self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment" or self.CossackBrgdFirstBattalion.currentText() == "Free Cossack regiment":
                 self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack" or "Free Cossack regiment":
+            if (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment"):
+                self.LCvlryBrgdFirstBattalion.setCurrentIndex(0)
+
 
 
     def lightCvlryBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
@@ -1249,9 +1254,13 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdThirdBattalion.currentText() == "Hussars" :
                 self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment" or self.CossackBrgdFirstBattalion.currentText() == "Free Cossack regiment":
+                self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment") and \
+                    (self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment"):
                 self.LCvlryBrgdSecondBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
@@ -1270,9 +1279,13 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             if self.LCvlryBrgdFirstBattalion.currentText() == "Hussars" and self.LCvlryBrgdSecondBattalion.currentText() == "Hussars":
                 self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
 
-        if self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack":
-            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack") and \
-                    (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack"):
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment" or self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment" or self.CossackBrgdFirstBattalion.currentText() == "Free Cossack regiment":
+                self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
+
+        if self.LCvlryBrgdThirdBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment":
+            if (self.LCvlryBrgdFirstBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment") and \
+                    (self.LCvlryBrgdSecondBattalion.currentText() == "Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Irregular Mounted Cossack" or self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment"):
                 self.LCvlryBrgdThirdBattalion.setCurrentIndex(0)
 
     def lightCvlryBrgdTotalCostView(self):
@@ -1549,6 +1562,12 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
     def cossackBrgd1stBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.cossack_brigade_number,
                                self.CossackBrgdFirstBattalionCost, self.cossackBrgdTotalCostView, 0, self.CossackBrFirstBttlnModPushButton)
+
+        if self.CossackBrgdFirstBattalion.currentText() == "Free Cossack regiment":
+            if self.LCvlryBrgdFirstBattalion.currentText() == "Free Cossack regiment" or self.LCvlryBrgdSecondBattalion.currentText() == "Free Cossack regiment" or self.LCvlryBrgdThirdBattalion.currentText() == "Free Cossack regiment":
+                self.CossackBrgdFirstBattalion.setCurrentIndex(0)
+
+
 
     def cossackBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.cossack_brigade_number,
