@@ -2103,7 +2103,7 @@ class Ui_RusDivisionWindow(object):
         self.label_46.setText(_translate("RusDivisionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">Horse Artillery <br/>battery</span></p></body></html>"))
         self.label_47.setText(_translate("RusDivisionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">EarthWorks</span></p></body></html>"))
         self.Cost_15.setText(_translate("RusDivisionWindow", "part of division cost"))
-        self.Cost_16.setText(_translate("RusDivisionWindow", "<html><head/><body><p align=\"center\">Guards have to be not more<br/>than 25% of army cost</p></body></html>"))
+        self.Cost_16.setText(_translate("RusDivisionWindow", "<html><head/><body><p align=\"center\">Guards have to be not more<br/>than 25% of division cost</p></body></html>"))
         self.menuFile.setTitle(_translate("RusDivisionWindow", "File"))
         self.menuHelp.setTitle(_translate("RusDivisionWindow", "Help"))
         self.actionSave.setText(_translate("RusDivisionWindow", "Save"))
