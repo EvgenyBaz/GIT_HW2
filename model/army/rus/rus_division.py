@@ -9,6 +9,7 @@ from model.army.rus.imperial_guard_infantry_brigade import LifeGuardInfantryBrig
 from model.army.rus.imperial_guard_light_cavalry_brigade import LifeGuadLightCavalryBrigade
 from model.army.rus.imperial_guard_heavy_cavalry_brigade import LifeGuadHeavyCavalryBrigade
 from model.army.rus.all_artillery import AllArtillery
+from model.army.rus.earth_works import EarthWorks
 
 
 
@@ -42,7 +43,8 @@ class RusDivision:
             LifeGuardInfantryBrigade(),     #9
             LifeGuadLightCavalryBrigade(),  #10
             LifeGuadHeavyCavalryBrigade(),  #11
-            AllArtillery()                  #12
+            AllArtillery(),                 #12
+            EarthWorks()                    #13
         ]
 
         self.division_commanders_list = [

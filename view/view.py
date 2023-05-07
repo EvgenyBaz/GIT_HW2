@@ -79,9 +79,10 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.cossack_brigade_bttln_Lists()
         self.rusDivisionWindow.imp_grd_inf_brigade_bttln_Lists()
         self.rusDivisionWindow.imp_grd_l_cav_brigade_bttln_Lists()
-        # self.rusDivisionWindow.imp_grd_h_cav_brigade_bttln_Lists()
+        self.rusDivisionWindow.imp_grd_h_cav_brigade_bttln_Lists()
 
         self.rusDivisionWindow.all_artillery_batteries_Lists()
+        self.rusDivisionWindow.earth_works_Lists()
 
         self.rusDivisionWindow.show()
 

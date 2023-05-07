@@ -10,8 +10,6 @@ from model.army.rus.artilllery.unicorn_heavy_battery import UnicornHeavyBattery
 from model.army.rus.artilllery.horse_artillery_battery import HorseArtilleryBattery
 from model.army.rus.artilllery.horse_artillery_half_battery import HorseArtilleryHalfBattery
 
-
-
 class AllArtillery(Brigade):
 
     def __init__(self):
