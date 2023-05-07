@@ -255,19 +255,34 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.divisionTotalCostView()
 
     def divisionTotalCostView(self):
-        self.division_total_cost = int(self.generalCost.text()) + int(self.aBrgdTotalCost.text()) +\
-                     int(self.bBrgdTotalCost.text()) + int(self.cBrgdTotalCost.text()) +\
-                     int(self.JgrBrgdTotalCost.text()) + int(self.CombGrndrBrgdTotalCost.text()) +\
+        army_part_of_ivision_total_cost = int(self.generalCost.text()) + int(self.aBrgdTotalCost.text()) + \
+                     int(self.bBrgdTotalCost.text()) + int(self.cBrgdTotalCost.text()) + \
+                     int(self.JgrBrgdTotalCost.text()) + int(self.CombGrndrBrgdTotalCost.text()) + \
                      int(self.GrndrBrgdTotalCost.text()) + int(self.LCvlryBrgdTotalCost.text()) + \
                      int(self.HCvlryBrgdTotalCost.text()) + int(self.CossackBrgdTotalCost.text()) + \
-                     int(self.ImpGrdInfBrgdTotalCost.text()) + int(self.ImpGrdLCavBrgdTotalCost.text()) + \
-                     int(self.ImpGrdHCavBrgdTotalCost.text()) + self.artillery_total_cost
+                     self.artillery_total_cost
+
+        guard_part_of_ivision_total_cost = int(self.ImpGrdInfBrgdTotalCost.text()) + \
+                                           int(self.ImpGrdLCavBrgdTotalCost.text()) + \
+                                           int(self.ImpGrdHCavBrgdTotalCost.text())
+
+        self.division_total_cost = army_part_of_ivision_total_cost + guard_part_of_ivision_total_cost
+
+        if self.division_total_cost == 0:
+            self.partOfDivisionTotalCost.setText("0 %")
+        else:
+            self.partOfDivisionTotalCost.setText(str(round(guard_part_of_ivision_total_cost/self.division_total_cost*100))+" %")
+            if round(guard_part_of_ivision_total_cost/self.division_total_cost*100) > 25:
+                self.partOfDivisionTotalCost.setStyleSheet("background-color : yellow ")
+            else:
+                self.partOfDivisionTotalCost.setStyleSheet("background-color : white ")
 
         total_cost = self.division_total_cost + self.earthworks_total_cost
 
         self.divisionTotalCost.setText(str(total_cost))
         self.artilleryBatteryVisible()
         self.earthworksVisible()
+        self.imperialGuardBgigadesVisible()
     def artilleryBatteryVisible(self):
 
         number_of_infantry_battalions = self.a_brgd_nmbr_of_battalions + self.b_brgd_nmbr_of_battalions + \
@@ -380,6 +395,27 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         else:
             self.EarthWorks2.setCurrentIndex(0)
             self.EarthWorks2.setDisabled(True)
+
+    def imperialGuardBgigadesVisible(self):
+        commanders_list = [self.aBrgdCmndr, self.bBrgdCmndr, self.cBrgdCmndr,
+                           self.JgrBrgdCmndr, self.CombGrndrBrgdCmndr, self.GrndrBrgdCmndr]
+
+        nmbr_of_brigades = (sum(self.presenter.BrigadeCmndrsPresence(commanders_list[i].currentIndex(), i) for i in range(6)))
+
+        if nmbr_of_brigades >2:
+            self.ImpGrdInfBrgdCmndr.setDisabled(False)
+        else:
+            self.ImpGrdInfBrgdCmndr.setCurrentIndex(0)
+            self.ImpGrdInfBrgdCmndr.setDisabled(True)
+
+        if nmbr_of_brigades >3:
+            self.ImpGrdLCavBrgdCmndr.setDisabled(False)
+            self.ImpGrdHCavBrgdCmndr.setDisabled(False)
+        else:
+            self.ImpGrdLCavBrgdCmndr.setCurrentIndex(0)
+            self.ImpGrdLCavBrgdCmndr.setDisabled(True)
+            self.ImpGrdHCavBrgdCmndr.setCurrentIndex(0)
+            self.ImpGrdHCavBrgdCmndr.setDisabled(True)
     # ------------------------------------------------------------------------------------------------------------------
     def brgdCommanderCostView(self, index, brigade_number, brgdCmndrCost):
         value = self.presenter.BrigadeCmndrsCost(index, brigade_number)

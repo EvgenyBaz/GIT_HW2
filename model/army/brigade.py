@@ -75,6 +75,9 @@ class Brigade:
     def get_presence_of_battalion(self, order_number):
         return self.brigade_list[order_number].presence
 
+    def get_presence_of_commander(self, order_number):
+        return self.brigade_commanders_list[order_number].presence
+
     # добавляем свойство в список бонусов батальона
     def set_battalion_bonus(self, bonus, order_number):
         self.brigade_list[order_number].bonus[bonus] = None

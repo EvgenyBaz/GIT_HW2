@@ -83,7 +83,7 @@
    <widget class="QLabel" name="mainTitle">
     <property name="geometry">
      <rect>
-      <x>670</x>
+      <x>590</x>
       <y>0</y>
       <width>341</width>
       <height>41</height>
@@ -1272,7 +1272,7 @@
    <widget class="QLabel" name="generalCost">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>510</x>
       <y>60</y>
       <width>51</width>
       <height>21</height>
@@ -1302,7 +1302,7 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>680</x>
       <y>40</y>
       <width>191</width>
       <height>16</height>
@@ -1318,7 +1318,7 @@
    <widget class="QComboBox" name="generalName">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>580</x>
       <y>60</y>
       <width>401</width>
       <height>22</height>
@@ -1328,7 +1328,7 @@
    <widget class="QLabel" name="Cost_4">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>510</x>
       <y>40</y>
       <width>51</width>
       <height>21</height>
@@ -1355,7 +1355,7 @@
    <widget class="QLabel" name="Cost_5">
     <property name="geometry">
      <rect>
-      <x>990</x>
+      <x>910</x>
       <y>10</y>
       <width>101</width>
       <height>21</height>
@@ -1382,7 +1382,7 @@
    <widget class="QLabel" name="divisionTotalCost">
     <property name="geometry">
      <rect>
-      <x>1100</x>
+      <x>1020</x>
       <y>10</y>
       <width>51</width>
       <height>21</height>
@@ -3386,8 +3386,8 @@
    <widget class="QPushButton" name="CossackBrFifthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>890</y>
+      <x>1080</x>
+      <y>900</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3399,8 +3399,8 @@
    <widget class="QLabel" name="label_30">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>790</y>
+      <x>870</x>
+      <y>800</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -3415,8 +3415,8 @@
    <widget class="QLabel" name="CossackBrgdFourthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>870</y>
+      <x>800</x>
+      <y>880</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3442,8 +3442,8 @@
    <widget class="QPushButton" name="CossackBrThirdBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>850</y>
+      <x>1080</x>
+      <y>860</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3455,8 +3455,8 @@
    <widget class="QComboBox" name="CossackBrgdSecondBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>830</y>
+      <x>870</x>
+      <y>840</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3465,8 +3465,8 @@
    <widget class="QPushButton" name="CossackBrSixthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>910</y>
+      <x>1080</x>
+      <y>920</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3478,8 +3478,8 @@
    <widget class="QLabel" name="CossackBrgdFifthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>890</y>
+      <x>800</x>
+      <y>900</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3505,8 +3505,8 @@
    <widget class="QLabel" name="CossackBrgdCmndrCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>760</y>
+      <x>800</x>
+      <y>770</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3535,8 +3535,8 @@
    <widget class="QLabel" name="label_31">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>740</y>
+      <x>870</x>
+      <y>750</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -3551,8 +3551,8 @@
    <widget class="QComboBox" name="CossackBrgdCmndr">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>760</y>
+      <x>870</x>
+      <y>770</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3561,8 +3561,8 @@
    <widget class="QLabel" name="CossackBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>830</y>
+      <x>800</x>
+      <y>840</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3588,8 +3588,8 @@
    <widget class="QComboBox" name="CossackBrgdThirdBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>850</y>
+      <x>870</x>
+      <y>860</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3598,8 +3598,8 @@
    <widget class="QPushButton" name="CossackBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>830</y>
+      <x>1080</x>
+      <y>840</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3611,8 +3611,8 @@
    <widget class="QComboBox" name="CossackBrgdFifthBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>890</y>
+      <x>870</x>
+      <y>900</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3621,8 +3621,8 @@
    <widget class="QLabel" name="CossackBrgdThirdBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>850</y>
+      <x>800</x>
+      <y>860</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3648,8 +3648,8 @@
    <widget class="QPushButton" name="CossackBrFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>870</y>
+      <x>1080</x>
+      <y>880</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3661,8 +3661,8 @@
    <widget class="QLabel" name="Cost_11">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>690</y>
+      <x>800</x>
+      <y>700</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3688,8 +3688,8 @@
    <widget class="QPushButton" name="CossackBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>810</y>
+      <x>1080</x>
+      <y>820</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -3701,8 +3701,8 @@
    <widget class="QLabel" name="CossackBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>810</y>
+      <x>800</x>
+      <y>820</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3731,8 +3731,8 @@
    <widget class="QLabel" name="label_32">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>700</y>
+      <x>870</x>
+      <y>710</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -3747,8 +3747,8 @@
    <widget class="QLabel" name="CossackBrgdSixthBattalionCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>910</y>
+      <x>800</x>
+      <y>920</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -3774,8 +3774,8 @@
    <widget class="QComboBox" name="CossackBrgdSixthBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>910</y>
+      <x>870</x>
+      <y>920</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3784,8 +3784,8 @@
    <widget class="QComboBox" name="CossackBrgdFirstBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>810</y>
+      <x>870</x>
+      <y>820</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3794,8 +3794,8 @@
    <widget class="QComboBox" name="CossackBrgdFourthBattalion">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>870</y>
+      <x>870</x>
+      <y>880</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -3804,8 +3804,8 @@
    <widget class="QLabel" name="CossackBrgdTotalCost">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>710</y>
+      <x>800</x>
+      <y>720</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4333,7 +4333,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Additional Battalion</string>
+     <string>Additional battery</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -4617,8 +4617,8 @@
    <widget class="QComboBox" name="ImpGrdHCavBrgdCmndr">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>760</y>
+      <x>1260</x>
+      <y>770</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -4627,8 +4627,8 @@
    <widget class="QLabel" name="label_40">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>790</y>
+      <x>1260</x>
+      <y>800</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -4643,8 +4643,8 @@
    <widget class="QPushButton" name="ImpGrdHCavBrFirstBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1480</x>
-      <y>810</y>
+      <x>1470</x>
+      <y>820</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -4656,8 +4656,8 @@
    <widget class="QComboBox" name="ImpGrdHCavBrgdSecondBattalion">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>830</y>
+      <x>1260</x>
+      <y>840</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -4666,8 +4666,8 @@
    <widget class="QPushButton" name="ImpGrdHCavBrSecondBttlnModPushButton">
     <property name="geometry">
      <rect>
-      <x>1480</x>
-      <y>830</y>
+      <x>1470</x>
+      <y>840</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -4679,8 +4679,8 @@
    <widget class="QLabel" name="ImpGrdHCavBrgdTotalCost">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>710</y>
+      <x>1190</x>
+      <y>720</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4706,8 +4706,8 @@
    <widget class="QLabel" name="ImpGrdHCavBrgdSecondBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>830</y>
+      <x>1190</x>
+      <y>840</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4733,8 +4733,8 @@
    <widget class="QLabel" name="ImpGrdHCavBrgdFirstBattalionCost">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>810</y>
+      <x>1190</x>
+      <y>820</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4763,8 +4763,8 @@
    <widget class="QLabel" name="Cost_14">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>690</y>
+      <x>1190</x>
+      <y>700</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4790,8 +4790,8 @@
    <widget class="QLabel" name="label_41">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>740</y>
+      <x>1260</x>
+      <y>750</y>
       <width>191</width>
       <height>16</height>
      </rect>
@@ -4806,8 +4806,8 @@
    <widget class="QLabel" name="ImpGrdHCavBrgdCmndrCost">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>760</y>
+      <x>1190</x>
+      <y>770</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -4836,8 +4836,8 @@
    <widget class="QLabel" name="label_42">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>680</y>
+      <x>1260</x>
+      <y>690</y>
       <width>201</width>
       <height>61</height>
      </rect>
@@ -4852,8 +4852,8 @@
    <widget class="QComboBox" name="ImpGrdHCavBrgdFirstBattalion">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>810</y>
+      <x>1260</x>
+      <y>820</y>
       <width>191</width>
       <height>22</height>
      </rect>
@@ -5024,7 +5024,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1000</y>
       <width>191</width>
       <height>22</height>
@@ -5037,7 +5037,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1020</y>
       <width>191</width>
       <height>22</height>
@@ -5050,7 +5050,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1060</y>
       <width>191</width>
       <height>22</height>
@@ -5063,7 +5063,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1040</y>
       <width>191</width>
       <height>22</height>
@@ -5076,7 +5076,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1100</y>
       <width>191</width>
       <height>22</height>
@@ -5089,7 +5089,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>1080</y>
       <width>191</width>
       <height>22</height>
@@ -5099,7 +5099,7 @@
    <widget class="QComboBox" name="HeavyArtilleryBattery2">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>790</x>
       <y>1020</y>
       <width>191</width>
       <height>22</height>
@@ -5109,7 +5109,7 @@
    <widget class="QComboBox" name="HeavyArtilleryBattery4">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>790</x>
       <y>1060</y>
       <width>191</width>
       <height>22</height>
@@ -5119,7 +5119,7 @@
    <widget class="QComboBox" name="HeavyArtilleryBattery1">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>790</x>
       <y>1000</y>
       <width>191</width>
       <height>22</height>
@@ -5129,7 +5129,7 @@
    <widget class="QComboBox" name="HeavyArtilleryBattery3">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>790</x>
       <y>1040</y>
       <width>191</width>
       <height>22</height>
@@ -5139,7 +5139,7 @@
    <widget class="QComboBox" name="UnicornBattery2">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1020</y>
       <width>191</width>
       <height>22</height>
@@ -5149,7 +5149,7 @@
    <widget class="QComboBox" name="UnicornBattery4">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1060</y>
       <width>191</width>
       <height>22</height>
@@ -5159,7 +5159,7 @@
    <widget class="QComboBox" name="UnicornBattery1">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1000</y>
       <width>191</width>
       <height>22</height>
@@ -5169,7 +5169,7 @@
    <widget class="QComboBox" name="UnicornBattery5">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1080</y>
       <width>191</width>
       <height>22</height>
@@ -5179,7 +5179,7 @@
    <widget class="QComboBox" name="UnicornBattery6">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1100</y>
       <width>191</width>
       <height>22</height>
@@ -5189,7 +5189,7 @@
    <widget class="QComboBox" name="UnicornBattery3">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>1040</y>
       <width>191</width>
       <height>22</height>
@@ -5199,7 +5199,7 @@
    <widget class="QLabel" name="label_43">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>510</x>
       <y>950</y>
       <width>191</width>
       <height>51</height>
@@ -5215,7 +5215,7 @@
    <widget class="QLabel" name="label_44">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>790</x>
       <y>950</y>
       <width>191</width>
       <height>51</height>
@@ -5231,7 +5231,7 @@
    <widget class="QLabel" name="label_45">
     <property name="geometry">
      <rect>
-      <x>1080</x>
+      <x>1070</x>
       <y>950</y>
       <width>191</width>
       <height>51</height>
@@ -5247,7 +5247,7 @@
    <widget class="QComboBox" name="HorseArtilleryBattery3">
     <property name="geometry">
      <rect>
-      <x>1360</x>
+      <x>1350</x>
       <y>1040</y>
       <width>191</width>
       <height>22</height>
@@ -5257,7 +5257,7 @@
    <widget class="QLabel" name="label_46">
     <property name="geometry">
      <rect>
-      <x>1360</x>
+      <x>1350</x>
       <y>950</y>
       <width>191</width>
       <height>51</height>
@@ -5273,7 +5273,7 @@
    <widget class="QComboBox" name="HorseArtilleryBattery2">
     <property name="geometry">
      <rect>
-      <x>1360</x>
+      <x>1350</x>
       <y>1020</y>
       <width>191</width>
       <height>22</height>
@@ -5283,7 +5283,7 @@
    <widget class="QComboBox" name="HorseArtilleryBattery1">
     <property name="geometry">
      <rect>
-      <x>1360</x>
+      <x>1350</x>
       <y>1000</y>
       <width>191</width>
       <height>22</height>
@@ -5293,7 +5293,7 @@
    <widget class="QLabel" name="HorseArtBttryCost1">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>1280</x>
       <y>1000</y>
       <width>51</width>
       <height>21</height>
@@ -5320,7 +5320,7 @@
    <widget class="QLabel" name="HorseArtBttryCost2">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>1280</x>
       <y>1020</y>
       <width>51</width>
       <height>21</height>
@@ -5347,7 +5347,7 @@
    <widget class="QLabel" name="HorseArtBttryCost3">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>1280</x>
       <y>1040</y>
       <width>51</width>
       <height>21</height>
@@ -5374,7 +5374,7 @@
    <widget class="QLabel" name="UnicornBttryCost2">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1020</y>
       <width>51</width>
       <height>21</height>
@@ -5401,7 +5401,7 @@
    <widget class="QLabel" name="UnicornBttryCost4">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1060</y>
       <width>51</width>
       <height>21</height>
@@ -5428,7 +5428,7 @@
    <widget class="QLabel" name="UnicornBttryCost5">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1080</y>
       <width>51</width>
       <height>21</height>
@@ -5455,7 +5455,7 @@
    <widget class="QLabel" name="UnicornBttryCost1">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1000</y>
       <width>51</width>
       <height>21</height>
@@ -5485,7 +5485,7 @@
    <widget class="QLabel" name="UnicornBttryCost6">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1100</y>
       <width>51</width>
       <height>21</height>
@@ -5512,7 +5512,7 @@
    <widget class="QLabel" name="UnicornBttryCost3">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>1040</y>
       <width>51</width>
       <height>21</height>
@@ -5539,7 +5539,7 @@
    <widget class="QLabel" name="HvyArtBttryCost1">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>1000</y>
       <width>51</width>
       <height>21</height>
@@ -5569,7 +5569,7 @@
    <widget class="QLabel" name="HvyArtBttryCost4">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>1060</y>
       <width>51</width>
       <height>21</height>
@@ -5596,7 +5596,7 @@
    <widget class="QLabel" name="HvyArtBttryCost2">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>1020</y>
       <width>51</width>
       <height>21</height>
@@ -5623,7 +5623,7 @@
    <widget class="QLabel" name="HvyArtBttryCost3">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>720</x>
       <y>1040</y>
       <width>51</width>
       <height>21</height>
@@ -5650,7 +5650,7 @@
    <widget class="QLabel" name="LightArtBttryCost2">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1020</y>
       <width>51</width>
       <height>21</height>
@@ -5677,7 +5677,7 @@
    <widget class="QLabel" name="LightArtBttryCost4">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1060</y>
       <width>51</width>
       <height>21</height>
@@ -5704,7 +5704,7 @@
    <widget class="QLabel" name="LightArtBttryCost5">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1080</y>
       <width>51</width>
       <height>21</height>
@@ -5731,7 +5731,7 @@
    <widget class="QLabel" name="LightArtBttryCost1">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1000</y>
       <width>51</width>
       <height>21</height>
@@ -5761,7 +5761,7 @@
    <widget class="QLabel" name="LightArtBttryCost6">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1100</y>
       <width>51</width>
       <height>21</height>
@@ -5788,7 +5788,7 @@
    <widget class="QLabel" name="LightArtBttryCost3">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>440</x>
       <y>1040</y>
       <width>51</width>
       <height>21</height>
@@ -5847,7 +5847,7 @@
    <widget class="QLabel" name="EarthWorks1Cost">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>1040</y>
       <width>51</width>
       <height>21</height>
@@ -5880,7 +5880,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>230</x>
       <y>1040</y>
       <width>191</width>
       <height>22</height>
@@ -5890,7 +5890,7 @@
    <widget class="QLabel" name="label_47">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>230</x>
       <y>990</y>
       <width>191</width>
       <height>51</height>
@@ -5909,7 +5909,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>230</x>
       <y>1060</y>
       <width>191</width>
       <height>22</height>
@@ -5919,7 +5919,7 @@
    <widget class="QLabel" name="EarthWorks2Cost">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>1060</y>
       <width>51</width>
       <height>21</height>
@@ -5941,6 +5941,90 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="partOfDivisionTotalCost">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>60</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_15">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>60</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>part of division cost</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cost_16">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>10</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Guards have to be not more&lt;br/&gt;than 25% of army cost&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

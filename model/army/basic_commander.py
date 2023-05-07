@@ -1,4 +1,5 @@
 class BasicCommander:
+    presence = 0
     def __init__(self):
         self.name = "empty"
         self.cost = 0

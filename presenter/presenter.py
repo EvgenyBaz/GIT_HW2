@@ -28,8 +28,12 @@ class Presenter():
         return self.division.get_brigade(brigade_number).get_name_of_battalion(order_number)
 
     def BrigadeBttlnPresence(self, order_number, brigade_number):
-         return self.division.get_brigade(brigade_number).get_presence_of_battalion(order_number)
+        return self.division.get_brigade(brigade_number).get_presence_of_battalion(order_number)
 
+    # запрос на присутствие или отсутсвие командира бригады
+
+    def BrigadeCmndrsPresence(self, order_number, brigade_number):
+        return self.division.get_brigade(brigade_number).get_presence_of_commander(order_number)
 
     #запрос на список бонусов для бригады
     def BrigadeBonusNameList(self,brigade_number):
