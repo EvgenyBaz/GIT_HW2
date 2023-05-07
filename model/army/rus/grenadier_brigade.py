@@ -10,7 +10,6 @@ from model.army.rus.commanders.commander_skill8 import CommanderSkill8
 
 class GrenadierBrigade(Brigade):
 
-
     def __init__(self):
         self.brigade_commanders_list = []
         self.brigade_commanders_list.append(BasicCommander())

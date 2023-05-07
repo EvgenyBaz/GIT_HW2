@@ -1,4 +1,4 @@
-
+from model.army.unit import Unit
 class Brigade:
 
     def __init__(self):
@@ -89,3 +89,8 @@ class Brigade:
     # возвращаем по запросу список всех бонусов батальона
     def get_bonus_list(self, order_number):
         return self.brigade_list[order_number].bonus
+
+    def set_common_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].insert(0, Unit())
+    def set_list_of_battalions(self, order_number):
+        self.brigade_list_battalion_list[order_number].pop(0)

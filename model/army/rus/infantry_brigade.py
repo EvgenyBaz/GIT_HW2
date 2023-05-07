@@ -9,7 +9,6 @@ from model.army.rus.infantry.opolchenie_jager import OpolchenieJager
 from model.army.rus.infantry.volunteer_jager_musket import VolunteerJagerMusket
 from model.army.rus.infantry.volunteer_jager_rifle import VolunteerJagerRifle
 from model.army.rus.infantry.jager import Jager
-from model.army.rus.infantry.jager_two_battalions import JagerTwoBattalions
 
 from model.army.basic_commander import BasicCommander
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
@@ -50,8 +49,6 @@ class InfantryBrigade(Brigade):
         self.brigade_bonus_list.append(["Veteran", 8])
         self.brigade_bonus_list.append(["Small", -8])
         self.brigade_bonus_list.append(["Sharpshooter", 3])
-        # self.brigade_bonus_list.append(["Veteran regiment", 16])
-        # self.brigade_bonus_list.append(["Small regiment", -16])
 
         # зададим соответствие бонусу - батальона
         self.brigade_bonus_battalion_correspondence = {}
@@ -70,9 +67,7 @@ class InfantryBrigade(Brigade):
                        VolunteerJagerRifle.get_name_of_battalion(),
                        VolunteerJagerMusket.get_name_of_battalion()],
              "Sharpshooter": [VolunteerJagerRifle.get_name_of_battalion(),
-                              VolunteerJagerMusket.get_name_of_battalion()],
-             # "Veteran regiment": [JagerTwoBattalions.get_name_of_battalion()],
-             # "Small regiment": [JagerTwoBattalions.get_name_of_battalion()]
+                              VolunteerJagerMusket.get_name_of_battalion()]
              }
 
 
@@ -91,8 +86,7 @@ class InfantryBrigade(Brigade):
             OpolchenieJager(),
             VolunteerJagerMusket(),
             VolunteerJagerRifle(),
-            Jager(),
-            # JagerTwoBattalions()
+            Jager()
         ]
 
     def additional_jgr_battalion_list(self):
