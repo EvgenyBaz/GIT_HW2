@@ -1,14 +1,14 @@
 from model.army.brigade import Brigade
 
 from model.army.unit import Unit
-from model.army.rus.artilllery.light_artillery_battery import Light_Artillery_Battery
-from model.army.rus.artilllery.light_artillery_half_battery import Light_Artillery_Half_Battery
-from model.army.rus.artilllery.position_artillery_battery import Position_Artillery_Battery
-from model.army.rus.artilllery.position_artillery_half_battery import Position_Artillery_Half_Battery
-from model.army.rus.artilllery.unicorn_field_battery import Unicorn_Field_Battery
-from model.army.rus.artilllery.unicorn_heavy_battery import Unicorn_Heavy_Battery
-from model.army.rus.artilllery.horse_artillery_battery import Horse_Artillery_Battery
-from model.army.rus.artilllery.horse_artillery_half_battery import Horse_Artillery_Half_Battery
+from model.army.rus.artilllery.light_artillery_battery import LightArtilleryBattery
+from model.army.rus.artilllery.light_artillery_half_battery import LightArtilleryHalfBattery
+from model.army.rus.artilllery.position_artillery_battery import PositionArtilleryBattery
+from model.army.rus.artilllery.position_artillery_half_battery import PositionArtilleryHalfBattery
+from model.army.rus.artilllery.unicorn_field_battery import UnicornFieldBattery
+from model.army.rus.artilllery.unicorn_heavy_battery import UnicornHeavyBattery
+from model.army.rus.artilllery.horse_artillery_battery import HorseArtilleryBattery
+from model.army.rus.artilllery.horse_artillery_half_battery import HorseArtilleryHalfBattery
 
 
 
@@ -71,27 +71,27 @@ class AllArtillery(Brigade):
     def light_battery_list(self):
         return [
             Unit(),
-            Light_Artillery_Battery(),
-            Light_Artillery_Half_Battery()
+            LightArtilleryBattery(),
+            LightArtilleryHalfBattery()
         ]
 
     def heavy_battery_list(self):
         return [
             Unit(),
-            Position_Artillery_Battery(),
-            Position_Artillery_Half_Battery()
+            PositionArtilleryBattery(),
+            PositionArtilleryHalfBattery()
         ]
 
     def unicorn_battery_list(self):
         return [
             Unit(),
-            Unicorn_Field_Battery(),
-            Unicorn_Heavy_Battery()
+            UnicornFieldBattery(),
+            UnicornHeavyBattery()
         ]
 
     def horse_battery_list(self):
         return [
             Unit(),
-            Horse_Artillery_Battery(),
-            Horse_Artillery_Half_Battery()
+            HorseArtilleryBattery(),
+            HorseArtilleryHalfBattery()
         ]

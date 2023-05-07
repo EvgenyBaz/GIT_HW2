@@ -3,10 +3,10 @@ from model.army.brigade import Brigade
 from model.army.unit import Unit
 from model.army.rus.infantry.life_guard_infantry import LifeGuardInfantry
 from model.army.rus.infantry.life_guard_jager import LifeGuardJager
-from model.army.rus.artilllery.guard_light_artillery_battery import Guard_Light_Artillery_Battery
-from model.army.rus.artilllery.guard_light_artillery_half_battery import Guard_Light_Artillery_Half_Battery
-from model.army.rus.artilllery.guard_position_artillery_battery import Guard_Position_Artillery_Battery
-from model.army.rus.artilllery.guard_position_artillery_half_battery import Guard_Position_Artillery_Half_Battery
+from model.army.rus.artilllery.guard_light_artillery_battery import GuardLightArtilleryBattery
+from model.army.rus.artilllery.guard_light_artillery_half_battery import GuardLightArtilleryHalfBattery
+from model.army.rus.artilllery.guard_position_artillery_battery import GuardPositionArtilleryBattery
+from model.army.rus.artilllery.guard_position_artillery_half_battery import GuardPositionArtilleryHalfBattery
 
 from model.army.basic_commander import BasicCommander
 from model.army.rus.commanders.commander_skill7 import CommanderSkill7
@@ -66,13 +66,13 @@ class LifeGuardInfantryBrigade(Brigade):
     def additional_light_artillery_list(self):
         return [
             Unit(),
-            Guard_Light_Artillery_Battery(),
-            Guard_Light_Artillery_Half_Battery()
+            GuardLightArtilleryBattery(),
+            GuardLightArtilleryHalfBattery()
         ]
 
     def additional_heavy_artillery_list(self):
         return [
             Unit(),
-            Guard_Position_Artillery_Battery(),
-            Guard_Position_Artillery_Half_Battery()
+            GuardPositionArtilleryBattery(),
+            GuardPositionArtilleryHalfBattery()
         ]

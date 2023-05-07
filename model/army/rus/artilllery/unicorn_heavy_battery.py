@@ -1,5 +1,5 @@
 from model.army.artillery import *
-class Unicorn_Heavy_Battery(Artillery):
+class UnicornHeavyBattery(Artillery):
 
     name = "Unicorn Heavy Battery"
     def __init__(self):

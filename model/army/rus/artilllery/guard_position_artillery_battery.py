@@ -1,5 +1,5 @@
 from model.army.artillery import *
-class Guard_Position_Artillery_Battery(Artillery):
+class GuardPositionArtilleryBattery(Artillery):
     name = "Guard Position Artillery Battery"
     def __init__(self):
 
