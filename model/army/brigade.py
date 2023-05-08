@@ -82,6 +82,10 @@ class Brigade:
     def set_battalion_bonus(self, bonus, order_number):
         self.brigade_list[order_number].bonus[bonus] = None
 
+    # добавляем свойство в список бонусов батальона в общем списке бригады (используется при загрузке данных)
+    def set_battalion_bonus_in_br_lists(self, bonus, place_number, order_number):
+        self.brigade_list_battalion_list[place_number][order_number].bonus[bonus] = None
+
     def del_battalion_bonus(self, bonus, order_number):
         del self.brigade_list[order_number].bonus[bonus]
 
@@ -89,6 +93,9 @@ class Brigade:
     def add_bonus_cost_to_battalion(self, new_bonus_cost, order_number):
         self.brigade_list[order_number].bonus_cost += new_bonus_cost
 
+    # добавляем стоимость бонуса к общей стоимости бонусов батальона в общем списке бригады (используется при загрузке данных)
+    def add_bonus_cost_to_battalionin_br_lists(self, new_bonus_cost, place_number, order_number):
+        self.brigade_list_battalion_list[place_number][order_number].bonus_cost += new_bonus_cost
     # возвращаем по запросу список всех бонусов батальона
     def get_bonus_list(self, order_number):
         return self.brigade_list[order_number].bonus

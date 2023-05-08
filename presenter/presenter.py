@@ -50,6 +50,9 @@ class Presenter():
     def BrigadeBttlnBonusAdd(self, bonus, order_number, brigade_number):
         self.division.get_brigade(brigade_number).set_battalion_bonus(bonus, order_number)
 
+    def BrigadeBttlnListBonusAdd(self, bonus,  place_number, order_number, brigade_number):
+        self.division.get_brigade(brigade_number).set_battalion_bonus_in_br_lists(bonus, place_number, order_number)
+
     # отправляем удаление бонуса у батальона
     def BrigadeBttlnBonusDel(self, bonus, order_number, brigade_number):
         self.division.get_brigade(brigade_number).del_battalion_bonus(bonus, order_number)
@@ -57,6 +60,11 @@ class Presenter():
     # отправляем стоимомть бонуса для батальона
     def BrigadeBttlnBonusCostAdd(self, bonus_cost, order_number, brigade_number):
         self.division.get_brigade(brigade_number).add_bonus_cost_to_battalion(bonus_cost, order_number)
+
+    def BrigadeBttlnListBonusCostAdd(self, bonus_cost, place_number, order_number, brigade_number):
+        self.division.get_brigade(brigade_number).add_bonus_cost_to_battalionin_br_lists(bonus_cost,place_number, order_number)
+
+
 
     # запрашиваем список бонусов батальона
     def BrigadeBttlnBonusList(self, order_number, brigade_number):

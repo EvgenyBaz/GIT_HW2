@@ -76,5 +76,5 @@ class Ui_MainWindow(object):
         self.menuT.setTitle(_translate("MainWindow", "File"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
-        self.actionLoad.setText(_translate("MainWindow", "Load"))
+        self.actionLoad.setText(_translate("MainWindow", "Load army list"))
         self.actionAbout.setText(_translate("MainWindow", "About"))

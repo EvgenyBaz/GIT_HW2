@@ -116,7 +116,7 @@ Choose the side!</string>
   </widget>
   <action name="actionLoad">
    <property name="text">
-    <string>Load</string>
+    <string>Load army list</string>
    </property>
   </action>
   <action name="actionAbout">

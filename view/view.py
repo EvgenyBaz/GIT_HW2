@@ -1,10 +1,11 @@
 # pyuic6 StartGuiWindow.ui -o StartGuiWindow.py
 # pyuic6 RusDivisionGuiWindow.ui -o RusDivisionGuiWindow.py
-# pyuic6 LineInfantryBonusGuiWindow.ui -o LineInfantryBonusGuiWindow.py
+# pyuic6 BonusGuiWindow.ui -o BonusGuiWindow.py
+import json
 
 from PyQt6 import QtGui
 from PyQt6 import uic
-from PyQt6.QtWidgets import QApplication, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QApplication, QPushButton, QMainWindow, QFileDialog
 import sys
 from PyQt6 import QtWidgets, uic
 
@@ -16,26 +17,48 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
         # self.setupUi(self)
 
-    #
+        self.flagToLoad = False
 
     def show_StartWindow(self):
         self.startWindow = StartWindow()
         self.startWindow.setWindowTitle("Black Powder 2.0 Army Builder")
+
+        self.startWindow.actionLoad.triggered.connect(self.loadFile)
 
         self.startWindow.pushButton_Russia.clicked.connect(self.show_RusDivisionWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
         self.startWindow.pushButton_Russia.clicked.connect(self.startWindow.close) # выключаем текущее окно
         self.startWindow.pushButton_France.clicked.connect(self.the_fra_button_was_clicked) # заглушка
         self.startWindow.show()
 
+    def loadFile(self):
 
+        fileName, _= QFileDialog.getOpenFileName(
+            parent=self,
+            caption='Select a data file',
+            filter='Data File (*.dat)'
+        )
+
+        if fileName:
+            try:
+                with open(fileName, 'r') as fileToLoad:
+                    self.data = json.load(fileToLoad)
+                    self.dataToTableFill(self.data)
+            except:
+                print("load wrong")
+        else:
+            print('window was closed')
+
+    def dataToTableFill(self, data):
+        match data["Side"]:
+            case "Rus":
+                self.flagToLoad = True
+                self.startWindow.pushButton_Russia.click()
+            case _:
+                print("something wrong")
 
 
     def show_RusDivisionWindow(self):
         self.rusDivisionWindow = RusDivisionWindow()
-
-
-        # self.move(qr.topLeft())
-
 
 # добавляем прокрутку
         self.scrollArea = QtWidgets.QScrollArea()
@@ -83,6 +106,9 @@ class MainWindow(QMainWindow):
 
         self.rusDivisionWindow.all_artillery_batteries_Lists()
         self.rusDivisionWindow.earth_works_Lists()
+        if self.flagToLoad:
+            print("passed")
+            self.rusDivisionWindow.loadData(self.data)
 
         self.rusDivisionWindow.show()
 
