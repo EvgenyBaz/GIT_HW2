@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
         self.scrollArea.setWindowTitle("Black Powder 2.0 Army Builder")
 
         # self.rusDivisionWindow.setWindowTitle("Black Powder 2.0 Army Builder")
-
+        # инициализация начальных значений полей
         self.rusDivisionWindow.generalCost.setText("0")
         self.rusDivisionWindow.aBrgdTotalCost.setText("0")
         self.rusDivisionWindow.bBrgdTotalCost.setText("0")
@@ -89,7 +89,7 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.ImpGrdLCavBrgdTotalCost.setText("0")
         self.rusDivisionWindow.ImpGrdHCavBrgdTotalCost.setText("0")
 
-
+        # инициализация списков батальонов в бригадах
         self.rusDivisionWindow.division_cmndrs_list()
         self.rusDivisionWindow.a_brigade_bttln_Lists()
         self.rusDivisionWindow.b_brigade_bttln_Lists()
@@ -106,6 +106,7 @@ class MainWindow(QMainWindow):
 
         self.rusDivisionWindow.all_artillery_batteries_Lists()
         self.rusDivisionWindow.earth_works_Lists()
+
         if self.flagToLoad:
             print("passed")
             self.rusDivisionWindow.loadData(self.data)

@@ -1982,7 +1982,10 @@ class Ui_RusDivisionWindow(object):
         RusDivisionWindow.setStatusBar(self.statusbar)
         self.actionSave = QtGui.QAction(parent=RusDivisionWindow)
         self.actionSave.setObjectName("actionSave")
+        self.actionExport_army_list_to_PDF = QtGui.QAction(parent=RusDivisionWindow)
+        self.actionExport_army_list_to_PDF.setObjectName("actionExport_army_list_to_PDF")
         self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionExport_army_list_to_PDF)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
 
@@ -2117,3 +2120,4 @@ class Ui_RusDivisionWindow(object):
         self.menuFile.setTitle(_translate("RusDivisionWindow", "File"))
         self.menuHelp.setTitle(_translate("RusDivisionWindow", "Help"))
         self.actionSave.setText(_translate("RusDivisionWindow", "Save army list"))
+        self.actionExport_army_list_to_PDF.setText(_translate("RusDivisionWindow", "Export army list to PDF"))

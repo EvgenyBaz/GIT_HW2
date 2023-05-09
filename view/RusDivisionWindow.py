@@ -2,6 +2,7 @@ import json
 
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QFileDialog
+from fpdf import FPDF, XPos, YPos, Align
 
 from presenter.presenter import Presenter
 from view.RusDivisionGuiWindow import Ui_RusDivisionWindow
@@ -16,6 +17,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         self.setupUi(self)
 
         self.actionSave.triggered.connect(self.saveFile)
+        self.actionExport_army_list_to_PDF.triggered.connect(self.exportToPDF)
 
         self.country = "Rus"  # определяем страну
         self.presenter = Presenter(self.country)
@@ -261,7 +263,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.generalName.addItem(cmndrName)
 
     def divisionCommanderCostView(self, index):
-        value = self.presenter.DivisionCmndrsCost(index)
+        value = self.presenter.DivisionCmndrCost(index)
         self.generalCost.setText(str(value))
         self.divisionTotalCostView()
 
@@ -3051,6 +3053,70 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.presenter.BrigadeBttlnListBonusAdd(bonus_name, place_in_br_list, order_in_bttln_list, brgd_number)
             self.presenter.BrigadeBttlnListBonusCostAdd(bonus_cost, place_in_br_list, order_in_bttln_list, brgd_number)
 
+    def exportToPDF(self):
+
+        fileName, _= QFileDialog.getSaveFileName(
+            parent=self,
+            caption='Select a pdf file',
+            filter='Pdf File (*.pdf)'
+        )
+
+        if fileName:
+            try:
+                self.dataToSavePdf(fileName)
+            except:
+                print("save wrong")
+        else:
+            print('window was closed')
+
+    def dataToSavePdf(self, fileName):
+
+        pdf = FPDF(orientation="P", unit="mm", format="A4")
+        pdf.add_page()
+
+        pdf.add_font('FontNS', '', 'View\Fonts\\Noto Sans\\NotoSans-Regular.ttf')
+        pdf.add_font('FontNS', 'B', 'View\Fonts\\Noto Sans\\NotoSans-Bold.ttf')
+        pdf.add_font('FontNS', 'I', 'View\Fonts\\Noto Sans\\NotoSans-Italic.ttf')
+        pdf.add_font('FontNS', 'BI', 'View\Fonts\\Noto Sans\\NotoSans-BoldItalic.ttf')
+
+        pdf.set_font('FontNS', '', 8)
+        pdf.cell(10, 8, "Black Powder 2.0 Army Builder", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.set_font('FontNS', 'B', 14)
+        pdf.cell(0, 8, "Imperial Russian Army Division list", align='C', new_x=XPos.LMARGIN)
+        pdf.set_font('FontNS', 'B', 10)
+        pdf.cell(0, 8, f'Total cost: {self.divisionTotalCost.text()}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.set_font('FontNS', '', 8)
+        line = "_"*162
+        pdf.cell(0, 0, line, new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
+
+        pdf.set_font('FontNS', 'I', 10)
+        pdf.cell(0, 8, "Division commander", new_x=XPos.LMARGIN)
+        pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.set_font('FontNS', 'B', 10)
+        pdf.cell(0, 8, f'{self.presenter.DivisionCmndrName(self.generalName.currentIndex())}', new_x=XPos.LMARGIN)
+        pdf.cell(0, 8, f'{self.presenter.DivisionCmndrCost(self.generalName.currentIndex())}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.set_font('FontNS', '', 8)
+        pdf.cell(0, 8, f'Skills: {self.presenter.DivisionCmndrSkills(self.generalName.currentIndex())}', new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
+        pdf.set_font('FontNS', '', 8)
+        line = "_"*162
+        pdf.cell(0, 0, line, new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
+
+        if self.aBrgdCmndr.currentIndex() != 0:
+            pdf.set_font('FontNS', 'I', 10)
+            pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            pdf.set_font('FontNS', 'B', 10)
+            pdf.cell(0, 8, "Line Infantry Brigade", new_x=XPos.LMARGIN)
+            pdf.cell(0, 8, f'{self.aBrgdTotalCost.text()}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            pdf.set_font('FontNS', 'I', 10)
+            pdf.cell(0, 8, f'Brigade Commander:', new_x=XPos.END)
+            pdf.set_font('FontNS', '', 10)
+            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsName(self.aBrgdCmndr.currentIndex(), self.a_brigade_number)}', new_x=XPos.LMARGIN)
+            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsCost(self.aBrgdCmndr.currentIndex(), self.a_brigade_number)}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
 
 
+
+
+
+        print("test0")
+        pdf.output(fileName)

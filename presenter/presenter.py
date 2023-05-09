@@ -75,13 +75,21 @@ class Presenter():
         return self.division.get_brigade(brigade_number).get_list_commanders_names()
 
     # запрашивает стоимость выбранного командира бригады
+    def BrigadeCmndrsName(self, index, brigade_number):
+        return self.division.get_brigade(brigade_number).get_name_of_commander(index)
+    # запрашивает стоимость выбранного командира бригады
     def BrigadeCmndrsCost(self, index, brigade_number):
         return self.division.get_brigade(brigade_number).get_costs_of_commander(index)
 
     # запрашивает список имен командиров для дивизии
     def DivisionCmndrsNamesList(self):
         return self.division.get_list_commanders_names()
-
+    # запрашивает имя выбранного командира
+    def DivisionCmndrName(self, index):
+        return self.division.get_name_of_commander(index)
     # запрашивает стоимость выбранного командира
-    def DivisionCmndrsCost(self, index):
-        return self.division.get_costs_of_commander(index)
+    def DivisionCmndrCost(self, index):
+        return self.division.get_cost_of_commander(index)
+
+    def DivisionCmndrSkills(self, index):
+        return self.division.get_skills_of_commander(index)

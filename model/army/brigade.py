@@ -43,6 +43,8 @@ class Brigade:
             brigade_cmndrs_names.append(cmndr.get_name_of_commander())
         return brigade_cmndrs_names
 
+    def get_name_of_commander(self, index):
+        return self.brigade_commanders_list[index].get_name_of_commander()
     # по порядковому номеру в списке командиров возвращает его стоимость
     def get_costs_of_commander(self, index):
         return self.brigade_commanders_list[index].get_cost_of_commander()

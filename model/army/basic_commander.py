@@ -10,3 +10,10 @@ class BasicCommander:
 
     def get_name_of_commander(self):
         return self.name
+
+    def get_skills_of_commander(self):
+        skills = "  "
+        for k in self.special:
+            skills = skills + str(k)+", "
+        return skills[0:-2]
+
