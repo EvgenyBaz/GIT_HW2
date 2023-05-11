@@ -1,7 +1,6 @@
 from model.army.cavalry import *
 class FreeCossack(Cavalry):
     name = "Free Cossack regiment"
-    presence = 1
     def __init__(self):
 
         self.type = "Regular Cavalry"

@@ -1,5 +1,5 @@
-from model.army.unit import *
-class StandardEarthWork(Unit):
+from model.army.earthworks import *
+class StandardEarthWork(EarthWorks):
     name = "Standard EarthWork"
     def __init__(self):
 

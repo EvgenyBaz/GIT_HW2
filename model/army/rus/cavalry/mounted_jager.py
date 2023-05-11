@@ -1,7 +1,6 @@
 from model.army.cavalry import *
 class MountedJager(Cavalry):
     name = "Mounted Jager"
-    presence = 1
     def __init__(self):
 
         self.type = "Regular Cavalry"

@@ -1,9 +1,7 @@
 from model.army.infantry import *
 class OpolchenieJager(Infantry):
     name = "Opolchenie Jager"
-    presence = 1
     def __init__(self):
-        # self.name = "Opolchenie Jager"
         self.type = "Regular Infantry"
         self.armament = "Smoothbore Musket and Rifled Musket"
         self.hand_to_hand = 5

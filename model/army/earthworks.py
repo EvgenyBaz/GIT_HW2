@@ -1,3 +1,3 @@
 from model.army.unit import Unit
-class Infantry(Unit):
+class EarthWorks(Unit):
     presence = 1

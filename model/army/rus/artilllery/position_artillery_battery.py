@@ -1,6 +1,6 @@
 from model.army.artillery import *
 class PositionArtilleryBattery(Artillery):
-    name = "Position_Artillery_Battery"
+    name = "Position Artillery Battery"
     def __init__(self):
 
         self.type = "Regular Artillery"

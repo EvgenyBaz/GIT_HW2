@@ -23,6 +23,9 @@ class Presenter():
     def BrigadeBttlnCost(self, order_number, brigade_number):
         return self.division.get_brigade(brigade_number).get_cost_of_battalion(order_number)
 
+    def BrigadeBttlnSpecials(self, order_number, brigade_number):
+        return self.division.get_brigade(brigade_number).get_bonus_of_battalion(order_number)
+
     # запрос имени текущего батальона
     def BrigadeBttlnName(self, order_number, brigade_number):
         return self.division.get_brigade(brigade_number).get_name_of_battalion(order_number)

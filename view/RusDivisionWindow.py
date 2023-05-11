@@ -3085,10 +3085,8 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         pdf.cell(0, 8, "Imperial Russian Army Division list", align='C', new_x=XPos.LMARGIN)
         pdf.set_font('FontNS', 'B', 10)
         pdf.cell(0, 8, f'Total cost: {self.divisionTotalCost.text()}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        pdf.set_font('FontNS', '', 8)
-        line = "_"*162
-        pdf.cell(0, 0, line, new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
-
+        self.print_line(pdf)
+# запрашиваем и печатаем имя, стоимость и умения дивиpионного командира
         pdf.set_font('FontNS', 'I', 10)
         pdf.cell(0, 8, "Division commander", new_x=XPos.LMARGIN)
         pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -3097,26 +3095,93 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         pdf.cell(0, 8, f'{self.presenter.DivisionCmndrCost(self.generalName.currentIndex())}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         pdf.set_font('FontNS', '', 8)
         pdf.cell(0, 8, f'Skills: {self.presenter.DivisionCmndrSkills(self.generalName.currentIndex())}', new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
-        pdf.set_font('FontNS', '', 8)
-        line = "_"*162
-        pdf.cell(0, 0, line, new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
+        self.print_line(pdf)
+        pdf.set_font('FontNS', 'I', 10)
+        pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
-        if self.aBrgdCmndr.currentIndex() != 0:
-            pdf.set_font('FontNS', 'I', 10)
-            pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+        brigades_and_battalions = []
+        brigades_and_battalions.append(["Line Infantry Brigade", self.aBrgdCmndr, self.aBrgdTotalCost, self.a_brigade_number, 6])
+        brigades_and_battalions.append(["Line Infantry Brigade", self.bBrgdCmndr, self.bBrgdTotalCost, self.b_brigade_number, 6])
+        brigades_and_battalions.append(["Line Infantry Brigade", self.cBrgdCmndr, self.cBrgdTotalCost, self.c_brigade_number, 6])
+        brigades_and_battalions.append(["Jager Brigade", self.JgrBrgdCmndr, self.JgrBrgdTotalCost, self.jgr_brigade_number, 8])
+        brigades_and_battalions.append(["Combine Grenadier Brigade", self.CombGrndrBrgdCmndr, self.CombGrndrBrgdTotalCost, self.comb_grndr_brigade_number, 7])
+        brigades_and_battalions.append(["Grenadier Brigade", self.GrndrBrgdCmndr, self.GrndrBrgdTotalCost, self.grndr_brigade_number, 4])
+        brigades_and_battalions.append(["Light Cavalry Brigade", self.LCvlryBrgdCmndr, self.LCvlryBrgdTotalCost, self.light_cvlry_brigade_number, 3])
+        brigades_and_battalions.append(["Heavy Cavalry Brigade", self.HCvlryBrgdCmndr, self.HCvlryBrgdTotalCost, self.heavy_cvlry_brigade_number, 3])
+        brigades_and_battalions.append(["Cossack Brigade", self.CossackBrgdCmndr, self.CossackBrgdTotalCost, self.cossack_brigade_number, 6])
+        brigades_and_battalions.append(["Imperial Guard Infantry Brigade", self.ImpGrdInfBrgdCmndr, self.ImpGrdInfBrgdTotalCost, self.imp_grd_inf_brigade_number, 8])
+        brigades_and_battalions.append(["Imperial Guard Light Cavalry Brigade", self.ImpGrdLCavBrgdCmndr, self.ImpGrdLCavBrgdTotalCost, self.imp_grd_l_cav_brigade_number, 2])
+        brigades_and_battalions.append(["Imperial Guard Heavy Cavalry Brigade", self.ImpGrdHCavBrgdCmndr, self.ImpGrdHCavBrgdTotalCost, self.imp_grd_h_cav_brigade_number, 2])
+
+        for i in range (0, len(brigades_and_battalions)):
+           self.brigade_title_print(pdf, brigades_and_battalions[i][0], brigades_and_battalions[i][1], brigades_and_battalions[i][2], brigades_and_battalions[i][3], brigades_and_battalions[i][4], "Battalion")
+
+
+        artillery_presence = 0
+        for i in range (0, 19):
+            artillery_presence += self.presenter.BrigadeBttlnPresence(i, self.artillery_quasy_brigade_number)
+        if artillery_presence > 0:
+            self.print_line(pdf)
             pdf.set_font('FontNS', 'B', 10)
-            pdf.cell(0, 8, "Line Infantry Brigade", new_x=XPos.LMARGIN)
-            pdf.cell(0, 8, f'{self.aBrgdTotalCost.text()}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-            pdf.set_font('FontNS', 'I', 10)
-            pdf.cell(0, 8, f'Brigade Commander:', new_x=XPos.END)
-            pdf.set_font('FontNS', '', 10)
-            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsName(self.aBrgdCmndr.currentIndex(), self.a_brigade_number)}', new_x=XPos.LMARGIN)
-            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsCost(self.aBrgdCmndr.currentIndex(), self.a_brigade_number)}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            pdf.cell(0, 8, 'Artillery', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
+            for order_number in range(0, 19):
+                if self.presenter.BrigadeBttlnName(order_number, self.artillery_quasy_brigade_number) != "empty":
+                    self.battalion_print(pdf, order_number, self.artillery_quasy_brigade_number, "Battery")
 
+        earthworks_presence = 0
+        for i in range (0, 2):
+            earthworks_presence += self.presenter.BrigadeBttlnPresence(i, self.earthworks_quasy_brigade_number)
+        if earthworks_presence > 0:
+            self.print_line(pdf)
+            pdf.set_font('FontNS', 'B', 10)
+            pdf.cell(0, 8, 'EarthWorks', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
-
+            for order_number in range(0, 2):
+                if self.presenter.BrigadeBttlnName(order_number, self.earthworks_quasy_brigade_number) != "empty":
+                    self.battalion_print(pdf, order_number, self.earthworks_quasy_brigade_number, 'EarthWorks')
+            self.print_line(pdf)
 
 
         print("test0")
         pdf.output(fileName)
+    def brigade_title_print(self, pdf, x_brigade_name, xBrgdCmndr, xBrgdTotalCost,x_brigade_number, number_of_battalions, flag):
+
+        # запрашиваем и печатаем (если выбран) имя и стоимость бригадного командира
+        if xBrgdCmndr.currentIndex() != 0:
+
+            pdf.set_font('FontNS', 'B', 10)
+            pdf.cell(0, 8, f'{x_brigade_name}', new_x=XPos.LMARGIN)
+            pdf.cell(0, 8, f'{xBrgdTotalCost.text()}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            pdf.set_font('FontNS', 'I', 10)
+            pdf.cell(0, 8, f'Brigade Commander: ', new_x=XPos.END)
+            pdf.set_font('FontNS', '', 10)
+            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsName(xBrgdCmndr.currentIndex(), x_brigade_number)}',
+                     new_x=XPos.LMARGIN)
+            pdf.cell(0, 8, f'{self.presenter.BrigadeCmndrsCost(xBrgdCmndr.currentIndex(), x_brigade_number)}',
+                     align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+            for order_number in range(0, number_of_battalions):
+                # запрашиваем и печатаем имя , стоимость и бонусы  батальона (если он есть)
+                if self.presenter.BrigadeBttlnName(order_number, x_brigade_number) != "empty":
+                    self.battalion_print(pdf, order_number, x_brigade_number, flag)
+                    
+
+    def print_line(self, pdf):
+        pdf.set_font('FontNS', '', 8)
+        line = "_" * 162
+        pdf.cell(0, 0, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+
+
+    def battalion_print (self, pdf, order_number, brigade_number, flag):
+        pdf.set_font('FontNS', 'I', 10)
+        pdf.cell(0, 8, f'{flag}: ', new_x=XPos.END)
+        pdf.set_font('FontNS', '', 10)
+        pdf.cell(0, 8, f'{self.presenter.BrigadeBttlnName(order_number, brigade_number)}', new_x=XPos.LMARGIN)
+        pdf.cell(0, 8, f'{self.presenter.BrigadeBttlnCost(order_number, brigade_number)}', align=Align.R,
+                 new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        if self.presenter.BrigadeBttlnBonusList(order_number, brigade_number):
+            pdf.set_font('FontNS', '', 8)
+            pdf.cell(0, 5, f'         Specials:  {self.presenter.BrigadeBttlnSpecials(order_number, brigade_number)}', new_x=XPos.LMARGIN, new_y=YPos.NEXT)

@@ -1,9 +1,7 @@
 from model.army.infantry import *
 class Grenadier(Infantry):
     name = "Grenadier"
-    presence = 1
     def __init__(self):
-        # self.name = "Grenadier"
         self.type = "Regular Infantry"
         self.armament = "Smoothbore Musket"
         self.hand_to_hand = 7

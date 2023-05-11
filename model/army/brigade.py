@@ -74,6 +74,9 @@ class Brigade:
     def get_name_of_battalion(self, order_number):
         return self.brigade_list[order_number].name
 
+    def get_bonus_of_battalion(self, order_number):
+        return self.brigade_list[order_number].get_bonus_of_battalion()
+
     def get_presence_of_battalion(self, order_number):
         return self.brigade_list[order_number].presence
 

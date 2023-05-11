@@ -20,9 +20,19 @@ class Unit:
     def get_cost_of_battalion(self):
         return self.cost
 
+    def get_bonus_of_battalion(self):
+        result = "  "
+        for bonus in self.bonus:
+            result = result + bonus + ", "
+        return result[0:-2]
+
 
     @classmethod
     def get_name_of_battalion(cls):
         return cls.name
+
+
+
+
 
 

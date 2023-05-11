@@ -1,7 +1,6 @@
 from model.army.cavalry import *
 class MountedCossackIrregular(Cavalry):
     name = "Irregular Mounted Cossack"
-    presence = 1
     def __init__(self):
 
         self.type = "Irregular Cavalry"

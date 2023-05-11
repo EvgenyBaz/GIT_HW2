@@ -1,5 +1,5 @@
-from model.army.unit import *
-class LargeEarthWork1(Unit):
+from model.army.earthworks import *
+class LargeEarthWork1(EarthWorks):
     name = "Large EarthWork save +1"
     def __init__(self):
 
