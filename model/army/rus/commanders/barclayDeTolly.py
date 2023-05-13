@@ -4,5 +4,6 @@ class BarklayDeTolly(BasicCommander):
         self.name = "General of Infantry Mikhail Bogdanovich Barklay de Tolly. CS 8 "
         self.cost = 100
         self.special = {
-            "descriprion"
+            "Combat attack +1 Dice. Decisive. If he fails to give an order to a unit/s \
+he can contunue to give one more order to a different unit on a D6 roll of 4+"
         }

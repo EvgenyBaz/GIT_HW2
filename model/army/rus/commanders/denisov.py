@@ -4,5 +4,5 @@ class Denisov(BasicCommander):
         self.name = "Major General Vasili Denisov. CS 8 "
         self.cost = 100
         self.special = {
-            "descriprion"
+            "Combat attack +1 Dice. Cossack cavalry under his command can charge normally"
         }

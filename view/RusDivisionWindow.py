@@ -7,6 +7,7 @@ from fpdf import FPDF, XPos, YPos, Align
 from presenter.presenter import Presenter
 from view.RusDivisionGuiWindow import Ui_RusDivisionWindow
 from view.BonusWindow import BonusWindow
+from view.E_message import MessageWindow
 
 from view.brigades.brigade_view import brigade_bttln_Lists
 
@@ -15,6 +16,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         super(RusDivisionWindow, self).__init__(*args, **kwargs)
 
         self.setupUi(self)
+        self.error_message = MessageWindow()
 
         self.actionSave.triggered.connect(self.saveFile)
         self.actionExport_army_list_to_PDF.triggered.connect(self.exportToPDF)
@@ -255,6 +257,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
         self.EarthWorks1.currentIndexChanged.connect(self.earthworks1CostView)
         self.EarthWorks2.currentIndexChanged.connect(self.earthworks2CostView)
+
+
+
 
     # заполняем список имен командиров дивизии
     def division_cmndrs_list(self):
@@ -2602,9 +2607,9 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                 with open(fileName, 'w') as fileToSave:
                     fileToSave.write(self.dataCollectToSave())
             except:
-                print("save wrong")
+                self.error_message.show()
         else:
-            print('window was closed')
+            pass
 
     def dataCollectToSave(self):
         dataSet= {"Side": self.country,
@@ -2797,8 +2802,6 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         return json_object
 
     def loadData(self, data):
-
-        print(data)
 
         self.generalName.setCurrentIndex(data["Division general"])
 
@@ -3065,19 +3068,22 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             try:
                 self.dataToSavePdf(fileName)
             except:
-                print("save wrong")
+                self.error_message.text("pdf export error")
+                self.error_message.show()
         else:
-            print('window was closed')
+            pass
+
+
 
     def dataToSavePdf(self, fileName):
 
         pdf = FPDF(orientation="P", unit="mm", format="A4")
         pdf.add_page()
 
-        pdf.add_font('FontNS', '', 'View\Fonts\\Noto Sans\\NotoSans-Regular.ttf')
-        pdf.add_font('FontNS', 'B', 'View\Fonts\\Noto Sans\\NotoSans-Bold.ttf')
-        pdf.add_font('FontNS', 'I', 'View\Fonts\\Noto Sans\\NotoSans-Italic.ttf')
-        pdf.add_font('FontNS', 'BI', 'View\Fonts\\Noto Sans\\NotoSans-BoldItalic.ttf')
+        pdf.add_font('FontNS', '', 'Fonts\\Noto Sans\\NotoSans-Regular.ttf')
+        pdf.add_font('FontNS', 'B', 'Fonts\\Noto Sans\\NotoSans-Bold.ttf')
+        pdf.add_font('FontNS', 'I', 'Fonts\\Noto Sans\\NotoSans-Italic.ttf')
+        pdf.add_font('FontNS', 'BI', 'Fonts\\Noto Sans\\NotoSans-BoldItalic.ttf')
 
         pdf.set_font('FontNS', '', 8)
         pdf.cell(10, 8, "Black Powder 2.0 Army Builder", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -3094,7 +3100,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         pdf.cell(0, 8, f'{self.presenter.DivisionCmndrName(self.generalName.currentIndex())}', new_x=XPos.LMARGIN)
         pdf.cell(0, 8, f'{self.presenter.DivisionCmndrCost(self.generalName.currentIndex())}', align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         pdf.set_font('FontNS', '', 8)
-        pdf.cell(0, 8, f'Skills: {self.presenter.DivisionCmndrSkills(self.generalName.currentIndex())}', new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
+        pdf.multi_cell(0, 4, f'Skills: {self.presenter.DivisionCmndrSkills(self.generalName.currentIndex())}', new_x=XPos.LMARGIN,  new_y=YPos.NEXT)
         self.print_line(pdf)
         pdf.set_font('FontNS', 'I', 10)
         pdf.cell(0, 8, "Cost", align=Align.R, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -3143,8 +3149,6 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
                     self.battalion_print(pdf, order_number, self.earthworks_quasy_brigade_number, 'EarthWorks')
             self.print_line(pdf)
 
-
-        print("test0")
         pdf.output(fileName)
     def brigade_title_print(self, pdf, x_brigade_name, xBrgdCmndr, xBrgdTotalCost,x_brigade_number, number_of_battalions, flag):
 
@@ -3172,8 +3176,6 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
         pdf.set_font('FontNS', '', 8)
         line = "_" * 162
         pdf.cell(0, 0, line, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-
-
 
     def battalion_print (self, pdf, order_number, brigade_number, flag):
         pdf.set_font('FontNS', 'I', 10)

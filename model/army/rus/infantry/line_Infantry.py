@@ -11,8 +11,7 @@ class LineInfantry(Infantry):
         self.stamina = 4
         self.special = {
             "Tough Fighter",
-            "Poor",
-            "Skirmisher",
+            "Poor Skirmisher",
             "Lacking Initiative"
         }
         self.cost = 41

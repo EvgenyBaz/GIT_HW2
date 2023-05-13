@@ -15,6 +15,6 @@ class GuardHorseArtilleryBattery(Artillery):
             "Elite 4+",
             'Large'
         }
-        self.cost = 27
+        self.cost = 51
         self.bonus = {}
         self.bonus_cost = 0

@@ -4,5 +4,5 @@ class Kutaisov(BasicCommander):
         self.name = "Major General Aleksander Ivanovich Kutaisov. CS 7 "
         self.cost = 150
         self.special = {
-            "descriprion"
+            "Combat attack +1 Dice. Decisive. Headstrong. Aggressive. Russian batteries ignore their proximity rule."
         }

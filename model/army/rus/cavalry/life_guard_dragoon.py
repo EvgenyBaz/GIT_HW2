@@ -10,7 +10,7 @@ class LifeGuardDragoon(Cavalry):
         self.morale = 4
         self.stamina = 3
         self.special = {
-            "Reliable"
+            "Reliable",
             "Heavy Cavalry D1"
         }
         self.cost = 54

@@ -4,18 +4,20 @@
 import json
 
 from PyQt6 import QtGui
-from PyQt6 import uic
 from PyQt6.QtWidgets import QApplication, QPushButton, QMainWindow, QFileDialog
 import sys
 from PyQt6 import QtWidgets, uic
 
 from view.StartWindow import StartWindow
 from view.RusDivisionWindow import RusDivisionWindow
+from view.E_message import MessageWindow
+
 
 class MainWindow(QMainWindow):
     def __init__(self, *args, obj=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         # self.setupUi(self)
+        self.error_message = MessageWindow()
 
         self.flagToLoad = False
 
@@ -24,6 +26,7 @@ class MainWindow(QMainWindow):
         self.startWindow.setWindowTitle("Black Powder 2.0 Army Builder")
 
         self.startWindow.actionLoad.triggered.connect(self.loadFile)
+        self.startWindow.actionAbout.triggered.connect(self.aboutMessage)
 
         self.startWindow.pushButton_Russia.clicked.connect(self.show_RusDivisionWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
         self.startWindow.pushButton_Russia.clicked.connect(self.startWindow.close) # выключаем текущее окно
@@ -44,9 +47,10 @@ class MainWindow(QMainWindow):
                     self.data = json.load(fileToLoad)
                     self.dataToTableFill(self.data)
             except:
-                print("load wrong")
+                self.error_message.text("load army list error")
+                self.error_message.show()
         else:
-            print('window was closed')
+            pass
 
     def dataToTableFill(self, data):
         match data["Side"]:
@@ -54,7 +58,8 @@ class MainWindow(QMainWindow):
                 self.flagToLoad = True
                 self.startWindow.pushButton_Russia.click()
             case _:
-                print("something wrong")
+                self.error_message.text("this country is not available")
+                self.error_message.show()
 
 
     def show_RusDivisionWindow(self):
@@ -108,16 +113,23 @@ class MainWindow(QMainWindow):
         self.rusDivisionWindow.earth_works_Lists()
 
         if self.flagToLoad:
-            print("passed")
-            self.rusDivisionWindow.loadData(self.data)
+            try:
+                self.rusDivisionWindow.loadData(self.data)
+            except:
+                self.error_message.text("load army list error")
+                self.error_message.show()
 
         self.rusDivisionWindow.show()
 
 
     def the_fra_button_was_clicked(self): # заглушка
-        print("fra_clicked")
+        self.error_message.text("France will be available in further updates")
+        self.error_message.show()
 
-
+    def aboutMessage(self):
+        self.error_message.text("Black Powder 2.0 army builder v 0.9<br>created by Evgeny Bazarov<br>This program is \
+free for use<br>Source code <a href='https://github.com/EvgenyBaz/GB_DIploma_project'> on Github </a>")
+        self.error_message.show()
 
 
 app = QtWidgets.QApplication(sys.argv)

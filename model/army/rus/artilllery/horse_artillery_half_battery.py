@@ -10,9 +10,8 @@ class HorseArtilleryHalfBattery(Artillery):
         self.morale = 4
         self.stamina = 1
         self.special = {
-            "Marauder",
-            "Large"
+            "Marauder"
         }
-        self.cost = 39
+        self.cost = 27
         self.bonus = {}
         self.bonus_cost = 0

@@ -26,6 +26,7 @@ from model.army.rus.commanders.platov import Platov
 from model.army.rus.commanders.stroganov import Stroganov
 from model.army.rus.commanders.vorontsov import Vorontsov
 from model.army.rus.commanders.bogdanovsky import Bogdanovsky
+from model.army.rus.commanders.raevsky import Raevsky
 
 class RusDivision:
 
@@ -59,7 +60,8 @@ class RusDivision:
             Platov(),
             Stroganov(),
             Vorontsov(),
-            Bogdanovsky()
+            Bogdanovsky(),
+            Raevsky()
         ]
 
     def get_list_commanders_names(self):

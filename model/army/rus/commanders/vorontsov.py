@@ -4,5 +4,5 @@ class Vorontsov(BasicCommander):
         self.name = "Major General Mikhail Vorontsov. CS 8 "
         self.cost = 75
         self.special = {
-            "descriprion"
+            "Combat attack +1 Dice. Decisive."
         }

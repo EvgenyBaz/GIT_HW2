@@ -10,8 +10,7 @@ class LifeGuardJager(Infantry):
         self.stamina = 4
         self.special = {
             "Rifle Mixed Formation"
-            "Light Infantry"
-            "Mixed Formation"
+            "Light Infantry Mixed Formation"
             "Skirmisher",
             "Reliable"
             "Elite 4+"

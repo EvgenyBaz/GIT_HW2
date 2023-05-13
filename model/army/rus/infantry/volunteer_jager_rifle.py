@@ -3,7 +3,7 @@ class VolunteerJagerRifle(Infantry):
     name = "Volunteer Jager with Rifle"
     def __init__(self):
         self.type = "Regular Infantry"
-        self.armament = "Smoothbore Musket"
+        self.armament = "Rifle"
         self.hand_to_hand = 6
         self.shooting = 3
         self.morale = 4

@@ -4,7 +4,7 @@ class Hussars(Cavalry):
     def __init__(self):
 
         self.type = "Regular Cavalry"
-        self.armament = "Sabre"
+        self.armament = "Lance"
         self.hand_to_hand = 6
         self.shooting = 0
         self.morale = 4

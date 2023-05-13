@@ -10,8 +10,7 @@ class LifeGuardInfantry(Infantry):
         self.stamina = 4
         self.special = {
             "Tough Fighter",
-            "Poor",
-            "Skirmisher",
+            "Poor Skirmisher",
             "Reliable"
             "Elite 3+"
             "Valiant"

@@ -10,8 +10,7 @@ class OpolchenieJager(Infantry):
         self.stamina = 3
         self.special = {
             "Militia",
-            "Poor",
-            "Skirmisher",
+            "Poor Skirmisher",
             "Lacking Initiative"
         }
         self.cost = 30

@@ -9,9 +9,8 @@ class Jager(Infantry):
         self.morale = 4
         self.stamina = 4
         self.special = {
-            "Rifle Mixed Formation"
-            "Light Infantry"
-            "Mixed Formation"
+            "Rifle Mixed Formation",
+            "Light Infantry Mixed Formation",
             "Tough Fighter",
             "Skirmisher",
             "Lacking Initiative"

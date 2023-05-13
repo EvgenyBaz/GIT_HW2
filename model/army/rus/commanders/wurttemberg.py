@@ -4,5 +4,5 @@ class Wurttemberg(BasicCommander):
         self.name = "Major General Eugene von Wurttemberg. CS 8 "
         self.cost = 100
         self.special = {
-            "descriprion"
+            "Headsrtong. Combat attack +2 Dice"
         }

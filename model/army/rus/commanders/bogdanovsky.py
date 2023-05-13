@@ -4,5 +4,5 @@ class Bogdanovsky(BasicCommander):
         self.name = "Lieutenant Colonel Andrei Bpgfsnovsky. CS 7 "
         self.cost = 25
         self.special = {
-            "descriprion"
+            "Combat attack +1 Dice. Agressive, Irresponsible"
         }
