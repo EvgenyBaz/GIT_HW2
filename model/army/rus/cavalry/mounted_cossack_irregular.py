@@ -1,4 +1,4 @@
-from model.army.cavalry import *
+from model.army.cavalry import Cavalry
 class MountedCossackIrregular(Cavalry):
     name = "Irregular Mounted Cossack"
     def __init__(self):

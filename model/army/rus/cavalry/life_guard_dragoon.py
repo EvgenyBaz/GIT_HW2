@@ -1,4 +1,4 @@
-from model.army.cavalry import *
+from model.army.cavalry import Cavalry
 class LifeGuardDragoon(Cavalry):
     name = "Life Guard Dragoon"
     def __init__(self):

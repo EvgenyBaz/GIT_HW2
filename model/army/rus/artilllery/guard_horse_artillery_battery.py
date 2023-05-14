@@ -1,4 +1,4 @@
-from model.army.artillery import *
+from model.army.artillery import Artillery
 class GuardHorseArtilleryBattery(Artillery):
     name = "Guard Horse Artillery Battery"
     def __init__(self):

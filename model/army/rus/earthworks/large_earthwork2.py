@@ -1,4 +1,4 @@
-from model.army.earthworks import *
+from model.army.earthworks import EarthWorks
 class LargeEarthWork2(EarthWorks):
     name = "Large EarthWork save +2"
     def __init__(self):

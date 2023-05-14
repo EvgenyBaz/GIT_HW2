@@ -1,4 +1,4 @@
-from model.army.cavalry import *
+from model.army.cavalry import Cavalry
 class FreeCossack(Cavalry):
     name = "Free Cossack regiment"
     def __init__(self):

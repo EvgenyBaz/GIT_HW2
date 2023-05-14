@@ -1,4 +1,4 @@
-from model.army.earthworks import *
+from model.army.earthworks import EarthWorks
 class StandardEarthWork(EarthWorks):
     name = "Standard EarthWork"
     def __init__(self):

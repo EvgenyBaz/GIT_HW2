@@ -1,4 +1,4 @@
-from model.army.artillery import *
+from model.army.artillery import Artillery
 class UnicornHeavyBattery(Artillery):
 
     name = "Unicorn Heavy Battery"

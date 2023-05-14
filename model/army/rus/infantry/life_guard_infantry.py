@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class LifeGuardInfantry(Infantry):
     name = "Life guard Infantry"
     def __init__(self):
@@ -11,8 +11,8 @@ class LifeGuardInfantry(Infantry):
         self.special = {
             "Tough Fighter",
             "Poor Skirmisher",
-            "Reliable"
-            "Elite 3+"
+            "Reliable",
+            "Elite 3+",
             "Valiant"
         }
         self.cost = 61

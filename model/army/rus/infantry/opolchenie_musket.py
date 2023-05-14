@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class OpolchenieMusket(Infantry):
     name = "Opolchenie with Musket"
     def __init__(self):

@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class Jager(Infantry):
     name = "Jager"
     def __init__(self):
@@ -13,7 +13,7 @@ class Jager(Infantry):
             "Light Infantry Mixed Formation",
             "Tough Fighter",
             "Skirmisher",
-            "Lacking Initiative"
+            "Lacking Initiative",
             "Sharpshooter"
         }
         self.cost = 45

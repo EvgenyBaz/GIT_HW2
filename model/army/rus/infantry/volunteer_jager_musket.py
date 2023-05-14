@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class VolunteerJagerMusket(Infantry):
     name = "Volunteer Jager with Musket"
 

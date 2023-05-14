@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class CombinedGrenadier(Infantry):
     name = "Combined Grenadier"
     def __init__(self):

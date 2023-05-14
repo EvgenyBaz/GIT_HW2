@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class LineInfantry(Infantry):
 
     name = "Line Infantry"

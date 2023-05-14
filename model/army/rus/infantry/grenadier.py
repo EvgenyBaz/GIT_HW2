@@ -1,4 +1,4 @@
-from model.army.infantry import *
+from model.army.infantry import Infantry
 class Grenadier(Infantry):
     name = "Grenadier"
     def __init__(self):
@@ -12,7 +12,7 @@ class Grenadier(Infantry):
             "Tough Fighter",
             "Poor",
             "Skirmisher",
-            "Lacking Initiative"
+            "Lacking Initiative",
             "Elite 4+"
         }
         self.cost = 48
