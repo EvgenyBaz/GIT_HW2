@@ -10,6 +10,7 @@ from PyQt6 import QtWidgets, uic
 
 from view.StartWindow import StartWindow
 from view.RusDivisionWindow import RusDivisionWindow
+from view.ItaDivisionWindow import ItaDivisionWindow
 from view.E_message import MessageWindow
 
 
@@ -31,6 +32,10 @@ class MainWindow(QMainWindow):
         self.startWindow.pushButton_Russia.clicked.connect(self.show_RusDivisionWindow) # по нажатию кнопки включаем окно с описанием корпуса русской армии
         self.startWindow.pushButton_Russia.clicked.connect(self.startWindow.close) # выключаем текущее окно
         self.startWindow.pushButton_France.clicked.connect(self.the_fra_button_was_clicked) # заглушка
+        self.startWindow.pushButton_Italy.clicked.connect(self.show_ItaDivisionWindow)
+        self.startWindow.pushButton_Italy.clicked.connect(self.startWindow.close)
+
+
         self.startWindow.show()
 
     def loadFile(self):
@@ -125,6 +130,12 @@ class MainWindow(QMainWindow):
     def the_fra_button_was_clicked(self): # заглушка
         self.error_message.text("France will be available in further updates")
         self.error_message.show()
+
+    def show_ItaDivisionWindow(self):
+        self.itaDivisionWindow = ItaDivisionWindow()
+
+        self.itaDivisionWindow.show()
+
 
     def aboutMessage(self):
         self.error_message.text("Black Powder 2.0 army builder v 0.9<br>created by Evgeny Bazarov<br>This program is \
