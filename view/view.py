@@ -133,8 +133,24 @@ class MainWindow(QMainWindow):
 
     def show_ItaDivisionWindow(self):
         self.itaDivisionWindow = ItaDivisionWindow()
+        # инициализация начальных значений полей
+        self.itaDivisionWindow.generalCost.setText("0")
+        self.itaDivisionWindow.aBrgdTotalCost.setText("0")
+
+        # инициализация списков батальонов в бригадах
+        self.itaDivisionWindow.division_cmndrs_list()
+        self.itaDivisionWindow.a_brigade_1stReg_choice()
+        self.itaDivisionWindow.a_brigade_2ndReg_choice()
+        self.itaDivisionWindow.a_brigade_bttln_Lists()
+
 
         self.itaDivisionWindow.show()
+
+
+
+
+
+
 
 
     def aboutMessage(self):

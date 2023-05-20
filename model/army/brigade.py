@@ -37,6 +37,14 @@ class Brigade:
             bonus_cost_list.append(self.brigade_bonus_list[i][1])
         return bonus_cost_list
 
+    def get_brigade_bonus_costs(self, bonus_name):
+        bonus_cost = 0
+        for i in range(len(self.brigade_bonus_list)):
+            if bonus_name == self.brigade_bonus_list[i][0]:
+                bonus_cost = self.brigade_bonus_list[i][1]
+
+        return bonus_cost
+
     def get_list_commanders_names(self):
         brigade_cmndrs_names = []
         for cmndr in self.brigade_commanders_list:
@@ -64,8 +72,8 @@ class Brigade:
         return brigade_bttln_list_names
 
     # помещает выбраный в интерфейсе батальон (обьект) в список бригады на позицию соответствующую кнопке
-    def set_battalion_to_list(self, order_number, bttln_choosen_from_list):
-        self.brigade_list[order_number] = self.brigade_list_battalion_list[order_number][
+    def set_battalion_to_list(self, order_number, bttln_choosen_from_list, shift):
+        self.brigade_list[order_number] = self.brigade_list_battalion_list[order_number + shift][
             bttln_choosen_from_list]
 
     def get_cost_of_battalion(self, order_number):
