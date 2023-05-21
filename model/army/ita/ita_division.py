@@ -11,20 +11,13 @@ class ItaDivision:
 
     def __init__(self):
         self.division_list = [
-            InfantryBrigade()              #0
-            # InfantryBrigade(),              #1
-            # InfantryBrigade(),              #2
-            # JagerBrigade(),                 #3
-            # CombinedGrenadierBrigade(),     #4
-            # GrenadierBrigade(),             #5
-            # LightCavalryBrigade(),          #6
-            # HeavyCavalryBrigade(),          #7
-            # CossackBrigade(),               #8
-            # LifeGuardInfantryBrigade(),     #9
-            # LifeGuadLightCavalryBrigade(),  #10
-            # LifeGuadHeavyCavalryBrigade(),  #11
-            # AllArtillery(),                 #12
-            # EarthWorks()                    #13
+            InfantryBrigade(),              #0
+            InfantryBrigade(),              #1
+            InfantryBrigade(),              #2
+            # CavalryBrigade(),               #3
+            # GuardInfantryBrigade(),         #4
+            # AllArtillery()                  #5
+
         ]
 
         self.division_commanders_list = [

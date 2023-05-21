@@ -25,7 +25,7 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         self.presenter = Presenter(self.country)
         self.generalName.currentIndexChanged.connect(self.divisionCommanderCostView)
 
-         # изменяемая переменная для прхождения проверки  - используется для кавполков с неоднозначным выбором первоко полка в списке, при изменении списка
+# изменяемая переменная для прхождения проверки  - используется для кавполков с неоднозначным выбором первоко полка в списке, при изменении списка
         self.a_brigade_number = 0  # номер бригады попорядку
         self.a_battalion_index_add = 0
         self.a1_choice_add = 0
@@ -34,7 +34,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         self.a2_battalion_index_add = 0
         self.a2_choice_add = 0
         self.a2_shift_battallion_order = 0
-
 # первый полк
         self.aBrgdCmndr.currentIndexChanged.connect(self.aBrgdCommanderCostView)
         self.aBrgd1stRgmntChoice.currentIndexChanged.connect(self.aBrgd1stRgmntChoiceView)
@@ -58,11 +57,79 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         self.aBr2ndRgmntSecondBttlnModPushButton.clicked.connect(self.a_the_sixth_bttln_mod_button_was_clicked)
         self.aBr2ndRgmntThirdBttlnModPushButton.clicked.connect(self.a_the_seventh_bttln_mod_button_was_clicked)
         self.aBr2ndRgmntFourthBttlnModPushButton.clicked.connect(self.a_the_eighth_bttln_mod_button_was_clicked)
-
-# дополнительные артроты
-
+# дополнительные арт роты
         self.aBrgd1stRgmntAddBttry.currentIndexChanged.connect(self.aBrgd1stRgmntAddBttryCostView)
         self.aBrgd2ndRgmntAddBttry.currentIndexChanged.connect(self.aBrgd2ndRgmntAddBttryCostView)
+#------------------------
+        self.b_brigade_number = 1  # номер бригады попорядку
+        self.b_battalion_index_add = 0
+        self.b1_choice_add = 0
+        self.b1_shift_battallion_order = 0
+        self.b_first_regiment_choice_run_flag = True  # флаг отсекающий вызов действия по изменению параметра списка при очистве списка
+        self.b2_battalion_index_add = 0
+        self.b2_choice_add = 0
+        self.b2_shift_battallion_order = 0
+        # первый полк
+        self.bBrgdCmndr.currentIndexChanged.connect(self.bBrgdCommanderCostView)
+        self.bBrgd1stRgmntChoice.currentIndexChanged.connect(self.bBrgd1stRgmntChoiceView)
+        self.bBrgd1stRgmntFirstBattalion.currentIndexChanged.connect(self.bBrgd1stRgmnt1stBttlnCostView)
+        self.bBrgd1stRgmntSecondBattalion.currentIndexChanged.connect(self.bBrgd1stRgmnt2ndBttlnCostView)
+        self.bBrgd1stRgmntThirdBattalion.currentIndexChanged.connect(self.bBrgd1stRgmnt3rdBttlnCostView)
+        self.bBrgd1stRgmntFourthBattalion.currentIndexChanged.connect(self.bBrgd1stRgmnt4thBttlnCostView)
+
+        self.bBr1stRgmntFirstBttlnModPushButton.clicked.connect(self.b_the_first_bttln_mod_button_was_clicked)
+        self.bBr1stRgmntSecondBttlnModPushButton.clicked.connect(self.b_the_second_bttln_mod_button_was_clicked)
+        self.bBr1stRgmntThirdBttlnModPushButton.clicked.connect(self.b_the_third_bttln_mod_button_was_clicked)
+        self.bBr1stRgmntFourthBttlnModPushButton.clicked.connect(self.b_the_fourth_bttln_mod_button_was_clicked)
+        # воройй полк
+        self.bBrgd2ndRgmntChoice.currentIndexChanged.connect(self.bBrgd2ndRgmntChoiceView)
+        self.bBrgd2ndRgmntFirstBattalion.currentIndexChanged.connect(self.bBrgd2ndRgmnt1stBttlnCostView)
+        self.bBrgd2ndRgmntSecondBattalion.currentIndexChanged.connect(self.bBrgd2ndRgmnt2ndBttlnCostView)
+        self.bBrgd2ndRgmntThirdBattalion.currentIndexChanged.connect(self.bBrgd2ndRgmnt3rdBttlnCostView)
+        self.bBrgd2ndRgmntFourthBattalion.currentIndexChanged.connect(self.bBrgd2ndRgmnt4thBttlnCostView)
+
+        self.bBr2ndRgmntFirstBttlnModPushButton.clicked.connect(self.b_the_fifth_bttln_mod_button_was_clicked)
+        self.bBr2ndRgmntSecondBttlnModPushButton.clicked.connect(self.b_the_sixth_bttln_mod_button_was_clicked)
+        self.bBr2ndRgmntThirdBttlnModPushButton.clicked.connect(self.b_the_seventh_bttln_mod_button_was_clicked)
+        self.bBr2ndRgmntFourthBttlnModPushButton.clicked.connect(self.b_the_eighth_bttln_mod_button_was_clicked)
+        # дополнительные арт роты
+        self.bBrgd1stRgmntAddBttry.currentIndexChanged.connect(self.bBrgd1stRgmntAddBttryCostView)
+        self.bBrgd2ndRgmntAddBttry.currentIndexChanged.connect(self.bBrgd2ndRgmntAddBttryCostView)
+#-----------------------------------
+        self.c_brigade_number = 2  # номер бригады попорядку
+        self.c_battalion_index_add = 0
+        self.c1_choice_add = 0
+        self.c1_shift_battallion_order = 0
+        self.c_first_regiment_choice_run_flag = True  # флаг отсекающий вызов действия по изменению параметра списка при очистве списка
+        self.c2_battalion_index_add = 0
+        self.c2_choice_add = 0
+        self.c2_shift_battallion_order = 0
+        # первый полк
+        self.cBrgdCmndr.currentIndexChanged.connect(self.cBrgdCommanderCostView)
+        self.cBrgd1stRgmntChoice.currentIndexChanged.connect(self.cBrgd1stRgmntChoiceView)
+        self.cBrgd1stRgmntFirstBattalion.currentIndexChanged.connect(self.cBrgd1stRgmnt1stBttlnCostView)
+        self.cBrgd1stRgmntSecondBattalion.currentIndexChanged.connect(self.cBrgd1stRgmnt2ndBttlnCostView)
+        self.cBrgd1stRgmntThirdBattalion.currentIndexChanged.connect(self.cBrgd1stRgmnt3rdBttlnCostView)
+        self.cBrgd1stRgmntFourthBattalion.currentIndexChanged.connect(self.cBrgd1stRgmnt4thBttlnCostView)
+
+        self.cBr1stRgmntFirstBttlnModPushButton.clicked.connect(self.c_the_first_bttln_mod_button_was_clicked)
+        self.cBr1stRgmntSecondBttlnModPushButton.clicked.connect(self.c_the_second_bttln_mod_button_was_clicked)
+        self.cBr1stRgmntThirdBttlnModPushButton.clicked.connect(self.c_the_third_bttln_mod_button_was_clicked)
+        self.cBr1stRgmntFourthBttlnModPushButton.clicked.connect(self.c_the_fourth_bttln_mod_button_was_clicked)
+        # воройй полк
+        self.cBrgd2ndRgmntChoice.currentIndexChanged.connect(self.cBrgd2ndRgmntChoiceView)
+        self.cBrgd2ndRgmntFirstBattalion.currentIndexChanged.connect(self.cBrgd2ndRgmnt1stBttlnCostView)
+        self.cBrgd2ndRgmntSecondBattalion.currentIndexChanged.connect(self.cBrgd2ndRgmnt2ndBttlnCostView)
+        self.cBrgd2ndRgmntThirdBattalion.currentIndexChanged.connect(self.cBrgd2ndRgmnt3rdBttlnCostView)
+        self.cBrgd2ndRgmntFourthBattalion.currentIndexChanged.connect(self.cBrgd2ndRgmnt4thBttlnCostView)
+
+        self.cBr2ndRgmntFirstBttlnModPushButton.clicked.connect(self.c_the_fifth_bttln_mod_button_was_clicked)
+        self.cBr2ndRgmntSecondBttlnModPushButton.clicked.connect(self.c_the_sixth_bttln_mod_button_was_clicked)
+        self.cBr2ndRgmntThirdBttlnModPushButton.clicked.connect(self.c_the_seventh_bttln_mod_button_was_clicked)
+        self.cBr2ndRgmntFourthBttlnModPushButton.clicked.connect(self.c_the_eighth_bttln_mod_button_was_clicked)
+        # дополнительные арт роты
+        self.cBrgd1stRgmntAddBttry.currentIndexChanged.connect(self.cBrgd1stRgmntAddBttryCostView)
+        self.cBrgd2ndRgmntAddBttry.currentIndexChanged.connect(self.cBrgd2ndRgmntAddBttryCostView)
 
 #
     # заполняем список имен командиров дивизии
@@ -78,7 +145,7 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
 
     def divisionTotalCostView(self):
 
-          total_cost = int(self.generalCost.text())
+          total_cost = int(self.generalCost.text())+int(self.aBrgdTotalCost.text())+int(self.bBrgdTotalCost.text())+int(self.cBrgdTotalCost.text())
           self.divisionTotalCost.setText(str(total_cost))
 
 
@@ -103,16 +170,8 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         brgdBattalionCost.setText(str(value))
         brgdTotalCostView()
 
-#
-#
 #     # -------------------------------------------------------------------------------------------------------------------
-    def a_brigade_1stReg_choice(self):
-        self.brigade_Reg_choice(self.aBrgd1stRgmntChoice)
-    def a_brigade_1stReg_choice_short(self):
-        self.brigade_Reg_choice_short(self.aBrgd1stRgmntChoice)
 
-    def a_brigade_2ndReg_choice(self):
-        self.brigade_Reg_choice(self.aBrgd2ndRgmntChoice)
 
 
     def brigade_Reg_choice(self, regimentChoice):
@@ -123,6 +182,14 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
     def brigade_Reg_choice_short(self, regimentChoice):
         regimentChoice.addItem("Line Infantry")
         regimentChoice.addItem("Light Infantry")
+#----------------------------------------------------------
+    def a_brigade_1stReg_choice(self):
+        self.brigade_Reg_choice(self.aBrgd1stRgmntChoice)
+    def a_brigade_1stReg_choice_short(self):
+        self.brigade_Reg_choice_short(self.aBrgd1stRgmntChoice)
+
+    def a_brigade_2ndReg_choice(self):
+        self.brigade_Reg_choice(self.aBrgd2ndRgmntChoice)
 
     def aBrgdCommanderCostView(self, index):
          self.brgdCommanderCostView(index, self.a_brigade_number, self.aBrgdCmndrCost)  # записали стоимость командира в окно
@@ -149,7 +216,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
                  self.aBrgd1stRgmntChoice.setCurrentIndex(0)
                  self.aBrgd1stRgmntChoice.setDisabled(False)
 
-             self.aBrgd2ndRgmntChoice.setCurrentIndex(0)  # выбор полка становится empty
              self.aBrgd2ndRgmntChoice.setDisabled(False)
 
 
@@ -205,7 +271,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
                     else:                                                           # то если выбрана вторая позиция - Liпре Infantry то ставим шаг = 4
                         self.a1_shift_battallion_order = 10
 
-
                     self.aBrgd1stRgmntFirstBattalion.clear()                        # очищаем список имен батальонов
                     bttln_list = self.presenter.BrigadeBttlnList(0+self.a1_shift_battallion_order, self.a_brigade_number)
                     for bttlnName in bttln_list:
@@ -226,7 +291,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
                     for bttlnName in bttln_list:
                         self.aBrgd1stRgmntFourthBattalion.addItem(bttlnName)
 
-
                 self.aBrgd1stRgmntFirstBattalion.setDisabled(False)
                 self.aBrgd1stRgmntSecondBattalion.setDisabled(False)
                 self.aBrgd1stRgmntThirdBattalion.setDisabled(False)
@@ -234,7 +298,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
                 self.aBrgd1stRgmntAddBttry.setDisabled(False)
 
     def aBrgd2ndRgmntChoiceView(self):
-
 
         if self.aBrgd2ndRgmntChoice.currentIndex() < 1:
 
@@ -317,13 +380,7 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
                              self.aBrgd1stRgmntAddBttry,
                              self.aBrgd2ndRgmntAddBttry,
                              ]
-
         brigade_bttln_Lists(self.a_brigade_number, self.presenter, self.aBrgdCmndr, a_brgd_bttlns_list)
-#
-
-
-
-
 
     def aBrgd1stRgmnt1stBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
@@ -340,7 +397,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
     def aBrgd1stRgmnt4thBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
                                self.aBrgd1stRgmntFourthBattalionCost, self.aBrgdTotalCostView, 3, self.aBr1stRgmntFourthBttlnModPushButton, self.a1_shift_battallion_order)
-
 
     def aBrgdTotalCostView(self):
         total_cost = self.presenter.BrigadeCmndrsCost(self.aBrgdCmndr.currentIndex(), self.a_brigade_number) + \
@@ -443,23 +499,718 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
             self.bttln_mod_button_was_clicked(battalion_order, self.a_brigade_number, self.aBr2ndRgmntFourthBttlnModPushButton,
                                               self.aBrgd2ndRgmntFourthBattalion.currentText(), self.order_number)
 
-
-
     def aBrgd1stRgmntAddBttryCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number, self.aBrgd1stRgmntAddBttryCost, self.aBrgdTotalCostView, 8, None, 0)
 
-
-
-
-
     def aBrgd2ndRgmntAddBttryCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number, self.aBrgd2ndRgmntAddBttryCost, self.aBrgdTotalCostView, 9, None, 0)
+#--------------------------------------------------------------------------------------------------------------------------
+    def b_brigade_1stReg_choice(self):
+        self.brigade_Reg_choice(self.bBrgd1stRgmntChoice)
+    def b_brigade_1stReg_choice_short(self):
+        self.brigade_Reg_choice_short(self.bBrgd1stRgmntChoice)
+    def b_brigade_2ndReg_choice(self):
+        self.brigade_Reg_choice(self.bBrgd2ndRgmntChoice)
+    def bBrgdCommanderCostView(self, index):
+        self.brgdCommanderCostView(index, self.b_brigade_number,
+                                   self.bBrgdCmndrCost)  # записали стоимость командира в окно
+        self.bBrgdTotalCostView()  # посчитали стоимость бригады
+        if self.bBrgdCmndr.currentIndex() < 1:  # если утанавливается первое значение в выборе командира (а там должно стоять empty)
+            self.b1_choice_add = 0  # флаг первого значения вписке 0  - emppty в полном списке
+            if self.bBrgd1stRgmntChoice.currentText() != "empty":  # если в выборе полка стоит не пусто
+                self.b_first_regiment_choice_run_flag = False
+                self.bBrgd1stRgmntChoice.clear()  # стереть текущий список выбора полка
+                self.b_first_regiment_choice_run_flag = True
+                self.b_brigade_1stReg_choice()  # записать полный спиок (с empty впереди)
 
+            self.bBrgd1stRgmntChoice.setCurrentIndex(0)  # выбор полка становится empty
+            self.bBrgd1stRgmntChoice.setDisabled(True)  # и возможность выбора бокируется.
+            self.bBrgd2ndRgmntChoice.setCurrentIndex(0)  # выбор полка становится empty
+            self.bBrgd2ndRgmntChoice.setDisabled(True)
+        else:  # если утанавливается любое не empty значение в выборе командира
+            if self.b1_choice_add == 0:  # флаг - полного списка и того ,что empty в списке полка стоит на 0 месте
+                self.b1_choice_add = 1  # изменяем флаг на 1 чтобы пройти проверку нулевой позиции списка в дальнейгем
+                self.b_first_regiment_choice_run_flag = False
+                self.bBrgd1stRgmntChoice.clear()  # очищается полный список выбора полка
+                self.b_first_regiment_choice_run_flag = True
+                self.b_brigade_1stReg_choice_short()  # устанавливается короткий список выбора полка - без empty
+                self.bBrgd1stRgmntChoice.setCurrentIndex(0)
+                self.bBrgd1stRgmntChoice.setDisabled(False)
 
+            self.bBrgd2ndRgmntChoice.setDisabled(False)
 
+    def bBrgd1stRgmntChoiceView(self):
+        if self.b_first_regiment_choice_run_flag:
 
+            if self.bBrgd1stRgmntChoice.currentIndex() + self.b1_choice_add < 1:  # проверка выбранного батальона, если список батальонов не содежит empty
 
+                if self.presenter.BrigadeBttlnName(0, self.b_brigade_number) != "empty":  # есл имя первого батальона бригады оказалось не empty
+                    self.presenter.FirstBttlnListChange(0, self.b_brigade_number)  # установим на нулевую позицию первого батальона empty Unit
+                    self.presenter.FirstBttlnListChange(10, self.b_brigade_number)
+                    self.bBrgd1stRgmntFirstBattalion.clear()  # очистим спссок первого батальона
+                    bttln_list = self.presenter.BrigadeBttlnList(0,self.b_brigade_number)  # gперезапишем список первого батальона
+                    for bttlnName in bttln_list:
+                        self.bBrgd1stRgmntFirstBattalion.addItem(bttlnName)
 
+                self.b_battalion_index_add = 0  # установим флаг сдвижки первого батальона на 0 - тоесть первый в списке empty
+
+                self.b1_shift_battallion_order = 0  # флаг  линейной 0 лии легкой пехты 4 ставим на 0
+                self.bBrgd1stRgmntFirstBattalion.setCurrentIndex(0)
+                self.bBrgd1stRgmntFirstBattalion.setDisabled(True)  # все батальоны на 0 - empty и выключаем возможность выбора
+                self.bBrgd1stRgmntSecondBattalion.setCurrentIndex(0)
+                self.bBrgd1stRgmntSecondBattalion.setDisabled(True)
+                self.bBrgd1stRgmntThirdBattalion.setCurrentIndex(0)
+                self.bBrgd1stRgmntThirdBattalion.setDisabled(True)
+                self.bBrgd1stRgmntFourthBattalion.setCurrentIndex(0)
+                self.bBrgd1stRgmntFourthBattalion.setDisabled(True)
+                self.bBrgd1stRgmntAddBttry.setCurrentIndex(0)
+                self.bBrgd1stRgmntAddBttry.setDisabled(True)
+
+                self.bBr1stRgmntFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.bBr1stRgmntSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.bBr1stRgmntThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.bBr1stRgmntFourthBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+            else:  # если выбор полка - любое другое
+                if self.b_battalion_index_add == 0:  # если при этом флаг сдаидки батальонов = 0 ,  тоесть в списве первым стоит unit  с именем empty
+                    # убираем обьект empty из списка выбора
+                    self.bBrgd1stRgmntFirstBattalion.clear()  # очищаем список первого батальона
+                    self.presenter.FirstBttlnListChangeToShow(0, self.b_brigade_number)  # удаляем empty из списка имен батальона
+                    self.presenter.FirstBttlnListChangeToShow(10, self.b_brigade_number)
+                    bttln_list = self.presenter.BrigadeBttlnList(0, self.b_brigade_number)
+                    for bttlnName in bttln_list:  # перезаписываем выпадающий список уже без empty
+                        self.bBrgd1stRgmntFirstBattalion.addItem(bttlnName)
+                    # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
+                    self.b_battalion_index_add = 1
+
+                else:  # если флаг сдвижки батальонов оказался не 0,  тоесть список уже не содержит empty
+                    if self.bBrgd1stRgmntChoice.currentIndex() == 0:  # то если выбрана первая позиция - Line Infantry то ставим шаг = 0
+                        self.b1_shift_battallion_order = 0
+                    else:  # то если выбрана вторая позиция - Liпре Infantry то ставим шаг = 4
+                        self.b1_shift_battallion_order = 10
+
+                    self.bBrgd1stRgmntFirstBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(0 + self.b1_shift_battallion_order,
+                                                                 self.b_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.bBrgd1stRgmntFirstBattalion.addItem(bttlnName)
+
+                    self.bBrgd1stRgmntSecondBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(1 + self.b1_shift_battallion_order,
+                                                                 self.b_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.bBrgd1stRgmntSecondBattalion.addItem(bttlnName)
+
+                    self.bBrgd1stRgmntThirdBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(2 + self.b1_shift_battallion_order,
+                                                                 self.b_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.bBrgd1stRgmntThirdBattalion.addItem(bttlnName)
+
+                    self.bBrgd1stRgmntFourthBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(3 + self.b1_shift_battallion_order,
+                                                                 self.b_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.bBrgd1stRgmntFourthBattalion.addItem(bttlnName)
+
+                self.bBrgd1stRgmntFirstBattalion.setDisabled(False)
+                self.bBrgd1stRgmntSecondBattalion.setDisabled(False)
+                self.bBrgd1stRgmntThirdBattalion.setDisabled(False)
+                self.bBrgd1stRgmntFourthBattalion.setDisabled(False)
+                self.bBrgd1stRgmntAddBttry.setDisabled(False)
+
+    def bBrgd2ndRgmntChoiceView(self):
+
+        if self.bBrgd2ndRgmntChoice.currentIndex() < 1:
+
+            if self.presenter.BrigadeBttlnName(4, self.b_brigade_number) != "empty":  # если имя первого батальона бригады оказалось не empty
+                self.presenter.FirstBttlnListChange(4, self.b_brigade_number)  # установим на нулевую позицию первого батальона empty Unit
+                self.presenter.FirstBttlnListChange(14, self.b_brigade_number)
+                self.bBrgd2ndRgmntFirstBattalion.clear()  # очистим спссок первого батальона
+                bttln_list = self.presenter.BrigadeBttlnList(4, self.b_brigade_number)  # gперезапишем список первого батальона
+                for bttlnName in bttln_list:
+                    self.bBrgd2ndRgmntFirstBattalion.addItem(bttlnName)
+            #
+            self.b2_battalion_index_add = 0  # установим флаг сдвижки первого батальона на 0 - тоесть первый в списке empty
+            #
+            self.b2_shift_battallion_order = 0  # флаг  линейной 0 лии легкой пехты 8 ставим на 0
+            self.bBrgd2ndRgmntFirstBattalion.setCurrentIndex(0)
+            self.bBrgd2ndRgmntFirstBattalion.setDisabled(True)  # все батальоны на 0 - empty и выключаем возможность выбора
+            self.bBrgd2ndRgmntSecondBattalion.setCurrentIndex(0)
+            self.bBrgd2ndRgmntSecondBattalion.setDisabled(True)
+            self.bBrgd2ndRgmntThirdBattalion.setCurrentIndex(0)
+            self.bBrgd2ndRgmntThirdBattalion.setDisabled(True)
+            self.bBrgd2ndRgmntFourthBattalion.setCurrentIndex(0)
+            self.bBrgd2ndRgmntFourthBattalion.setDisabled(True)
+            self.bBrgd2ndRgmntAddBttry.setCurrentIndex(0)
+            self.bBrgd2ndRgmntAddBttry.setDisabled(True)
+
+            self.bBr2ndRgmntFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.bBr2ndRgmntSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.bBr2ndRgmntThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.bBr2ndRgmntFourthBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+        else:  # если выбор полка - любое другое
+            if self.b2_battalion_index_add == 0:  # если при этом флаг сдаидки батальонов = 0 ,  тоесть в списве первым стоит unit  с именем empty
+                # убираем обьект empty из списка выбора
+                self.bBrgd2ndRgmntFirstBattalion.clear()  # очищаем список первого батальона
+                self.presenter.FirstBttlnListChangeToShow(4,  self.b_brigade_number)  # удаляем empty из списка имен батальона
+                self.presenter.FirstBttlnListChangeToShow(14, self.b_brigade_number)
+                self.b2_battalion_index_add = 1
+
+            if self.bBrgd2ndRgmntChoice.currentIndex() == 1:  # то если выбрана первая позиция - Line Infantry то ставим шаг = 0
+                self.b2_shift_battallion_order = 0
+
+            if self.bBrgd2ndRgmntChoice.currentIndex() == 2:  # то если выбрана вторая позиция - Liпре Infantry то ставим шаг = 8
+                self.b2_shift_battallion_order = 10
+
+            self.bBrgd2ndRgmntFirstBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(4 + self.b2_shift_battallion_order, self.b_brigade_number)
+            for bttlnName in bttln_list:
+                self.bBrgd2ndRgmntFirstBattalion.addItem(bttlnName)
+
+            self.bBrgd2ndRgmntSecondBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(5 + self.b2_shift_battallion_order, self.b_brigade_number)
+            for bttlnName in bttln_list:
+                self.bBrgd2ndRgmntSecondBattalion.addItem(bttlnName)
+
+            self.bBrgd2ndRgmntThirdBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(6 + self.b2_shift_battallion_order, self.b_brigade_number)
+            for bttlnName in bttln_list:
+                self.bBrgd2ndRgmntThirdBattalion.addItem(bttlnName)
+
+            self.bBrgd2ndRgmntFourthBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(7 + self.b2_shift_battallion_order, self.b_brigade_number)
+            for bttlnName in bttln_list:
+                self.bBrgd2ndRgmntFourthBattalion.addItem(bttlnName)
+
+            self.bBrgd2ndRgmntFirstBattalion.setDisabled(False)
+            self.bBrgd2ndRgmntSecondBattalion.setDisabled(False)
+            self.bBrgd2ndRgmntThirdBattalion.setDisabled(False)
+            self.bBrgd2ndRgmntFourthBattalion.setDisabled(False)
+            self.bBrgd2ndRgmntAddBttry.setDisabled(False)
+
+    def b_brigade_bttln_Lists(self):
+        b_brgd_bttlns_list = [self.bBrgd1stRgmntFirstBattalion,
+                              self.bBrgd1stRgmntSecondBattalion,
+                              self.bBrgd1stRgmntThirdBattalion,
+                              self.bBrgd1stRgmntFourthBattalion,
+                              self.bBrgd2ndRgmntFirstBattalion,
+                              self.bBrgd2ndRgmntSecondBattalion,
+                              self.bBrgd2ndRgmntThirdBattalion,
+                              self.bBrgd2ndRgmntFourthBattalion,
+                              self.bBrgd1stRgmntAddBttry,
+                              self.bBrgd2ndRgmntAddBttry,
+                              ]
+
+        brigade_bttln_Lists(self.b_brigade_number, self.presenter, self.bBrgdCmndr, b_brgd_bttlns_list)
+
+    #
+
+    def bBrgd1stRgmnt1stBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd1stRgmntFirstBattalionCost, self.bBrgdTotalCostView, 0,
+                               self.bBr1stRgmntFirstBttlnModPushButton, self.b1_shift_battallion_order)
+
+    def bBrgd1stRgmnt2ndBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd1stRgmntSecondBattalionCost, self.bBrgdTotalCostView, 1,
+                               self.bBr1stRgmntSecondBttlnModPushButton, self.b1_shift_battallion_order)
+
+    def bBrgd1stRgmnt3rdBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd1stRgmntThirdBattalionCost, self.bBrgdTotalCostView, 2,
+                               self.bBr1stRgmntThirdBttlnModPushButton, self.b1_shift_battallion_order)
+
+    def bBrgd1stRgmnt4thBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd1stRgmntFourthBattalionCost, self.bBrgdTotalCostView, 3,
+                               self.bBr1stRgmntFourthBttlnModPushButton, self.b1_shift_battallion_order)
+
+    def bBrgdTotalCostView(self):
+        total_cost = self.presenter.BrigadeCmndrsCost(self.bBrgdCmndr.currentIndex(), self.b_brigade_number) + \
+                     sum(self.presenter.BrigadeBttlnCost(i, self.b_brigade_number) for i in range(10))
+
+        self.b_brgd_1st_rgmt_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.b_brigade_number) for i in range(0, 4)))
+        self.b_brgd_2nd_rgmt_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.b_brigade_number) for i in range(4, 8)))
+
+        if self.bBrgd1stRgmntAddBttry.currentText() == "Regimental Artillery Battery":
+            if self.b_brgd_1st_rgmt_nmbr_of_battalions < 3:
+                self.bBrgd1stRgmntAddBttry.setCurrentIndex(0)
+
+        if self.bBrgd2ndRgmntAddBttry.currentText() == "Regimental Artillery Battery":
+            if self.b_brgd_2nd_rgmt_nmbr_of_battalions < 3:
+                self.bBrgd2ndRgmntAddBttry.setCurrentIndex(0)
+
+        self.bBrgdTotalCost.setText(str(total_cost))
+        self.divisionTotalCostView()
+
+    def b_the_first_bttln_mod_button_was_clicked(self):
+        if self.bBrgd1stRgmntFirstBattalion.currentIndex() + self.b_battalion_index_add != 0:
+            battalion_order = "First Battalion"
+            self.order_number = 0  # первый по порядку батальон
+            self.brgdFirstBattalionCostSetText = self.bBrgd1stRgmntFirstBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr1stRgmntFirstBttlnModPushButton,
+                                              self.bBrgd1stRgmntFirstBattalion.currentText(), self.order_number)
+
+    def b_the_second_bttln_mod_button_was_clicked(self):
+        if self.bBrgd1stRgmntSecondBattalion.currentIndex() != 0:
+            battalion_order = "Second Battalion"
+            self.order_number = 1  # второй по порядку батальон
+            self.brgdSecondBattalionCostSetText = self.bBrgd1stRgmntSecondBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr1stRgmntSecondBttlnModPushButton,
+                                              self.bBrgd1stRgmntSecondBattalion.currentText(), self.order_number)
+
+    def b_the_third_bttln_mod_button_was_clicked(self):
+        if self.bBrgd1stRgmntThirdBattalion.currentIndex() != 0:
+            battalion_order = "Third Battalion"
+            self.order_number = 2  # третий по порядку батальон
+            self.brgdThirdBattalionCostSetText = self.bBrgd1stRgmntThirdBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr1stRgmntThirdBttlnModPushButton,
+                                              self.bBrgd1stRgmntThirdBattalion.currentText(), self.order_number)
+
+    def b_the_fourth_bttln_mod_button_was_clicked(self):
+        if self.bBrgd1stRgmntFourthBattalion.currentIndex() != 0:
+            battalion_order = "Fourth Battalion"
+            self.order_number = 3  # четвертый по порядку батальон
+            self.brgdFourthBattalionCostSetText = self.bBrgd1stRgmntFourthBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr1stRgmntFourthBttlnModPushButton,
+                                              self.bBrgd1stRgmntFourthBattalion.currentText(), self.order_number)
+
+    def bBrgd2ndRgmnt1stBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd2ndRgmntFirstBattalionCost, self.bBrgdTotalCostView, 4,
+                               self.bBr2ndRgmntFirstBttlnModPushButton, self.b2_shift_battallion_order)
+
+    def bBrgd2ndRgmnt2ndBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd2ndRgmntSecondBattalionCost, self.bBrgdTotalCostView, 5,
+                               self.bBr2ndRgmntSecondBttlnModPushButton, self.b2_shift_battallion_order)
+
+    def bBrgd2ndRgmnt3rdBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd2ndRgmntThirdBattalionCost, self.bBrgdTotalCostView, 6,
+                               self.bBr2ndRgmntThirdBttlnModPushButton, self.b2_shift_battallion_order)
+
+    def bBrgd2ndRgmnt4thBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number,
+                               self.bBrgd2ndRgmntFourthBattalionCost, self.bBrgdTotalCostView, 7,
+                               self.bBr2ndRgmntFourthBttlnModPushButton, self.b2_shift_battallion_order)
+
+    def b_the_fifth_bttln_mod_button_was_clicked(self):
+        if self.bBrgd2ndRgmntFirstBattalion.currentIndex() + self.b2_battalion_index_add != 0:
+            battalion_order = "Fifth Battalion"
+            self.order_number = 4  # пятый по порядку батальон
+            self.brgdFifthBattalionCostSetText = self.bBrgd2ndRgmntFirstBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr2ndRgmntFirstBttlnModPushButton,
+                                              self.bBrgd2ndRgmntFirstBattalion.currentText(), self.order_number)
+
+    def b_the_sixth_bttln_mod_button_was_clicked(self):
+        if self.bBrgd2ndRgmntSecondBattalion.currentIndex() != 0:
+            battalion_order = "Sixth Battalion"
+            self.order_number = 5  # шестой по порядку батальон
+            self.brgdSixthBattalionCostSetText = self.bBrgd2ndRgmntSecondBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr2ndRgmntSecondBttlnModPushButton,
+                                              self.bBrgd2ndRgmntSecondBattalion.currentText(), self.order_number)
+
+    def b_the_seventh_bttln_mod_button_was_clicked(self):
+        if self.bBrgd2ndRgmntThirdBattalion.currentIndex() != 0:
+            battalion_order = "Seventh Battalion"
+            self.order_number = 6  # седьмой по порядку батальон
+            self.brgdSeventhBattalionCostSetText = self.bBrgd2ndRgmntThirdBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr2ndRgmntThirdBttlnModPushButton,
+                                              self.bBrgd2ndRgmntThirdBattalion.currentText(), self.order_number)
+
+    def b_the_eighth_bttln_mod_button_was_clicked(self):
+        if self.bBrgd2ndRgmntFourthBattalion.currentIndex() != 0:
+            battalion_order = "Eighth Battalion"
+            self.order_number = 7  # восьмой по порядку батальон
+            self.brgdEighthBattalionCostSetText = self.bBrgd2ndRgmntFourthBattalionCost.setText
+            self.brgdTotalCostView = self.bBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.b_brigade_number,
+                                              self.bBr2ndRgmntFourthBttlnModPushButton,
+                                              self.bBrgd2ndRgmntFourthBattalion.currentText(), self.order_number)
+
+    def bBrgd1stRgmntAddBttryCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number, self.bBrgd1stRgmntAddBttryCost,
+                               self.bBrgdTotalCostView, 8, None, 0)
+
+    def bBrgd2ndRgmntAddBttryCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.b_brigade_number, self.bBrgd2ndRgmntAddBttryCost,
+                               self.bBrgdTotalCostView, 9, None, 0)
+
+    # --------------------------------------------------------------------------------------------------------------------------
+    def c_brigade_1stReg_choice(self):
+        self.brigade_Reg_choice(self.cBrgd1stRgmntChoice)
+
+    def c_brigade_1stReg_choice_short(self):
+        self.brigade_Reg_choice_short(self.cBrgd1stRgmntChoice)
+
+    def c_brigade_2ndReg_choice(self):
+        self.brigade_Reg_choice(self.cBrgd2ndRgmntChoice)
+
+    def cBrgdCommanderCostView(self, index):
+        self.brgdCommanderCostView(index, self.c_brigade_number,
+                                   self.cBrgdCmndrCost)  # записали стоимость командира в окно
+        self.cBrgdTotalCostView()  # посчитали стоимость бригады
+        if self.cBrgdCmndr.currentIndex() < 1:  # если утанавливается первое значение в выборе командира (а там должно стоять empty)
+            self.c1_choice_add = 0  # флаг первого значения вписке 0  - empty в полном списке
+            if self.cBrgd1stRgmntChoice.currentText() != "empty":  # если в выборе полка стоит не пусто
+                self.c_first_regiment_choice_run_flag = False
+                self.cBrgd1stRgmntChoice.clear()  # стереть текущий список выбора полка
+                self.c_first_regiment_choice_run_flag = True
+                self.c_brigade_1stReg_choice()  # записать полный спиок (с empty впереди)
+
+            self.cBrgd1stRgmntChoice.setCurrentIndex(0)  # выбор полка становится empty
+            self.cBrgd1stRgmntChoice.setDisabled(True)  # и возможность выбора бокируется.
+            self.cBrgd2ndRgmntChoice.setCurrentIndex(0)  # выбор полка становится empty
+            self.cBrgd2ndRgmntChoice.setDisabled(True)
+        else:  # если утанавливается любое не empty значение в выборе командира
+            if self.c1_choice_add == 0:  # флаг - полного списка и того ,что empty в списке полка стоит на 0 месте
+                self.c1_choice_add = 1  # изменяем флаг на 1 чтобы пройти проверку нулевой позиции списка в дальнейгем
+                self.c_first_regiment_choice_run_flag = False
+                self.cBrgd1stRgmntChoice.clear()  # очищается полный список выбора полка
+                self.c_first_regiment_choice_run_flag = True
+                self.c_brigade_1stReg_choice_short()  # устанавливается короткий список выбора полка - без empty
+                self.cBrgd1stRgmntChoice.setCurrentIndex(0)
+                self.cBrgd1stRgmntChoice.setDisabled(False)
+
+            self.cBrgd2ndRgmntChoice.setDisabled(False)
+
+    def cBrgd1stRgmntChoiceView(self):
+        if self.c_first_regiment_choice_run_flag:
+
+            if self.cBrgd1stRgmntChoice.currentIndex() + self.c1_choice_add < 1:  # проверка выбранного батальона, если список батальонов не содежит empty
+
+                if self.presenter.BrigadeBttlnName(0,
+                                                   self.c_brigade_number) != "empty":  # есл имя первого батальона бригады оказалось не empty
+                    self.presenter.FirstBttlnListChange(0,
+                                                        self.c_brigade_number)  # установим на нулевую позицию первого батальона empty Unit
+                    self.presenter.FirstBttlnListChange(10, self.c_brigade_number)
+                    self.cBrgd1stRgmntFirstBattalion.clear()  # очистим спссок первого батальона
+                    bttln_list = self.presenter.BrigadeBttlnList(0,self.c_brigade_number)  # gперезапишем список первого батальона
+                    for bttlnName in bttln_list:
+                        self.cBrgd1stRgmntFirstBattalion.addItem(bttlnName)
+
+                self.c_battalion_index_add = 0  # установим флаг сдвижки первого батальона на 0 - тоесть первый в списке empty
+
+                self.c1_shift_battallion_order = 0  # флаг  линейной 0 лии легкой пехты 4 ставим на 0
+                self.cBrgd1stRgmntFirstBattalion.setCurrentIndex(0)
+                self.cBrgd1stRgmntFirstBattalion.setDisabled(True)
+                self.cBrgd1stRgmntSecondBattalion.setCurrentIndex(0)
+                self.cBrgd1stRgmntSecondBattalion.setDisabled(True)
+                self.cBrgd1stRgmntThirdBattalion.setCurrentIndex(0)
+                self.cBrgd1stRgmntThirdBattalion.setDisabled(True)
+                self.cBrgd1stRgmntFourthBattalion.setCurrentIndex(0)
+                self.cBrgd1stRgmntFourthBattalion.setDisabled(True)
+                self.cBrgd1stRgmntAddBttry.setCurrentIndex(0)
+                self.cBrgd1stRgmntAddBttry.setDisabled(True)
+
+                self.cBr1stRgmntFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.cBr1stRgmntSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.cBr1stRgmntThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+                self.cBr1stRgmntFourthBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+            else:  # если выбор полка - любое другое
+                if self.c_battalion_index_add == 0:  # если при этом флаг сдаидки батальонов = 0 ,  тоесть в списве первым стоит unit  с именем empty
+                    # убираем обьект empty из списка выбора
+                    self.cBrgd1stRgmntFirstBattalion.clear()  # очищаем список первого батальона
+                    self.presenter.FirstBttlnListChangeToShow(0, self.c_brigade_number)  # удаляем empty из списка имен батальона
+                    self.presenter.FirstBttlnListChangeToShow(10, self.c_brigade_number)
+                    bttln_list = self.presenter.BrigadeBttlnList(0, self.c_brigade_number)
+                    for bttlnName in bttln_list:  # перезаписываем выпадающий список уже без empty
+                        self.cBrgd1stRgmntFirstBattalion.addItem(bttlnName)
+                    # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
+                    self.c_battalion_index_add = 1
+
+                else:  # если флаг сдвижки батальонов оказался не 0,  тоесть список уже не содержит empty
+                    if self.cBrgd1stRgmntChoice.currentIndex() == 0:  # то если выбрана первая позиция - Line Infantry то ставим шаг = 0
+                        self.c1_shift_battallion_order = 0
+                    else:  # то если выбрана вторая позиция - Liпре Infantry то ставим шаг = 4
+                        self.c1_shift_battallion_order = 10
+
+                    self.cBrgd1stRgmntFirstBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(0 + self.c1_shift_battallion_order,
+                                                                 self.c_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.cBrgd1stRgmntFirstBattalion.addItem(bttlnName)
+
+                    self.cBrgd1stRgmntSecondBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(1 + self.c1_shift_battallion_order,
+                                                                 self.c_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.cBrgd1stRgmntSecondBattalion.addItem(bttlnName)
+
+                    self.cBrgd1stRgmntThirdBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(2 + self.c1_shift_battallion_order,
+                                                                 self.c_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.cBrgd1stRgmntThirdBattalion.addItem(bttlnName)
+
+                    self.cBrgd1stRgmntFourthBattalion.clear()  # очищаем список имен батальонов
+                    bttln_list = self.presenter.BrigadeBttlnList(3 + self.c1_shift_battallion_order,
+                                                                 self.c_brigade_number)
+                    for bttlnName in bttln_list:
+                        self.cBrgd1stRgmntFourthBattalion.addItem(bttlnName)
+
+                self.cBrgd1stRgmntFirstBattalion.setDisabled(False)
+                self.cBrgd1stRgmntSecondBattalion.setDisabled(False)
+                self.cBrgd1stRgmntThirdBattalion.setDisabled(False)
+                self.cBrgd1stRgmntFourthBattalion.setDisabled(False)
+                self.cBrgd1stRgmntAddBttry.setDisabled(False)
+
+    def cBrgd2ndRgmntChoiceView(self):
+
+        if self.cBrgd2ndRgmntChoice.currentIndex() < 1:
+
+            if self.presenter.BrigadeBttlnName(4, self.c_brigade_number) != "empty":  # если имя первого батальона бригады оказалось не empty
+                self.presenter.FirstBttlnListChange(4,
+                                                    self.c_brigade_number)  # установим на нулевую позицию первого батальона empty Unit
+                self.presenter.FirstBttlnListChange(14, self.c_brigade_number)
+                self.cBrgd2ndRgmntFirstBattalion.clear()  # очистим спссок первого батальона
+                bttln_list = self.presenter.BrigadeBttlnList(4, self.c_brigade_number)  # gперезапишем список первого батальона
+                for bttlnName in bttln_list:
+                    self.cBrgd2ndRgmntFirstBattalion.addItem(bttlnName)
+            #
+            self.c2_battalion_index_add = 0  # установим флаг сдвижки первого батальона на 0 - тоесть первый в списке empty
+            #
+            self.c2_shift_battallion_order = 0  # флаг  линейной 0 лии легкой пехты 8 ставим на 0
+            self.cBrgd2ndRgmntFirstBattalion.setCurrentIndex(0)
+            self.cBrgd2ndRgmntFirstBattalion.setDisabled(True)
+            self.cBrgd2ndRgmntSecondBattalion.setCurrentIndex(0)
+            self.cBrgd2ndRgmntSecondBattalion.setDisabled(True)
+            self.cBrgd2ndRgmntThirdBattalion.setCurrentIndex(0)
+            self.cBrgd2ndRgmntThirdBattalion.setDisabled(True)
+            self.cBrgd2ndRgmntFourthBattalion.setCurrentIndex(0)
+            self.cBrgd2ndRgmntFourthBattalion.setDisabled(True)
+            self.cBrgd2ndRgmntAddBttry.setCurrentIndex(0)
+            self.cBrgd2ndRgmntAddBttry.setDisabled(True)
+
+            self.cBr2ndRgmntFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.cBr2ndRgmntSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.cBr2ndRgmntThirdBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+            self.cBr2ndRgmntFourthBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
+
+        else:  # если выбор полка - любое другое
+            if self.c2_battalion_index_add == 0:  # если при этом флаг сдаидки батальонов = 0 ,  тоесть в списве первым стоит unit  с именем empty
+                # убираем обьект empty из списка выбора
+                self.cBrgd2ndRgmntFirstBattalion.clear()  # очищаем список первого батальона
+                self.presenter.FirstBttlnListChangeToShow(4, self.c_brigade_number)  # удаляем empty из списка имен батальона
+                self.presenter.FirstBttlnListChangeToShow(14, self.c_brigade_number)
+                self.c2_battalion_index_add = 1
+
+            if self.cBrgd2ndRgmntChoice.currentIndex() == 1:  # то если выбрана первая позиция - Line Infantry то ставим шаг = 0
+                self.c2_shift_battallion_order = 0
+
+            if self.cBrgd2ndRgmntChoice.currentIndex() == 2:  # то если выбрана вторая позиция - Liпре Infantry то ставим шаг = 8
+                self.c2_shift_battallion_order = 10
+
+            self.cBrgd2ndRgmntFirstBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(4 + self.c2_shift_battallion_order, self.c_brigade_number)
+            for bttlnName in bttln_list:
+                self.cBrgd2ndRgmntFirstBattalion.addItem(bttlnName)
+
+            self.cBrgd2ndRgmntSecondBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(5 + self.c2_shift_battallion_order, self.c_brigade_number)
+            for bttlnName in bttln_list:
+                self.cBrgd2ndRgmntSecondBattalion.addItem(bttlnName)
+
+            self.cBrgd2ndRgmntThirdBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(6 + self.c2_shift_battallion_order, self.c_brigade_number)
+            for bttlnName in bttln_list:
+                self.cBrgd2ndRgmntThirdBattalion.addItem(bttlnName)
+
+            self.cBrgd2ndRgmntFourthBattalion.clear()  # очищаем список имен батальонов
+            bttln_list = self.presenter.BrigadeBttlnList(7 + self.c2_shift_battallion_order, self.c_brigade_number)
+            for bttlnName in bttln_list:
+                self.cBrgd2ndRgmntFourthBattalion.addItem(bttlnName)
+
+            self.cBrgd2ndRgmntFirstBattalion.setDisabled(False)
+            self.cBrgd2ndRgmntSecondBattalion.setDisabled(False)
+            self.cBrgd2ndRgmntThirdBattalion.setDisabled(False)
+            self.cBrgd2ndRgmntFourthBattalion.setDisabled(False)
+            self.cBrgd2ndRgmntAddBttry.setDisabled(False)
+
+    def c_brigade_bttln_Lists(self):
+        c_brgd_bttlns_list = [self.cBrgd1stRgmntFirstBattalion,
+                              self.cBrgd1stRgmntSecondBattalion,
+                              self.cBrgd1stRgmntThirdBattalion,
+                              self.cBrgd1stRgmntFourthBattalion,
+                              self.cBrgd2ndRgmntFirstBattalion,
+                              self.cBrgd2ndRgmntSecondBattalion,
+                              self.cBrgd2ndRgmntThirdBattalion,
+                              self.cBrgd2ndRgmntFourthBattalion,
+                              self.cBrgd1stRgmntAddBttry,
+                              self.cBrgd2ndRgmntAddBttry,
+                              ]
+
+        brigade_bttln_Lists(self.c_brigade_number, self.presenter, self.cBrgdCmndr, c_brgd_bttlns_list)
+
+    #
+
+    def cBrgd1stRgmnt1stBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd1stRgmntFirstBattalionCost, self.cBrgdTotalCostView, 0,
+                               self.cBr1stRgmntFirstBttlnModPushButton, self.c1_shift_battallion_order)
+
+    def cBrgd1stRgmnt2ndBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd1stRgmntSecondBattalionCost, self.cBrgdTotalCostView, 1,
+                               self.cBr1stRgmntSecondBttlnModPushButton, self.c1_shift_battallion_order)
+
+    def cBrgd1stRgmnt3rdBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd1stRgmntThirdBattalionCost, self.cBrgdTotalCostView, 2,
+                               self.cBr1stRgmntThirdBttlnModPushButton, self.c1_shift_battallion_order)
+
+    def cBrgd1stRgmnt4thBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd1stRgmntFourthBattalionCost, self.cBrgdTotalCostView, 3,
+                               self.cBr1stRgmntFourthBttlnModPushButton, self.c1_shift_battallion_order)
+
+    def cBrgdTotalCostView(self):
+        total_cost = self.presenter.BrigadeCmndrsCost(self.cBrgdCmndr.currentIndex(), self.c_brigade_number) + \
+                     sum(self.presenter.BrigadeBttlnCost(i, self.c_brigade_number) for i in range(10))
+
+        self.c_brgd_1st_rgmt_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.c_brigade_number) for i in range(0, 4)))
+        self.c_brgd_2nd_rgmt_nmbr_of_battalions = (
+            sum(self.presenter.BrigadeBttlnPresence(i, self.c_brigade_number) for i in range(4, 8)))
+
+        if self.cBrgd1stRgmntAddBttry.currentText() == "Regimental Artillery Battery":
+            if self.c_brgd_1st_rgmt_nmbr_of_battalions < 3:
+                self.cBrgd1stRgmntAddBttry.setCurrentIndex(0)
+
+        if self.cBrgd2ndRgmntAddBttry.currentText() == "Regimental Artillery Battery":
+            if self.c_brgd_2nd_rgmt_nmbr_of_battalions < 3:
+                self.cBrgd2ndRgmntAddBttry.setCurrentIndex(0)
+
+        self.cBrgdTotalCost.setText(str(total_cost))
+        self.divisionTotalCostView()
+
+    def c_the_first_bttln_mod_button_was_clicked(self):
+        if self.cBrgd1stRgmntFirstBattalion.currentIndex() + self.c_battalion_index_add != 0:
+            battalion_order = "First Battalion"
+            self.order_number = 0  # первый по порядку батальон
+            self.brgdFirstBattalionCostSetText = self.cBrgd1stRgmntFirstBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr1stRgmntFirstBttlnModPushButton,
+                                              self.cBrgd1stRgmntFirstBattalion.currentText(), self.order_number)
+
+    def c_the_second_bttln_mod_button_was_clicked(self):
+        if self.cBrgd1stRgmntSecondBattalion.currentIndex() != 0:
+            battalion_order = "Second Battalion"
+            self.order_number = 1  # второй по порядку батальон
+            self.brgdSecondBattalionCostSetText = self.cBrgd1stRgmntSecondBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr1stRgmntSecondBttlnModPushButton,
+                                              self.cBrgd1stRgmntSecondBattalion.currentText(), self.order_number)
+
+    def c_the_third_bttln_mod_button_was_clicked(self):
+        if self.cBrgd1stRgmntThirdBattalion.currentIndex() != 0:
+            battalion_order = "Third Battalion"
+            self.order_number = 2  # третий по порядку батальон
+            self.brgdThirdBattalionCostSetText = self.cBrgd1stRgmntThirdBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr1stRgmntThirdBttlnModPushButton,
+                                              self.cBrgd1stRgmntThirdBattalion.currentText(), self.order_number)
+
+    def c_the_fourth_bttln_mod_button_was_clicked(self):
+        if self.cBrgd1stRgmntFourthBattalion.currentIndex() != 0:
+            battalion_order = "Fourth Battalion"
+            self.order_number = 3  # четвертый по порядку батальон
+            self.brgdFourthBattalionCostSetText = self.cBrgd1stRgmntFourthBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr1stRgmntFourthBttlnModPushButton,
+                                              self.cBrgd1stRgmntFourthBattalion.currentText(), self.order_number)
+
+    def cBrgd2ndRgmnt1stBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd2ndRgmntFirstBattalionCost, self.cBrgdTotalCostView, 4,
+                               self.cBr2ndRgmntFirstBttlnModPushButton, self.c2_shift_battallion_order)
+
+    def cBrgd2ndRgmnt2ndBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd2ndRgmntSecondBattalionCost, self.cBrgdTotalCostView, 5,
+                               self.cBr2ndRgmntSecondBttlnModPushButton, self.c2_shift_battallion_order)
+
+    def cBrgd2ndRgmnt3rdBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd2ndRgmntThirdBattalionCost, self.cBrgdTotalCostView, 6,
+                               self.cBr2ndRgmntThirdBttlnModPushButton, self.c2_shift_battallion_order)
+
+    def cBrgd2ndRgmnt4thBttlnCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number,
+                               self.cBrgd2ndRgmntFourthBattalionCost, self.cBrgdTotalCostView, 7,
+                               self.cBr2ndRgmntFourthBttlnModPushButton, self.c2_shift_battallion_order)
+
+    def c_the_fifth_bttln_mod_button_was_clicked(self):
+        if self.cBrgd2ndRgmntFirstBattalion.currentIndex() + self.c2_battalion_index_add != 0:
+            battalion_order = "Fifth Battalion"
+            self.order_number = 4  # пятый по порядку батальон
+            self.brgdFifthBattalionCostSetText = self.cBrgd2ndRgmntFirstBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr2ndRgmntFirstBttlnModPushButton,
+                                              self.cBrgd2ndRgmntFirstBattalion.currentText(), self.order_number)
+
+    def c_the_sixth_bttln_mod_button_was_clicked(self):
+        if self.cBrgd2ndRgmntSecondBattalion.currentIndex() != 0:
+            battalion_order = "Sixth Battalion"
+            self.order_number = 5  # шестой по порядку батальон
+            self.brgdSixthBattalionCostSetText = self.cBrgd2ndRgmntSecondBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr2ndRgmntSecondBttlnModPushButton,
+                                              self.cBrgd2ndRgmntSecondBattalion.currentText(), self.order_number)
+
+    def c_the_seventh_bttln_mod_button_was_clicked(self):
+        if self.cBrgd2ndRgmntThirdBattalion.currentIndex() != 0:
+            battalion_order = "Seventh Battalion"
+            self.order_number = 6  # седьмой по порядку батальон
+            self.brgdSeventhBattalionCostSetText = self.cBrgd2ndRgmntThirdBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr2ndRgmntThirdBttlnModPushButton,
+                                              self.cBrgd2ndRgmntThirdBattalion.currentText(), self.order_number)
+
+    def c_the_eighth_bttln_mod_button_was_clicked(self):
+        if self.cBrgd2ndRgmntFourthBattalion.currentIndex() != 0:
+            battalion_order = "Eighth Battalion"
+            self.order_number = 7  # восьмой по порядку батальон
+            self.brgdEighthBattalionCostSetText = self.cBrgd2ndRgmntFourthBattalionCost.setText
+            self.brgdTotalCostView = self.cBrgdTotalCostView
+            self.bttln_mod_button_was_clicked(battalion_order, self.c_brigade_number,
+                                              self.cBr2ndRgmntFourthBttlnModPushButton,
+                                              self.cBrgd2ndRgmntFourthBattalion.currentText(), self.order_number)
+
+    def cBrgd1stRgmntAddBttryCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number, self.cBrgd1stRgmntAddBttryCost,
+                               self.cBrgdTotalCostView, 8, None, 0)
+
+    def cBrgd2ndRgmntAddBttryCostView(self, bttln_choosen_from_list):
+        self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number, self.cBrgd2ndRgmntAddBttryCost,
+                               self.cBrgdTotalCostView, 9, None, 0)
 
 
 
