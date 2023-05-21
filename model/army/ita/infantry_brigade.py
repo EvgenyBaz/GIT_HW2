@@ -53,9 +53,6 @@ class InfantryBrigade(Brigade):
         self.brigade_list_battalion_list.append(self.additional_battalion_list()) # дополнительная арт рота 1 полка
         self.brigade_list_battalion_list.append(self.additional_battalion_list()) # дополнительная арт рота 2 полка
 
-
-
-
 # альтернатива # первый полк
         self.brigade_list_battalion_list.append(self.light_battalion_list())  # первый батальон - варианты
         self.brigade_list_battalion_list.append(self.light_battalion_list())  # второй батальон - варианты
@@ -66,12 +63,6 @@ class InfantryBrigade(Brigade):
         self.brigade_list_battalion_list.append(self.light_battalion_list())  # второй батальон - варианты
         self.brigade_list_battalion_list.append(self.light_battalion_list())  # третий батальон - варианты
         self.brigade_list_battalion_list.append(self.light_battalion_list())  # четвертый батальон - варианты
-
-
-
-
-
-
 
         self.brigade_list_battalion_list.append(self.additional_battalion_list())  # дополнительный батальон - варианты
 
