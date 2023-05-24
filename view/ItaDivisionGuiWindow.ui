@@ -299,7 +299,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="aBr1stRgmntFourthBttlnModPushButton">
+   <widget class="QPushButton" name="aBr1stRgmnFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -1706,7 +1706,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="aBrgd2ndRgmntFirstBattalionCost">
+   <widget class="QLabel" name="aBrgd2ndRgnmtFirstBattalionCost">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1736,7 +1736,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="aBrgd2ndRgmntFirstBattalion">
+   <widget class="QComboBox" name="aBrgd2ndRgnmtFirstBattalion">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -1746,7 +1746,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="aBrgd2ndRgmntSecondBattalionCost">
+   <widget class="QLabel" name="aBrgd2ndRgnmtSecondBattalionCost">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1773,7 +1773,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="aBrgd2ndRgmntThirdBattalion">
+   <widget class="QComboBox" name="aBrgd2ndRgnmtThirdBattalion">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -1783,7 +1783,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="aBrgd2ndRgmntThirdBattalionCost">
+   <widget class="QLabel" name="aBrgd2ndRgnmtThirdBattalionCost">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1810,7 +1810,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="aBrgd2ndRgmntSecondBattalion">
+   <widget class="QComboBox" name="aBrgd2ndRgnmtSecondBattalion">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -1820,7 +1820,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="aBrgd2ndRgmntFourthBattalion">
+   <widget class="QComboBox" name="aBrgd2ndRgnmtFourthBattalion">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -1830,7 +1830,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="aBrgd2ndRgmntFourthBattalionCost">
+   <widget class="QLabel" name="aBrgd2ndRgnmtFourthBattalionCost">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1867,7 +1867,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="aBrgd2ndRgmntChoice">
+   <widget class="QComboBox" name="aBrgd2ndRgnmtChoice">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -2512,7 +2512,7 @@
      <string>modify</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="aBr2ndRgmntFourthBttlnModPushButton">
+   <widget class="QPushButton" name="aBr2ndRgmnFourthBttlnModPushButton">
     <property name="geometry">
      <rect>
       <x>300</x>

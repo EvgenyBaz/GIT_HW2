@@ -533,11 +533,11 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
 
     def aBrgd3rdBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
-                               self.aBrgdThirdBattalionCost, self.aBrgdTotalCostView, 2, self.aBrThirdBttlnModPushButton)
+                               self.aBrgdThirdBattalionCost, self.aBrgdTotalCostView, 2, self.aBrFourthBttlnModPushButton)
 
     def aBrgd4thBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
-                               self.aBrgdFourthBattalionCost, self.aBrgdTotalCostView, 3, self.aBrFourthBttlnModPushButton)
+                               self.aBrgdFourthBattalionCost, self.aBrgdTotalCostView, 3, self.aBrThirdBttlnModPushButton)
 
     def aBrgdAddBttlnCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.a_brigade_number,
@@ -2375,8 +2375,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             "",
             "",
             "",
-            "",
-            "",
+            ""
         ]
 
         self.bonuses_list_in_window = [
@@ -2385,8 +2384,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.bonus_window.bonus3,
             self.bonus_window.bonus4,
             self.bonus_window.bonus5,
-            self.bonus_window.bonus6,
-            self.bonus_window.bonus7
+            self.bonus_window.bonus6
         ]
 
         self.bonuses_checkboxes_in_window = [
@@ -2395,8 +2393,7 @@ class RusDivisionWindow(QtWidgets.QMainWindow, Ui_RusDivisionWindow):
             self.bonus_window.checkBox_3,
             self.bonus_window.checkBox_4,
             self.bonus_window.checkBox_5,
-            self.bonus_window.checkBox_6,
-            self.bonus_window.checkBox_7,
+            self.bonus_window.checkBox_6
         ]
 
         checkbox_Action_list =[

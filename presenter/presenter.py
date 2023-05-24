@@ -1,18 +1,10 @@
 from model.army.rus.rus_division import RusDivision
-from model.army.ita.ita_division import ItaDivision
 
 class Presenter():
     def __init__(self, country):
     #производим выбок структуры и наполнения дивизии в зависимости от выбранной  страны
-        match country:
-            case "Rus":
-                self.division = RusDivision()
-            case "Ita":
-                self.division = ItaDivision()
-
-# запрос на текущий состав бригады
-    def BrigadeCurrentList(self, brigade_number):
-        return self.division.get_brigade(brigade_number).brigade_list
+        if country =="Rus":
+            self.division = RusDivision()
 
     # запрос на список имен батальонов
     def BrigadeBttlnList(self, order_number, brigade_number):
@@ -24,8 +16,8 @@ class Presenter():
         self.division.get_brigade(brigade_number).set_list_of_battalions(order_number)
 
         # отправляет данные в модель для заполнения списка бригады
-    def BrigadeBttlnChoosen(self, order_number, bttln_choosen_from_list, brigade_number, shift = 0):
-        return self.division.get_brigade(brigade_number).set_battalion_to_list(order_number, bttln_choosen_from_list, shift)
+    def BrigadeBttlnChoosen(self, order_number, bttln_choosen_from_list, brigade_number):
+        return self.division.get_brigade(brigade_number).set_battalion_to_list(order_number, bttln_choosen_from_list)
 
     # запрос на стоимость текущего батальона
     def BrigadeBttlnCost(self, order_number, brigade_number):
@@ -53,9 +45,6 @@ class Presenter():
     # запрос на список стоимости бонусов для бригады
     def BrigadeBonusCostList(self, brigade_number):
         return self.division.get_brigade(brigade_number).get_brigade_bonus_list_costs()
-
-    def BrigadeBonusCost(self, brigade_number, bonus_name):
-        return self.division.get_brigade(brigade_number).get_brigade_bonus_costs(bonus_name)
 
     def BrigadeBonusToBattalion(self, bonus_name, brigade_number):
         return self.division.get_brigade(brigade_number).get_brigade_bonus_to_battalion_list(bonus_name)
