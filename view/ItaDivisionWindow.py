@@ -130,17 +130,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         # дополнительные арт роты
         self.cBrgd1stRgmntAddBttry.currentIndexChanged.connect(self.cBrgd1stRgmntAddBttryCostView)
         self.cBrgd2ndRgmntAddBttry.currentIndexChanged.connect(self.cBrgd2ndRgmntAddBttryCostView)
-#---------------------------------------------------------------
-        self.cvlry_brigade_number = 3
-        self.cvlry_battalion_index_add = 0
-
-        self.CvlryBrgdCmndr.currentIndexChanged.connect(self.cvlryBrgdCommanderCostView)
-        self.CvlryBrgdFirstBattalion.currentIndexChanged.connect(self.cvlryBrgd1stBttlnCostView)
-        self.CvlryBrgdSecondBattalion.currentIndexChanged.connect(self.cvlryBrgd2ndBttlnCostView)
-
-        self.CvlryBrFirstBttlnModPushButton.clicked.connect(self.cvlry_the_first_bttln_mod_button_was_clicked)
-        self.CvlryBrSecondBttlnModPushButton.clicked.connect(self.cvlry_the_second_bttln_mod_button_was_clicked)
-#------------------------------------------------------------------------------------
 
 #
     # заполняем список имен командиров дивизии
@@ -166,7 +155,7 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
         value = self.presenter.BrigadeCmndrsCost(index, brigade_number)
         brgdCmndrCost.setText(str(value))
 
-    def brgdBttlnCostView(self, bttln_choosen_from_list, brigade_number, brgdBattalionCost, brgdTotalCostView, order_number, bttlnModPushButton, shift=0):
+    def brgdBttlnCostView(self, bttln_choosen_from_list, brigade_number, brgdBattalionCost, brgdTotalCostView, order_number, bttlnModPushButton, shift):
         # отправляем индекс в презентер для передачи в модель чтобы поместить соотетствующий батальон на его место в бригаде
         # order_number =  порядковое место в бригаде
         # индекс выбранного баталльона из списка
@@ -1222,112 +1211,6 @@ class ItaDivisionWindow(QtWidgets.QMainWindow, Ui_ItaDivisionWindow):
     def cBrgd2ndRgmntAddBttryCostView(self, bttln_choosen_from_list):
         self.brgdBttlnCostView(bttln_choosen_from_list, self.c_brigade_number, self.cBrgd2ndRgmntAddBttryCost,
                                self.cBrgdTotalCostView, 9, None, 0)
-
-#----------------------------------------------------------------------------------------------------------------------
-    def cvlry_brigade_bttln_Lists(self):
-        cvlry_brgd_bttlns_list = [self.CvlryBrgdFirstBattalion,
-                                    self.CvlryBrgdSecondBattalion
-                                    ]
-
-        brigade_bttln_Lists(self.cvlry_brigade_number, self.presenter, self.CvlryBrgdCmndr, cvlry_brgd_bttlns_list)
-
-    def cvlryBrgdCommanderCostView(self, index):
-        value = self.presenter.BrigadeCmndrsCost(index, self.cvlry_brigade_number)
-        self.CvlryBrgdCmndrCost.setText(str(value))
-        self.cvlryBrgdTotalCostView()
-
-        if self.CvlryBrgdCmndr.currentIndex() < 1:
-
-            if self.presenter.BrigadeBttlnName(0, self.cvlry_brigade_number) != "empty":
-                self.presenter.FirstBttlnListChange(0, self.cvlry_brigade_number)
-
-                self.CvlryBrgdFirstBattalion.clear()
-                bttln_list = self.presenter.BrigadeBttlnList(0, self.cvlry_brigade_number)
-                for bttlnName in bttln_list:
-                    self.CvlryBrgdFirstBattalion.addItem(bttlnName)
-
-                self.cvlry_battalion_index_add = 0
-
-            self.CvlryBrgdFirstBattalion.setCurrentIndex(0)
-            self.CvlryBrgdFirstBattalion.setDisabled(True)
-            self.CvlryBrgdSecondBattalion.setCurrentIndex(0)
-            self.CvlryBrgdSecondBattalion.setDisabled(True)
-
-            self.CvlryBrFirstBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
-            self.CvlryBrSecondBttlnModPushButton.setStyleSheet("background-color : rgb(225,225,225) ")
-
-        else:
-
-            if self.cvlry_battalion_index_add == 0:
-                # убираем обьект empty из списка выбора
-                self.CvlryBrgdFirstBattalion.clear()
-                self.presenter.FirstBttlnListChangeToShow(0, self.cvlry_brigade_number)
-                bttln_list = self.presenter.BrigadeBttlnList(0, self.cvlry_brigade_number)
-                for bttlnName in bttln_list:
-                    self.CvlryBrgdFirstBattalion.addItem(bttlnName)
-                # сдвигаем на единицу номер выбираемого кав полка чтобы пройти проверку при нажатии на кнопку модификаци
-                self.cvlry_battalion_index_add = 1
-
-            self.CvlryBrgdFirstBattalion.setDisabled(False)
-            self.CvlryBrgdSecondBattalion.setDisabled(False)
-
-    def cvlryBrgd1stBttlnCostView(self, bttln_choosen_from_list):
-
-        self.brgdBttlnCostView(bttln_choosen_from_list, self.cvlry_brigade_number,
-                               self.CvlryBrgdFirstBattalionCost, self.cvlryBrgdTotalCostView, 0, self.CvlryBrFirstBttlnModPushButton)
-
-    def cvlryBrgd2ndBttlnCostView(self, bttln_choosen_from_list):
-        self.brgdBttlnCostView(bttln_choosen_from_list, self.cvlry_brigade_number,
-                               self.CvlryBrgdSecondBattalionCost, self.cvlryBrgdTotalCostView, 1, self.CvlryBrSecondBttlnModPushButton)
-
-    def cvlryBrgdTotalCostView(self):
-        total_cost = self.presenter.BrigadeCmndrsCost(self.CvlryBrgdCmndr.currentIndex(),self.cvlry_brigade_number) + \
-                     sum(self.presenter.BrigadeBttlnCost(i, self.cvlry_brigade_number) for i in range(2))
-
-        self.CvlryBrgdTotalCost.setText(str(total_cost))
-        self.cvlry_nmbr_of_battalions = (
-            sum(self.presenter.BrigadeBttlnPresence(i, self.cvlry_brigade_number) for i in range(2)))
-
-        self.divisionTotalCostView()
-
-    def cvlry_the_first_bttln_mod_button_was_clicked(self):
-
-        if self.CvlryBrgdFirstBattalion.currentIndex() +self.cvlry_battalion_index_add != 0:
-            battalion_order = "First Regiment"
-            self.order_number = 0  # первый по порядку кав полк
-            self.brgdFirstBattalionCostSetText = self.CvlryBrgdFirstBattalionCost.setText
-            self.brgdTotalCostView = self.cvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.cvlry_brigade_number, self.CvlryBrFirstBttlnModPushButton, self.CvlryBrgdFirstBattalion.currentText(), self.order_number)
-
-    def cvlry_the_second_bttln_mod_button_was_clicked(self):
-
-        if self.CvlryBrgdSecondBattalion.currentIndex() != 0:
-            battalion_order = "Second Regiment"
-            self.order_number = 1  # второй по порядку кав полк
-            self.brgdSecondBattalionCostSetText = self.CvlryBrgdSecondBattalionCost.setText
-            self.brgdTotalCostView = self.cvlryBrgdTotalCostView
-            self.bttln_mod_button_was_clicked(battalion_order, self.cvlry_brigade_number, self.CvlryBrSecondBttlnModPushButton, self.CvlryBrgdSecondBattalion.currentText(), self.order_number)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

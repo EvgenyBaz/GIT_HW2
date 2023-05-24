@@ -138,8 +138,6 @@ class MainWindow(QMainWindow):
         self.itaDivisionWindow.aBrgdTotalCost.setText("0")
         self.itaDivisionWindow.bBrgdTotalCost.setText("0")
         self.itaDivisionWindow.cBrgdTotalCost.setText("0")
-        self.itaDivisionWindow.CvlryBrgdTotalCost.setText("0")
-
 
         # инициализация списков батальонов в бригадах
         self.itaDivisionWindow.division_cmndrs_list()
@@ -152,7 +150,6 @@ class MainWindow(QMainWindow):
         self.itaDivisionWindow.c_brigade_1stReg_choice()
         self.itaDivisionWindow.c_brigade_2ndReg_choice()
         self.itaDivisionWindow.c_brigade_bttln_Lists()
-        self.itaDivisionWindow.cvlry_brigade_bttln_Lists()
 
         self.itaDivisionWindow.show()
 
